@@ -1,4 +1,4 @@
-fangzi = """
+fangzi = r"""
         ----------------
       /                \\
      /                  \\
@@ -8,20 +8,25 @@ fangzi = """
     | |____| |____| |____||
 """
 
-print(fangzi)
+# print(fangzi)
 
-rabbit = """
+rabbit = r"""
          (\_/)
          (o.o)
          (> <)
 """
 
-print(rabbit)
+# print(rabbit)
 
-mouse = """
+mouse = r"""
          ()__()
          (o.O)
          (> <)
 """
 
-print(mouse)
+# print(mouse)
+
+a,b=0,1
+while b<10:
+    print(b)
+    a,b=b,a+b
