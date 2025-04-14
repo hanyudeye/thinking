@@ -70,3 +70,8 @@ scp /home/zhao/data/test.txt zw@10.150.69.247: /C:/Users/zw/Desktop/summary/tt.t
 $ ssh-keygen -t rsa -C "youremail@example.com"
 ```
 要用 ssh 无密码登录，要把本地公钥 ~/.ssh/id_rsa.pub 配置到服务器 的 ~/.ssh/authorized_keys 认证文件中，服务器才能接受您的认证。
+
+## 直播录制  StreamCap
+
+https://github.com/ihmily/StreamCap
+一个桌面应用（支持 Windows 和 Mac），基于 FFmpeg 进行直播录制，覆盖40+国内外主流直播平台

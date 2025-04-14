@@ -36,3 +36,9 @@ https://email.163.com/
 https://www.ruanyifeng.com/blog/weekly/
 https://www.producthunt.com/
 https://x.com/search?q={query}
+
+pdf 翻译
+https://deeppdf.ai/pdf-translator
+
+播客
+https://rsspod.pro/#trend
