@@ -8,3 +8,6 @@
 ## 创建可视化模型 ，在 ubuntu 系统中
 
 https://github.com/hiyouga/LLaMA-Factory
+
+安装 tmux
+
