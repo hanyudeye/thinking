@@ -1,2 +1,0 @@
-echo "helelo";
-echo "he";
