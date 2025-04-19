@@ -1,12 +1,12 @@
+
+1. ubuntu 中浏览器 对输入法 老是失去焦点
+2. ubuntu 如何与 windows 一样，在 dock 中 点击 应用图标 显示窗口，再点一下隐藏应用窗口
+
+## 别人出国找机会，我难出国，看下国际新闻找机会
+
 ## Doing 做一个 远离手机的 app ，想前端在使用好的界面，后端在创作发明
 
 学 安卓
-
-##  Doing  保存一个投资网站链接
-
-分析 曲线 ，平滑的时候买入，下跌的时候是不是很急，只能买标普，其他曲线太猛，只能短期盯盘
-
-https://www.msn.cn/zh-cn/money/chart?id=a21mim&timeFrame=Max&ocid=ansMSNMoney11&chartType=line&projection=false
 
 ## Doing 做视频内容 
 
@@ -19,4 +19,3 @@ https://www.msn.cn/zh-cn/money/chart?id=a21mim&timeFrame=Max&ocid=ansMSNMoney11&
 ## T 创建可视化模型 ，在 ubuntu 系统中
 
 https://github.com/hiyouga/LLaMA-Factory
-
