@@ -1,4 +1,4 @@
-
+hello
 1. ubuntu 中浏览器 对输入法 老是失去焦点
 2. ubuntu 如何与 windows 一样，在 dock 中 点击 应用图标 显示窗口，再点一下隐藏应用窗口
 
