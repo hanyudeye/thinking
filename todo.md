@@ -19,3 +19,7 @@
 ## T 创建可视化模型 ，在 ubuntu 系统中
 
 https://github.com/hiyouga/LLaMA-Factory
+
+在Linux 环境中使用 ai
+
+use ai in linux environment
