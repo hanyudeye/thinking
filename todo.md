@@ -1,9 +1,13 @@
+## TODO 当前任务
 
-## 别人出国找机会，我难出国，看下国际新闻找机会
+停止投资，已满足资金
+开始做业务
 
 ## Doing 做一个 远离手机的 app ，想前端在使用好的界面，后端在创作发明
 
 学 安卓
+
+## 别人出国找机会，我难出国，看下国际新闻找机会
 
 ## Doing 做视频内容 
 
@@ -17,6 +21,3 @@
 
 https://github.com/hiyouga/LLaMA-Factory
 
-在Linux 环境中使用 ai
-
-use ai in linux environment
