@@ -1,16 +1,8 @@
----
-layout: default
-toc: false
-title: linux运维所要了解的知识
-date:  2025-01-08T18:51:38+08:00
-categories: ['程序员']
----
-
 
 ## linux运维所要了解的知识
 ### 1. **Linux基础**
    - **Linux发行版**：了解常见的Linux发行版（如Ubuntu、CentOS、Debian、Red Hat、Fedora等）的差异及适用场景。
-   - **Linux文件系统**：掌握目录结构（如`/etc`、`/var`、`/usr`）、文件权限（`rwx`）、文件管理命令（如`ls`、`cp`、`mv`、`rm`、`find`、`chmod`、`chown`等）。
+  - **Linux文件系统**：掌握目录结构（如`/etc`、`/var`、`/usr`）、文件权限（`rwx`）、文件管理命令（如`ls`、`cp`、`mv`、`rm`、`find`、`chmod`、`chown`等）。
    - **文件权限管理**：理解用户、用户组、权限位，以及如何通过`chmod`、`chown`调整权限。
    - **文件压缩与解压**：掌握`tar`、`gzip`、`bzip2`、`zip`等压缩工具。
 
@@ -82,3 +74,9 @@ categories: ['程序员']
 
 ### 总结
 Linux运维是一个需要多领域知识的职业，涵盖系统、网络、存储、脚本编写、容器技术等方面。对于一个合格的Linux运维工程师来说，掌握从系统基础操作到自动化运维、云计算等新技术的能力，才能够确保系统稳定、安全、高效地运行。
+
+# ubuntu
+
+## 安装最新的软件(使用 snap)
+
+sudo snap install

@@ -1,13 +1,4 @@
-## 模糊图片变清晰  
 
-https://github.com/upscayl/upscayl?tab=readme-ov-file
-
-## 文生成图工具  
-https://designer.microsoft.com/
-
-## 免登录文件中转站
-https://www.airportal.cn/
-https://www.wenshushu.cn/
 
 ##  youtube 字幕下载
 
@@ -75,3 +66,7 @@ $ ssh-keygen -t rsa -C "youremail@example.com"
 
 https://github.com/ihmily/StreamCap
 一个桌面应用（支持 Windows 和 Mac），基于 FFmpeg 进行直播录制，覆盖40+国内外主流直播平台
+
+## [pdf-craft](https://github.com/oomol-lab/pdf-craft)
+
+命令行 Python 工具，用来将扫描的 PDF 文件转为 Markdown 和 EPUB，并通过 AI 进行 OCR。
