@@ -1,7 +1,15 @@
+## 完成考题
+
+doing https://github.com/Noob-Dream/cskaoyan
+
+
+
+
 ## TODO 当前任务
 
 停止投资，已满足资金
 开始做业务，学习做业务，就是下面的编程业务，多练习，就能接业务
+
 
 ## TODO 学习编程
 https://www.freecodecamp.org/learn/full-stack-developer/workshop-cat-photo-app/step-5

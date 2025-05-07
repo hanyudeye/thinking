@@ -159,3 +159,12 @@ filename='numbers.json'
 #     numbers=json.load(file_object)
 # print(numbers)
 
+
+# 排序，由小到大
+chengji=[23,43,12,45,67,89,90]
+for i in range(len(chengji)-1):
+    for j in range(len(chengji)-1-i):
+        if chengji[j] > chengji[j+1]:
+            chengji[j], chengji[j+1] = chengji[j+1], chengji[j]
+
+print(chengji)  # [12, 23, 43, 45, 67, 89, 90]
