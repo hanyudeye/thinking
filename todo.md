@@ -4,6 +4,7 @@ doing https://github.com/Noob-Dream/cskaoyan
 
 godot 游戏引擎开发游戏问答
 
+## obs 设置码率 为 8000k - 15000k
 
 ## TODO 当前任务
 
