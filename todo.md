@@ -1,3 +1,9 @@
+## 查看互联网业务，模仿，放广告
+
+看看同行竞争高不高
+
+## 查看外国雇工
+
 ## 完成考题
 
 doing https://github.com/Noob-Dream/cskaoyan
