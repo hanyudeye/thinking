@@ -162,3 +162,103 @@ GitHub 上有许多适合初学者的开源项目，涵盖人工智能、编程�
 - **中文资源**：参考 **GitHub-Chinese-Top-Charts**，汇总了中文开发者维护的优质项目。
 
 如需完整项目列表或特定领域推荐，可进一步查看上述来源中的详细内容。
+
+# contribution
+
+Fork 别人的项目后，你可以修改代码并通过「Pull Request」请求项目作者合并。整个流程如下（适用于 GitHub，也适用于 GitLab、Gitee 等）：
+
+---
+
+## 🧭 总流程图解
+
+```
+原项目（上游） → 你 fork 一份 → 本地修改 → 提交 → Push 到你 fork 的库 → 发 Pull Request → 等待合并
+```
+
+---
+
+## ✅ 详细步骤（以 GitHub 为例）
+
+### 📌 1. Fork 项目
+
+* 打开你想贡献的 GitHub 项目；
+* 点击右上角的 “Fork” 按钮，GitHub 会将该项目复制到你的仓库。
+
+---
+
+### 📌 2. 克隆（Clone）到本地
+
+```bash
+git clone https://github.com/你的用户名/项目名.git
+cd 项目名
+```
+
+---
+
+### 📌 3. 添加上游源（可选，但推荐）
+
+这样可以同步原项目的更新：
+
+```bash
+git remote add upstream https://github.com/原作者用户名/项目名.git
+git fetch upstream
+```
+
+---
+
+### 📌 4. 创建新分支（避免直接在 main 分支改动）
+
+```bash
+git checkout -b my-feature-branch
+```
+
+---
+
+### 📌 5. 修改代码、提交更改
+
+编辑你想修改的内容，然后：
+
+```bash
+git add .
+git commit -m "Fix: 修复了xxx问题 / Add: 添加了xxx功能"
+```
+
+---
+
+### 📌 6. 推送到你自己的仓库
+
+```bash
+git push origin my-feature-branch
+```
+
+---
+
+### 📌 7. 发起 Pull Request（PR）
+
+* 打开你的 GitHub 项目页面；
+* GitHub 通常会提示你「Compare & Pull Request」；
+* 点击它，填写说明（说明你修改了什么，为什么这样做）；
+* 提交 PR。
+
+---
+
+### 📌 8. 等待原项目作者 review（审核）
+
+* 作者可能会提出修改意见；
+* 你可以继续在你的分支提交更新，PR 会自动同步；
+* 如果作者同意，就会合并到原项目。
+
+---
+
+## 💡 小贴士
+
+| 场景      | 建议                                           |
+| ------- | -------------------------------------------- |
+| 想长期贡献   | 经常同步 `upstream` 的代码：`git pull upstream main` |
+| 有多个功能   | 每个功能单独建一个分支、一个 PR，便于审核                       |
+| 想撤销修改   | 使用 `git reset`、`git checkout` 等命令            |
+| PR 没被合并 | 可以 politely 评论或等待维护者处理，有些项目合并很慢              |
+
+---
+
+如果你需要一个**具体例子或命令脚本模板**，我也可以帮你写出来，比如“我修改了某个 README 错字并提交 PR”的全过程。需要吗？
