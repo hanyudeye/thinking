@@ -167,4 +167,7 @@ for i in range(len(chengji)-1):
         if chengji[j] > chengji[j+1]:
             chengji[j], chengji[j+1] = chengji[j+1], chengji[j]
 
-print(chengji)  # [12, 23, 43, 45, 67, 89, 90]
+# print(chengji)  # [12, 23, 43, 45, 67, 89, 90]
+
+s='ab\tc'
+print(len(s))  # ab	c
