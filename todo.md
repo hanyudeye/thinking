@@ -1,4 +1,10 @@
-使用 vscode wsl 打开库 
+## 内容审核员
+https://join.modsquad.com/join-the-mods/
+<!-- https://join.modsquad.com/careers/ -->
+https://www.taskus.com/careers/
+
+
+学习3d打印，Blender建模
 
 用 包装袋 收集树叶
 
