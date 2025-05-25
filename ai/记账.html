@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能记账 - MoneyTracker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .phone-container {
+            width: 375px;
+            height: 812px;
+            background: #000;
+            border-radius: 40px;
+            padding: 6px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        .screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 34px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 24px;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .app-content {
+            background: white;
+            height: calc(100% - 44px);
+            border-radius: 20px 20px 0 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .page {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.3s ease;
+        }
+
+        .page.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .header {
+            padding: 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 16px;
+        }
+
+        .balance-card {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 24px;
+            margin: 20px 24px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .balance-amount {
+            font-size: 36px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .balance-trend {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .trend-up {
+            color: #10b981;
+        }
+
+        .content {
+            padding: 24px;
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .quick-actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .action-btn {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border: none;
+            border-radius: 16px;
+            padding: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .action-btn:nth-child(2) {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .recent-transactions {
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .view-all {
+            color: #667eea;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .transaction-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .transaction-item {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .transaction-item:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+        }
+
+        .transaction-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+            font-size: 20px;
+        }
+
+        .transaction-info {
+            flex: 1;
+        }
+
+        .transaction-title {
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 4px;
+        }
+
+        .transaction-category {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        .transaction-amount {
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .expense {
+            color: #ef4444;
+        }
+
+        .income {
+            color: #10b981;
+        }
+
+        .bottom-nav {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            border-top: 1px solid #f3f4f6;
+            display: flex;
+            padding: 20px 0;
+        }
+
+        .nav-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            padding: 8px;
+        }
+
+        .nav-item.active {
+            color: #667eea;
+        }
+
+        .nav-item:not(.active) {
+            color: #9ca3af;
+        }
+
+        .nav-icon {
+            font-size: 24px;
+        }
+
+        .nav-label {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .add-transaction {
+            padding: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 8px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            font-size: 16px;
+            transition: all 0.2s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        .category-item {
+            aspect-ratio: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #f9fafb;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            padding: 12px;
+        }
+
+        .category-item:hover,
+        .category-item.selected {
+            background: #667eea;
+            color: white;
+        }
+
+        .category-icon {
+            font-size: 24px;
+            margin-bottom: 4px;
+        }
+
+        .category-name {
+            font-size: 12px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .amount-input-large {
+            font-size: 32px;
+            font-weight: 700;
+            text-align: center;
+            background: #f9fafb;
+            border: none;
+            padding: 24px;
+            border-radius: 16px;
+            margin-bottom: 24px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 16px;
+            padding: 18px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            border-radius: 12px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .floating-add-btn {
+            position: absolute;
+            bottom: 100px;
+            right: 24px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 8px 25px rgba(240, 147, 251, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .floating-add-btn:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-container">
+        <div class="screen">
+            <div class="status-bar">
+                <span>9:41</span>
+                <span>📶 📶 📶 🔋100%</span>
+            </div>
+            
+            <div class="app-content">
+                <!-- 首页 -->
+                <div class="page active" id="home">
+                    <div class="header">
+                        <h1>智能记账</h1>
+                        <p>今天是个记账的好日子</p>
+                    </div>
+                    
+                    <div class="balance-card fade-in">
+                        <div class="balance-amount">¥8,432.50</div>
+                        <div class="balance-trend">
+                            <span class="trend-up">↗ +12.5%</span>
+                            <span>较上月</span>
+                        </div>
+                    </div>
+                    
+                    <div class="content">
+                        <div class="quick-actions">
+                            <button class="action-btn" onclick="showPage('add')">
+                                ➕ 添加支出
+                            </button>
+                            <button class="action-btn" onclick="showPage('add')">
+                                💰 添加收入
+                            </button>
+                        </div>
+                        
+                        <div class="recent-transactions">
+                            <div class="section-title">
+                                最近交易
+                                <span class="view-all" onclick="showPage('transactions')">查看全部</span>
+                            </div>
+                            <div class="transaction-list" id="transactionList">
+                                <div class="transaction-item fade-in">
+                                    <div class="transaction-icon" style="background: #fef3c7; color: #f59e0b;">🍕</div>
+                                    <div class="transaction-info">
+                                        <div class="transaction-title">午餐</div>
+                                        <div class="transaction-category">餐饮美食</div>
+                                    </div>
+                                    <div class="transaction-amount expense">-¥45.00</div>
+                                </div>
+                                <div class="transaction-item fade-in">
+                                    <div class="transaction-icon" style="background: #dcfce7; color: #16a34a;">💼</div>
+                                    <div class="transaction-info">
+                                        <div class="transaction-title">工资</div>
+                                        <div class="transaction-category">薪资收入</div>
+                                    </div>
+                                    <div class="transaction-amount income">+¥8,500.00</div>
+                                </div>
+                                <div class="transaction-item fade-in">
+                                    <div class="transaction-icon" style="background: #fce7f3; color: #ec4899;">🛒</div>
+                                    <div class="transaction-info">
+                                        <div class="transaction-title">超市购物</div>
+                                        <div class="transaction-category">日用百货</div>
+                                    </div>
+                                    <div class="transaction-amount expense">-¥156.80</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="floating-add-btn" onclick="showPage('add')">+</button>
+                </div>
+                
+                <!-- 添加交易页面 -->
+                <div class="page" id="add">
+                    <div class="header">
+                        <button class="back-btn" onclick="showPage('home')">←</button>
+                        <h1 style="margin-top: 20px;">记一笔</h1>
+                        <p>记录你的每一笔收支</p>
+                    </div>
+                    
+                    <div class="content add-transaction">
+                        <div class="form-group">
+                            <input type="text" class="amount-input-large" placeholder="¥0.00" id="amountInput">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">选择分类</label>
+                            <div class="category-grid">
+                                <div class="category-item" onclick="selectCategory(this)">
+                                    <div class="category-icon">🍕</div>
+                                    <div class="category-name">餐饮</div>
+                                </div>
+                                <div class="category-item" onclick="selectCategory(this)">
+                                    <div class="category-icon">🛒</div>
+                                    <div class="category-name">购物</div>
+                                </div>
+                                <div class="category-item" onclick="selectCategory(this)">
+                                    <div class="category-icon">🚗</div>
+                                    <div class="category-name">交通</div>
+                                </div>
+                                <div class="category-item" onclick="selectCategory(this)">
+                                    <div class="category-icon">🎬</div>
+                                    <div class="category-name">娱乐</div>
+                                </div>
+                                <div class="category-item" onclick="selectCategory(this)">
+                                    <div class="category-icon">💼</div>
+                                    <div class="category-name">工作</div>
+                                </div>
+                                <div class="category-item" onclick="selectCategory(this)">
+                                    <div class="category-icon">🏥</div>
+                                    <div class="category-name">医疗</div>
+                                </div>
+                                <div class="category-item" onclick="selectCategory(this)">
+                                    <div class="category-icon">📚</div>
+                                    <div class="category-name">教育</div>
+                                </div>
+                                <div class="category-item" onclick="selectCategory(this)">
+                                    <div class="category-icon">🏠</div>
+                                    <div class="category-name">居住</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">备注</label>
+                            <input type="text" class="form-input" placeholder="添加备注信息..." id="noteInput">
+                        </div>
+                        
+                        <button class="submit-btn" onclick="addTransaction()">确认添加</button>
+                    </div>
+                </div>
+                
+                <!-- 统计页面 -->
+                <div class="page" id="stats">
+                    <div class="header">
+                        <h1>统计分析</h1>
+                        <p>了解你的消费习惯</p>
+                    </div>
+                    
+                    <div class="content">
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-value expense">¥2,156</div>
+                                <div class="stat-label">本月支出</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value income">¥8,500</div>
+                                <div class="stat-label">本月收入</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">15</div>
+                                <div class="stat-label">交易笔数</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">¥143</div>
+                                <div class="stat-label">日均支出</div>
+                            </div>
+                        </div>
+                        
+                        <div class="recent-transactions">
+                            <div class="section-title">支出分类</div>
+                            <div class="transaction-list">
+                                <div class="transaction-item">
+                                    <div class="transaction-icon" style="background: #fef3c7; color: #f59e0b;">🍕</div>
+                                    <div class="transaction-info">
+                                        <div class="transaction-title">餐饮美食</div>
+                                        <div class="transaction-category">占比 32%</div>
+                                    </div>
+                                    <div class="transaction-amount expense">¥690.00</div>
+                                </div>
+                                <div class="transaction-item">
+                                    <div class="transaction-icon" style="background: #fce7f3; color: #ec4899;">🛒</div>
+                                    <div class="transaction-info">
+                                        <div class="transaction-title">购物消费</div>
+                                        <div class="transaction-category">占比 28%</div>
+                                    </div>
+                                    <div class="transaction-amount expense">¥604.00</div>
+                                </div>
+                                <div class="transaction-item">
+                                    <div class="transaction-icon" style="background: #dbeafe; color: #3b82f6;">🚗</div>
+                                    <div class="transaction-info">
+                                        <div class="transaction-title">交通出行</div>
+                                        <div class="transaction-category">占比 18%</div>
+                                    </div>
+                                    <div class="transaction-amount expense">¥388.00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 全部交易页面 -->
+                <div class="page" id="transactions">
+                    <div class="header">
+                        <button class="back-btn" onclick="showPage('home')">←</button>
+                        <h1 style="margin-top: 20px;">全部交易</h1>
+                        <p>查看所有收支记录</p>
+                    </div>
+                    
+                    <div class="content">
+                        <div class="transaction-list">
+                            <div class="transaction-item">
+                                <div class="transaction-icon" style="background: #fef3c7; color: #f59e0b;">🍕</div>
+                                <div class="transaction-info">
+                                    <div class="transaction-title">午餐</div>
+                                    <div class="transaction-category">餐饮美食 · 今天 12:30</div>
+                                </div>
+                                <div class="transaction-amount expense">-¥45.00</div>
+                            </div>
+                            <div class="transaction-item">
+                                <div class="transaction-icon" style="background: #dcfce7; color: #16a34a;">💼</div>
+                                <div class="transaction-info">
+                                    <div class="transaction-title">工资</div>
+                                    <div class="transaction-category">薪资收入 · 今天 09:00</div>
+                                </div>
+                                <div class="transaction-amount income">+¥8,500.00</div>
+                            </div>
+                            <div class="transaction-item">
+                                <div class="transaction-icon" style="background: #fce7f3; color: #ec4899;">🛒</div>
+                                <div class="transaction-info">
+                                    <div class="transaction-title">超市购物</div>
+                                    <div class="transaction-category">日用百货 · 昨天 18:45</div>
+                                </div>
+                                <div class="transaction-amount expense">-¥156.80</div>
+                            </div>
+                            <div class="transaction-item">
+                                <div class="transaction-icon" style="background: #dbeafe; color: #3b82f6;">🚗</div>
+                                <div class="transaction-info">
+                                    <div class="transaction-title">打车费用</div>
+                                    <div class="transaction-category">交通出行 · 昨天 15:20</div>
+                                </div>
+                                <div class="transaction-amount expense">-¥28.50</div>
+                            </div>
+                            <div class="transaction-item">
+                                <div class="transaction-icon" style="background: #f3e8ff; color: #8b5cf6;">🎬</div>
+                                <div class="transaction-info">
+                                    <div class="transaction-title">电影票</div>
+                                    <div class="transaction-category">娱乐休闲 · 昨天 20:00</div>
+                                </div>
+                                <div class="transaction-amount expense">-¥78.00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 底部导航 -->
+                <div class="bottom-nav">
+                    <div class="nav-item active" onclick="showPage('home')">
+                        <div class="nav-icon">🏠</div>
+                        <div class="nav-label">首页</div>
+                    </div>
+                    <div class="nav-item" onclick="showPage('transactions')">
+                        <div class="nav-icon">📊</div>
+                        <div class="nav-label">明细</div>
+                    </div>
+                    <div class="nav-item" onclick="showPage('add')">
+                        <div class="nav-icon">➕</div>
+                        <div class="nav-label">记账</div>
+                    </div>
+                    <div class="nav-item" onclick="showPage('stats')">
+                        <div class="nav-icon">📈</div>
+                        <div class="nav-label">统计</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let transactions = [
+            {
+                id: 1,
+                amount: -45.00,
+                category: '餐饮美食',
+                title: '午餐',
+                icon: '🍕',
+                date: new Date(),
+                note: ''
+            },
+            {
+                id: 2,
+                amount: 8500.00,
+                category: '薪资收入',
+                title: '工资',
+                icon: '💼',
+                date: new Date(),
+                note: ''
+            },
+            {
+                id: 3,
+                amount: -156.80,
+                category: '日用百货',
+                title: '超市购物',
+                icon: '🛒',
+                date: new Date(Date.now() - 86400000),
+                note: ''
+            }
+        ];
+
+        let selectedCategory = null;
+
+        function showPage(pageId) {
+            // 隐藏所有页面
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // 显示目标页面
+            document.getElementById(pageId).classList.add('active');
+            
+            // 更新导航状态
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // 根据页面ID设置对应的导航项为活跃状态
+            const navMap = {
+                'home': 0,
+                'transactions': 1,
+                'add': 2,
+                'stats': 3
+            };
+            
+            if (navMap[pageId] !== undefined) {
+                document.querySelectorAll('.nav-item')[navMap[pageId]].classList.add('active');
+            }
+        }
+
+        function selectCategory(element) {
+            // 移除之前选中的分类
+            document.querySelectorAll('.category-item').forEach(item => {
+                item.classList.remove('selected');
+            });
+            
+            // 选中当前分类
+            element.classList.add('selected');
+            selectedCategory = {
+                name: element.querySelector('.category-name').textContent,
+                icon: element.querySelector('.category-icon').textContent
+            };
+        }
+
+        function addTransaction() {
+            const amountInput = document.getElementById('amountInput');
+            const noteInput = document.getElementById('noteInput');
+            
+            if (!amountInput.value || !selectedCategory) {
+                alert('请填写金额并选择分类');
+                return;
+            }
+
+            const amount = parseFloat(amountInput.value.replace('¥', '').replace(',', ''));
+            
+            const newTransaction = {
+                id: transactions.length + 1,
+                amount: -amount, // 默认为支出
+                category: selectedCategory.name,
+                title: noteInput.value || selectedCategory.name,
+                icon: selectedCategory.icon,
+                date: new Date(),
+                note: noteInput.value
+            };
+
+            transactions.unshift(newTransaction);
+            updateTransactionList();
+            
+            // 清空表单并返回首页
+            amountInput.value = '';
+            noteInput.value = '';
+            selectedCategory = null;
+            document.querySelectorAll('.category-item').forEach(item => {
+                item.classList.remove('selected');
+            });
+            
+            showPage('home');
+            
+            // 显示成功提示
+            setTimeout(() => {
+                alert('记账成功！');
+            }, 300);
+        }
+
+        function updateTransactionList() {
+            const transactionList = document.getElementById('transactionList');
+            transactionList.innerHTML = '';
+            
+            transactions.slice(0, 3).forEach(transaction => {
+                const item = document.createElement('div');
+                item.className = 'transaction-item fade-in';
+                
+                const iconColor = transaction.amount > 0 ? '#dcfce7' : '#fef3c7';
+                const textColor = transaction.amount > 0 ? '#16a34a' : '#f59e0b';
+                
+                item.innerHTML = `
+                    <div class="transaction-icon" style="background: ${iconColor}; color: ${textColor};">${transaction.icon}</div>
+                    <div class="transaction-info">
+                        <div class="transaction-title">${transaction.title}</div>
+                        <div class="transaction-category">${transaction.category}</div>
+                    </div>
+                    <div class="transaction-amount ${transaction.amount > 0 ? 'income' : 'expense'}">
+                        ${transaction.amount > 0 ? '+' : ''}¥${Math.abs(transaction.amount).toFixed(2)}
+                    </div>
+                `;
+                
+                transactionList.appendChild(item);
+            });
+        }
+
+        // 添加一些交互动画效果
+        document.addEventListener('DOMContentLoaded', function() {
+            // 为所有按钮添加点击效果
+            document.querySelectorAll('button, .nav-item, .transaction-item').forEach(element => {
+                element.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                });
+            });
+
+            // 输入框焦点效果
+            document.querySelectorAll('.form-input, .amount-input-large').forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.style.transform = 'scale(1.02)';
+                });
+                
+                input.addEventListener('blur', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+
+            // 金额输入格式化
+            const amountInput = document.getElementById('amountInput');
+            amountInput.addEventListener('input', function() {
+                let value = this.value.replace(/[^\d.]/g, '');
+                if (value) {
+                    const number = parseFloat(value);
+                    if (!isNaN(number)) {
+                        this.value = '¥' + number.toLocaleString('zh-CN', {
+                            minimumFractionDigits: 2,
+                            maximumFractionDigits: 2
+                        });
+                    }
+                }
+            });
+
+            // 模拟实时数据更新
+            setInterval(() => {
+                const balanceElement = document.querySelector('.balance-amount');
+                if (balanceElement) {
+                    const currentBalance = transactions.reduce((sum, t) => sum + t.amount, 8432.50);
+                    balanceElement.textContent = '¥' + currentBalance.toLocaleString('zh-CN', {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2
+                    });
+                }
+            }, 1000);
+
+            // 添加页面切换时的音效反馈（模拟）
+            let lastClickTime = 0;
+            document.addEventListener('click', function() {
+                const now = Date.now();
+                if (now - lastClickTime > 100) { // 防抖
+                    // 这里可以添加音效播放代码
+                    console.log('🔊 Click sound');
+                    lastClickTime = now;
+                }
+            });
+        });
+
+        // 添加手势支持（模拟）
+        let startX = 0;
+        let startY = 0;
+
+        document.addEventListener('touchstart', function(e) {
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+        });
+
+        document.addEventListener('touchend', function(e) {
+            const endX = e.changedTouches[0].clientX;
+            const endY = e.changedTouches[0].clientY;
+            const diffX = startX - endX;
+            const diffY = startY - endY;
+
+            // 水平滑动切换页面
+            if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+                const currentPage = document.querySelector('.page.active').id;
+                const pages = ['home', 'transactions', 'add', 'stats'];
+                const currentIndex = pages.indexOf(currentPage);
+                
+                if (diffX > 0 && currentIndex < pages.length - 1) {
+                    // 向左滑，下一页
+                    showPage(pages[currentIndex + 1]);
+                } else if (diffX < 0 && currentIndex > 0) {
+                    // 向右滑，上一页
+                    showPage(pages[currentIndex - 1]);
+                }
+            }
+        });
+
+        // 模拟数据加载效果
+        function simulateDataLoading() {
+            const loadingElements = document.querySelectorAll('.fade-in');
+            loadingElements.forEach((element, index) => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    element.style.transition = 'all 0.5s ease';
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        }
+
+        // 页面加载完成后执行动画
+        window.addEventListener('load', function() {
+            setTimeout(simulateDataLoading, 500);
+        });
+    </script>
+</body>
+</html>
