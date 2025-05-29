@@ -80,3 +80,4 @@ Linux运维是一个需要多领域知识的职业，涵盖系统、网络、存
 ## 安装最新的软件(使用 snap)
 
 sudo snap install
+
