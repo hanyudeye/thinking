@@ -1,6 +1,5 @@
 git clone --single-branch https://github.com/gpakosz/.tmux.git
 
-
 ## 教程也在上面的链接
 
 1. 使用 Ctrl+a 作为 prefix
