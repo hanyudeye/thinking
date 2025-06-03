@@ -131,6 +131,8 @@ let decodedString=atob(base64string);
 // console.log(atob('aHR0cDovL2NwLnU5dW4uY29tL2FmZi5waHA/YWZmPTk3MQo='))
 
 var val = "test";
-console.log("output is " + (val === "Test") ? "123" : "456")
-console.log((val === "Test") ? "123" : "456")
-console.log("output is false");
+// console.log("output is " + (val === "Test") ? "123" : "456")
+// console.log((val === "Test") ? "123" : "456")
+// console.log("output is false");
+
+console.log("hello")
