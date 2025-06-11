@@ -8,6 +8,9 @@
 创建 rime 缩写键
 1. 描述这个文件
 
+把百强项目都浏览观察下
+https://github.com/EvanLi/Github-Ranking?tab=readme-ov-file#most-stars
+
 todo 缩减文章文字，整理笔记本
 
 todo 使用空瓶子，电线制作手工。
