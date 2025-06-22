@@ -50,6 +50,10 @@
     - [主从复制](#主从复制)
     - [读写分离](#读写分离)
   - [参考资料](#参考资料)
+- [Mysql 数据变动备份](#mysql-数据变动备份)
+  - [1. 使用内部 事件调度器 (EVENT) 定时备份](#1-使用内部-事件调度器-event-定时备份)
+  - [2. 使用操作系统的 定时任务（例如 cron）](#2-使用操作系统的-定时任务例如-cron)
+  - [3. 创建 trigger 进行跟踪触发](#3-创建-trigger-进行跟踪触发)
 <!-- GFM-TOC -->
 
 
@@ -444,3 +448,50 @@ MySQL 提供了 FROM_UNIXTIME() 函数把 UNIX 时间戳转换为日期，并提
 - [How Sharding Works](https://medium.com/@jeeyoungk/how-sharding-works-b4dec46b3f6)
 - [大众点评订单系统分库分表实践](https://tech.meituan.com/dianping_order_db_sharding.html)
 - [B + 树](https://zh.wikipedia.org/wiki/B%2B%E6%A0%91)
+
+# Mysql 数据变动备份
+
+## 1. 使用内部 事件调度器 (EVENT) 定时备份
+
+1. 启用事件调度器
+  
+```
+SET GLOBAL event_scheduler = ON;
+
+```
+2. 创建一个定时备份的事件。例如，每天凌晨 3 点备份数据库：
+```
+CREATE EVENT backup_event
+ON SCHEDULE EVERY 1 DAY
+STARTS '2025-06-23 03:00:00'
+DO
+  -- 备份数据库
+  SYSTEM 'mysqldump -u your_user -pYourPassword your_database > /path_to_backup/backup_$(date +\%F).sql';
+
+```
+## 2. 使用操作系统的 定时任务（例如 cron）
+
+1. 编辑 **crontab**  文件
+```
+crontab -e
+```
+2. 添加任务
+```
+0 3 * * * mysqldump -u your_user -pYourPassword your_database > /path_to_backup/backup_$(date +\%F).sql
+```
+
+
+## 3. 创建 trigger 进行跟踪触发
+> 不推荐，备份太频繁
+
+```sql
+CREATE TRIGGER `trigger1`
+AFTER UPDATE ON `tablename`
+FOR EACH ROW
+    INSERT INTO history_table
+    VALUES
+    (
+        NEW.field1,
+        NEW.field2
+    );
+  ```
