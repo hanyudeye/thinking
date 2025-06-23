@@ -1,4 +1,7 @@
+todo pc 订阅工具
 
+todo> 订阅 英文 rss
+https://github.com/plenaryapp/awesome-rss-feeds?tab=readme-ov-file
 
 ## 自己的缺点：
 
