@@ -1,8 +1,6 @@
 # TODO 
-todo pc 订阅工具
-todo> 订阅 英文 rss
-https://github.com/plenaryapp/awesome-rss-feeds?tab=readme-ov-file
 
+新闻聚合,文生图发布
 
 
 服务器 7月到期,注意
