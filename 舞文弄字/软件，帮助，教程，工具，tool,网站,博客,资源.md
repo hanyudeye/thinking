@@ -1,4 +1,16 @@
 
+# 软件使用
+## git
+
+### git windows 下文件名显示中文
+
+``` sh
+# 关闭 Git 对文件名的引号转义，保证文件名以原始方式显示
+ git config --global core.quotepath off
+ # 设置 Git 使用 UTF-8 编码来处理提交信息和文件名
+ git config --global i18n.commitencoding utf-8
+```
+
 ## 生产力
 
 ### 窗口管理

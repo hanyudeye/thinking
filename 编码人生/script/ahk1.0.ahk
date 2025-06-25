@@ -1,9 +1,23 @@
+; 使用 3 个键控制，^; 作为前缀键
+^;::
+Input, key1, L1 T1
+if (key1 = "a") {
+        Run, notepad.exe
+}
+return
+
+
+; 把 CapsLock 定义为 Ctrl 键
 CapsLock::Ctrl
+
+
 !j:: Send {Down}
 !k:: Send {Up}
 !h:: Send {Left}
 !l:: Send {Right}
-!d::  ; Alt + D
+
+; Alt + D 定义为 delete 键
+!d::  
 Send, {Delete}  ; 模拟按下 Delete 键
 return
 
