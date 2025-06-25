@@ -579,3 +579,4 @@ docker rmi <image_name>
 ``` sh
 docker build  -f ubuntu.dockerfile . -t zhonger/ubuntu:latest
 ```
+
