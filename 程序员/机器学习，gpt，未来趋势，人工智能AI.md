@@ -1,13 +1,5 @@
 
 
-# gpt  语言，文字生成
-
-搜索引擎的rank算法保证了最准确、最有用、最权威的信息出现在最前面
-
-但搜索引擎不懂语义，所以要多次改变搜索描述反复更正。
-
-gpt 理解语义，还了解上下文，，
-
 # 机器学习
 
 http://scikit-learn.org/stable/user_guide.html
@@ -15,6 +7,16 @@ http://scikit-learn.org/stable/user_guide.html
 Anaconda（https://store.continuum.io/cshop/anaconda/）
 
  模型 相当于 学习方法，有的死记硬背，有的理解记忆，学习后掌握的知识是不同的，而且各个学科要用不同的学习方法
+
+## 样本数据集
+
+
+## 监督学习
+
+### 分类
+
+###  回归 : 预测一个连续值
+
 
 ## 准备
 
@@ -37,6 +39,14 @@ Anaconda（https://store.continuum.io/cshop/anaconda/）
 3. 选择优化器
 4. 编写训练循环
 5. 监控训练过程
+
+# gpt  语言，文字生成
+
+搜索引擎的rank算法保证了最准确、最有用、最权威的信息出现在最前面
+
+但搜索引擎不懂语义，所以要多次改变搜索描述反复更正。
+
+gpt 理解语义，还了解上下文，，
 
 # 模型微调可视化UI
 
@@ -234,3 +244,88 @@ https://github.com/hiyouga/LLaMA-Factory
 所以这些苏超比赛短视频，大多是：
 👉 **网上找高清源** → **快速剪辑精彩瞬间** → **配简单语音** → **竖屏+大字标题** → **一键发抖音**
 重复操作，越快发越能蹭到比赛热度。
+
+# python 库
+
+## mglearn
+mglearn 是一个用于机器学习教学的 Python 库，主要用于展示和说明机器学习概念和算法的工作原理。它是由著名的机器学习专家 Andreas C. Müller 和 Sarah Guido 开发的，特别适用于机器学习入门教程和学习过程中可视化和数据探索。
+
+ `mglearn` 是一个用于机器学习教学的 Python 库，主要用于展示和说明机器学习概念和算法的工作原理。它是由著名的机器学习专家 **Andreas C. Müller** 和 **Sarah Guido** 开发的，特别适用于机器学习入门教程和学习过程中可视化和数据探索。
+
+### 主要功能和特点：
+
+1. **数据集生成**：
+   `mglearn` 提供了多个用于机器学习示例的数据集，帮助学习者理解机器学习算法的工作原理。这些数据集通常用于示例和可视化，帮助展示不同算法的效果。
+
+   ```python
+   import mglearn
+   X, y = mglearn.datasets.make_forge()
+   ```
+
+2. **可视化**：
+   `mglearn` 提供了非常方便的可视化工具，帮助用户直观地展示机器学习算法的表现，比如分类边界、决策树的结构、聚类的效果等。
+
+   例如，绘制分类问题的决策边界：
+   ```python
+   import mglearn
+   import matplotlib.pyplot as plt
+
+   mglearn.plots.plot_2d_classification(classifier, X, y)
+   plt.show()
+   ```
+
+3. **教学工具**：
+   `mglearn` 主要目标是为了教学，它与**《Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow》**这本书一起使用。这本书涵盖了机器学习和深度学习的许多内容，`mglearn` 在书中提供了代码示例和可视化，帮助理解概念。
+
+4. **模型可视化**：
+   `mglearn` 还包括了一些专门用于可视化不同机器学习算法行为的功能。例如，决策树的可视化：
+   
+   ```python
+   mglearn.plots.plot_tree_tree()
+   ```
+
+5. **用于演示算法和概念**：
+   它可以通过一系列简单的示例代码展示机器学习算法的工作方式，从简单的线性回归到复杂的分类模型。它的目的是帮助学习者更好地理解这些算法，并为更复杂的实际问题打下基础。
+
+### 安装
+
+如果你还没有安装 `mglearn`，可以通过 pip 安装：
+
+```bash
+pip install mglearn
+```
+
+### 示例
+
+下面是一个使用 `mglearn` 可视化分类数据集的示例：
+
+```python
+import mglearn
+import matplotlib.pyplot as plt
+
+# 生成一个简单的分类数据集
+X, y = mglearn.datasets.make_forge()
+
+# 可视化数据点
+mglearn.discrete_scatter(X[:, 0], X[:, 1], y)
+
+# 显示图形
+plt.show()
+```
+
+这段代码会生成一个分类数据集，并将其可视化，以便我们能够看到数据点的分布及其标签。
+
+### 总结
+
+`mglearn` 主要用于机器学习的教学和可视化，它提供了简化的数据集、易于理解的可视化工具以及与机器学习算法相关的各种演示。它非常适合于机器学习入门者，特别是配合相关书籍或教程一起使用。
+
+
+
+## pandas
+
+## matplotlib
+
+## numpy
+## IPython
+
+## sklearn

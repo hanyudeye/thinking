@@ -184,6 +184,14 @@ python3 -m venv myenv
 ``` sh
 cd ~/your_project && source venv/bin/activate
 ```
+ ## pip 
+
+``` sh
+# 列出所关联的 Python 环境中已安装的所有包
+pip list
+# 显示特定包的详细信息
+pip show <package_name>
+```
 
 # bug 追踪
 ## 设计原则
