@@ -11,6 +11,14 @@
  git config --global i18n.commitencoding utf-8
 ```
 
+## scoop
+
+``` sh
+#ripgrep 文本搜索
+scoop install main/rga
+```
+
+
 ## 生产力
 
 ### 窗口管理
