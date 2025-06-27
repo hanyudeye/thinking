@@ -588,3 +588,6 @@ docker rmi <image_name>
 docker build  -f ubuntu.dockerfile . -t zhonger/ubuntu:latest
 ```
 
+# autokey
+
+给我创建 autokey 脚本，按Windows + A 按键 可以 显示或隐藏 edge 浏览器窗口
