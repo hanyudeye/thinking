@@ -21,15 +21,7 @@
 
 ### over
 
-# ubuntu 系统 和 其环境下的 功能软件
-
-# windows
-
-## 创建符号链接
-``` powershell
-mklink /D "C:\Users\Alice" "D:\Users\Alice"
-```
-这会创建一个符号链接，使得 Windows 认为用户的文件夹仍然在 C:\Users\Alice，但实际存储位置在 D:\Users\Alice
+# ubuntu 
 
 ## 软件资源 管理
 
@@ -171,6 +163,13 @@ ps aux | grep php-fpm
 tail -f /var/log/php7.4-fpm.log
 
 ```
+# wsl
+
+```sh
+# 在wsl中设置子系统的默认用户
+ubuntu.exe config --default-user {username}
+```
+
 
 # python
 ## 创建虚拟环境
@@ -273,3 +272,18 @@ pip show <package_name>
   ```
 
 通过这个流程，你就能够向服务器发送 JSON 格式的数据了。
+
+# windows
+
+## 创建符号链接
+``` powershell
+mklink /D "C:\Users\Alice" "D:\Users\Alice"
+```
+这会创建一个符号链接，使得 Windows 认为用户的文件夹仍然在 C:\Users\Alice，但实际存储位置在 D:\Users\Alice
+
+# i3wm
+
+## 应用程序在高分辨率屏幕进行2倍缩放
+``` desktop
+Exec=netease-cloud-music --force-device-scale-factor=2 %U
+```

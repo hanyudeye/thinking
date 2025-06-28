@@ -1,6 +1,17 @@
+软件，可以因为不同的行为，分为不同的类型
+如有： 功能软件，游戏软件，编辑软件，浏览软件，行业软件....
 
-# 软件使用
-## git
+# 功能软件
+
+## git  [历史追踪/项目管理]
+### 分支管理
+``` sh
+# 删除远程分支
+git branch -r -d branch-name
+git push origin :branch-name
+# 删除本地分支
+git branch -D origin/branch-name
+```
 
 ### git windows 下文件名显示中文
 
@@ -11,157 +22,61 @@
  git config --global i18n.commitencoding utf-8
 ```
 
-## scoop
+## scoop [软件管理]
 
 ``` sh
 #ripgrep 文本搜索
 scoop install main/rga
 ```
 
+## i3wm，tmux [窗口管理] 
 
-## 生产力
+每个软件占用窗口的一部分
+ 
+## autokey/autohotkey [快捷键管理]
 
-### 窗口管理
-i3wm 是一块分割的玻璃板，各个屏幕都可以在玻璃板中移动。
-tmux
+## 翻译 [特定行业]
 
-创建 rime 缩写键
-1. 描述这个文件
+## yt-dlp [视频/字幕下载]
 
-### 1. 多添加快捷键
-
-光标移动: 使用 autokey
-
-### 翻译
-
-### 浏览器快速使用某种功能
-
-学习浏览器的方法
-
-1. 搜索 ctrl+l
-2. 切换标签 o
-
-# 工具
-## tmux
-
-git clone --single-branch https://github.com/gpakosz/.tmux.git
-
-1. 使用 Ctrl+a 作为 prefix
-
-This configuration uses the following bindings:
-
-<prefix> e opens the .local customization file copy with the editor defined by the EDITOR environment variable (defaults to vim when empty)
-
-<prefix> r reloads the configuration
-
-C-l clears both the screen and the tmux history
-
-<prefix> C-c creates a new session
-
-<prefix> C-f lets you switch to another session by name
-
-<prefix> C-h and <prefix> C-l let you navigate windows (default <prefix> n is unbound and <prefix> p is repurposed)
-
-<prefix> Tab brings you to the last active window
-
-<prefix> - splits the current pane vertically
-
-<prefix> _ splits the current pane horizontally
-
-<prefix> h, <prefix> j, <prefix> k and <prefix> l let you navigate panes ala Vim
-
-<prefix> H, <prefix> J, <prefix> K, <prefix> L let you resize panes
-
-<prefix> < and <prefix> > let you swap panes
-
-<prefix> + maximizes the current pane to a new window
-
-<prefix> m toggles mouse mode on or off
-
-<prefix> U launches Urlscan (preferred) or Urlview, if available
-
-<prefix> F launches Facebook PathPicker, if available
-
-<prefix> Enter enters copy-mode
-
-<prefix> b lists the paste-buffers
-
-<prefix> p pastes from the top paste-buffer
-
-<prefix> P lets you choose the paste-buffer to paste from
-
-Additionally, copy-mode-vi matches my own Vim configuration
-
-Bindings for copy-mode-vi:
-
-v begins selection / visual mode
-C-v toggles between blockwise visual mode and visual mode
-H jumps to the start of line
-L jumps to the end of line
-y copies the selection to the top paste-buffer
-Escape cancels the current operation
-It's also possible to preserve the tmux stock bindings by setting the tmux_conf_preserve_stock_bindings variable to true in your .local customization file copy.
-
-
-##  youtube 字幕下载
-
+``` sh
+# youtube 字幕下载
 yt-dlp --write-sub --sub-lang en VIDEO_URL
+m3u8视频下载  windows 下是 N_m3u8DL-CLI
+b 站视频下载 downKyi
+```
 
-## ollama Web UI 控制端
-
-浏览器插件： Page Assist - 本地 AI 模型的 Web UI
-
-##  查找工具 (按文件名)
+##  everything/启动器/grep [应用/文件查找工具]
 
 - Everything: Windows下强大的文件搜索工具
 - Listary:  Windows 下的文件搜索和应用启动工具
 - ulauncher: Linux 下具有同Listary 相似功能的工具
 
-## 资源下载
-
-- m3u8视频下载  windows 下是 N_m3u8DL-CLI
-- b 站视频下载 downKyi
-
-## 激活工具
+## 激活工具、破解
 
 - AdobeGenP : Windows 平台的 Adobe 产品激活
 
-## 分离人声
+## 分离人声 [行业软件]
 
 - Ultimate vocal remover gui
 
-## 文本编辑
-
-### VIM 配置
-
-```.vimrc
-inoremap kj <ESC>   kj 按键绑定<ESC> 键
-```
-
-> 在 windows 中是 _vimrc 文件
-
-## 在wsl中设置子系统的默认用户
-
-```sh
-ubuntu.exe config --default-user {username}
-```
-
-## 应用程序在高分辨率屏幕进行缩放
-
-Exec=netease-cloud-music --force-device-scale-factor=2 %U
-
-## 远程拷贝
-
+## 远程拷贝 [文件远程操作]
+``` sh
 scp /path/to/file user@server:/path/to/destination # Copy file from local to server
 
 scp /home/zhao/data/test.txt zw@10.150.69.247: /C:/Users/zw/Desktop/summary
 或
 scp /home/zhao/data/test.txt zw@10.150.69.247: /C:/Users/zw/Desktop/summary/tt.txt
-
-## ssh
-
 ```
-$ ssh-keygen -t rsa -C "youremail@example.com"
+## ssh [登录验证]
+
+密钥： 就是一串 看不懂的东西，用来验证用。
+> 就像密码一样，用来核实身份用。
+> 公钥和私钥验证：用公钥签名，私钥进行解密
+
+``` sh
+# 生成密钥
+ssh-keygen -t rsa -C "youremail@example.com"
 ```
 要用 ssh 无密码登录，要把本地公钥 ~/.ssh/id_rsa.pub 配置到服务器 的 ~/.ssh/authorized_keys 认证文件中，服务器才能接受您的认证。
 
@@ -169,90 +84,83 @@ $ ssh-keygen -t rsa -C "youremail@example.com"
 
 一个桌面应用（支持 Windows 和 Mac），基于 FFmpeg 进行直播录制，覆盖40+国内外主流直播平台
 
-## [pdf-craft](https://github.com/oomol-lab/pdf-craft)
+## [pdf-craft](https://github.com/oomol-lab/pdf-craft) [行业软件，图像识别]
 
 命令行 Python 工具，用来将扫描的 PDF 文件转为 Markdown 和 EPUB，并通过 AI 进行 OCR。
 
-## 视频
+## 视频资源 [视频网站]
 
 https://www.pexels.com/zh-cn/search/videos/{query}
 
-## 图片
-
-https://cn.bing.com/images/search?q={query}&form=HDRSC2&first=1
-https://www.pexels.com/zh-cn/search/{query}
-
-## 图片去背景
-https://remove.photos/zh-cn/
-
-## 白板
-
-https://excalidraw.com/
-
-## 查找相似图片
-https://tineye.com/how
-https://www.google.com/
-
-## 什么值得买
-
-https://search.smzdm.com/?c=faxian&s={Query}&order=time&v=b
-
-## github
-
-https://github.com/search?q={query}
-
-## bilibili
-
 https://search.bilibili.com/all?keyword={query}
-
-## 有道词典
-
-https://youdao.com/result?word={query}&lang=en
-
-## 电影下载
 
 https://4khdr.cn/
 https://www.aliyundrive.com/s/McXw86wJaBU/folder/649489ae5421e049b19242feb641b7415488a43e
 https://www.cilixiong.org/
 
-## 电影字幕下载
-https://yts.mx/
 
-## 字幕转换
-https://converter.app/cn/vtt-srt/
-
-## 看电视
 网络电视台  https://tv.garden/
+电影字幕下载 : https://yts.mx/
+字幕转换 https://converter.app/cn/vtt-srt/
 
-## tts 文本转语音
+## 图片 [图片网站]
+
+https://cn.bing.com/images/search?q={query}&form=HDRSC2&first=1
+https://www.pexels.com/zh-cn/search/{query}
+
+## 图片去背景 [图像处理]
+https://remove.photos/zh-cn/
+
+## 白板 [笔记软件]
+
+https://excalidraw.com/
+
+## 查找相似图片 [图片网站，相似图片查找]
+https://tineye.com/how
+https://www.google.com/
+
+## 什么值得买 [购物比对网站]
+
+https://search.smzdm.com/?c=faxian&s={Query}&order=time&v=b
+
+## github [开源仓库]
+
+https://github.com/search?q={query}
+
+## tts 文本转语音 [行业软件]
 
 https://ai.bingal.com/cn/ai-tts/
 
-## 音效下载
+## 音效下载 [行业软件]
 
 https://sc.chinaz.com/yinxiao/
 
-## 二维码
+## 小工具
 
-https://cli.im/
+二维码 https://cli.im/
+IP 地址  https://tool.lu/ip/
+站长之家 https://tool.chinaz.com/
 
-## IP 地址
+[HTML to JSX](https://transform.tools/html-to-jsx)
+[文件或文本共享Pastebin](https://paste.c-net.org/)
+[Scoop - Apps](https://scoop.sh/#/apps)
+https://scoop.sh/#/apps?q={query}
 
-https://tool.lu/ip/
+[云鸽 - 文件传输助手网页版](https://yunge.in/)
 
-## 站长之家
+免登录文件中转站
+https://www.airportal.cn/
+https://www.wenshushu.cn/
 
-https://tool.chinaz.com/
 
-# AI
 
-## huggingface
+## huggingface [大模型、人工智能]
+
 https://huggingface.co/
 
-# 社交媒体创作
+## 短视频 [视频网站，社交媒体]
 
-## 快手
-https://cp.kuaishou.com/profile
+[快手]https://cp.kuaishou.com/profile
 
 [Facebook](https://www.facebook.com/)
 
@@ -266,40 +174,26 @@ https://cp.kuaishou.com/profile
 
 [创作中心 - 哔哩哔哩弹幕视频网 - ( ゜- ゜)つロ 乾杯~](https://member.bilibili.com/platform/upload-manager/article)
 
-# 小工具
 
-[HTML to JSX](https://transform.tools/html-to-jsx)
+## 数学 ,物理，英语 [教学网站]
 
-[文件或文本共享Pastebin](https://paste.c-net.org/)
-
-[Scoop - Apps](https://scoop.sh/#/apps)
-https://scoop.sh/#/apps?q={query}
-
-[云鸽 - 文件传输助手网页版](https://yunge.in/)
-
-### 数学
-
+数学
 [Desmos | 图形计算器](https://www.desmos.com/calculator?lang=zh-CN)
-
 [计算器套件 - GeoGebra](https://www.geogebra.org/calculator)
-
 [Wolfram|Alpha：计算型智能](https://www.wolframalpha.com/)
 
-### 物理
-
+物理
 [Filter - PhET Simulations](https://phet.colorado.edu/en/simulations/filter?subjects=physics&type=html)
 
-### 学习外语
-
+学习外语
 [🌐 italki - 最好的语言学习应用，有认证的导师和小组课程](https://www.italki.com/zh-cn)
 
 [Learn with the best online language tutors - Preply](https://preply.com/)
-
 [Notion – The all-in-one workspace for your notes, tasks, wikis, and databases.](https://inky-fold-a31.notion.site/a658257f925d45a8a0a4c3422dad1ddb?p=1f27423904b542aa91f41288e13b0ec5&pm=s)
 
 [Notion笔记](https://www.notion.so/c1795493060d4edc9829f2cbcfa3d83f)
 
-### 投资
+## 投资 [金融网站]
 
 [财报SEC.gov | Home](https://www.sec.gov/)
 
@@ -310,13 +204,18 @@ https://scoop.sh/#/apps?q={query}
 [Innomad一挪迈](https://innomad.io/)
 [吕小荣](https://mednoter.com/)
 
-### 版权
+## 版权 [行业网站，版权]
 
 [CC Search Portal](https://search.creativecommons.org/)
 
+## 名人名言 [知识分享网站]
+
 [名人名言Inspirational Quotes at BrainyQuote](https://www.brainyquote.com/)
 
-### 英文
+## 生活经验 [日常实用网站]
+[有用经验](https://yyjingyan.com/)
+
+## 英文 [行业网站]
 
 ### 招聘
 
@@ -337,102 +236,6 @@ https://scoop.sh/#/apps?q={query}
 [Arts & Crafts, Frames, Seasonal Décor | DIY & Inspiration | Michaels](https://www.michaels.com/)
 
 [SparkFun Electronics](https://www.sparkfun.com/)
-
-### 可靠性高的媒体
-
-[Home - BBC News](https://www.bbc.com/news)
-
-[Reuters | Breaking International News & Views](https://www.reuters.com/)
-
-[NPR - Breaking News, Analysis, Music, Arts & Podcasts : NPR](https://www.npr.org/)
-
-[Associated Press News: Breaking News, Latest Headlines and Videos | AP News](https://apnews.com/)
-
-[布客新知](https://github.com/ixinzhi)
-
-[Proposals](https://www.upwork.com/nx/proposals/1852537563588263937?success)
-
-[有用经验](https://yyjingyan.com/)
-
-[Product Hunt – The best new products in tech.](https://www.producthunt.com/)
-
-[澳大利亚签证信息-签证PTE分数要求-培生PTE考试中国官网](https://www.pearsonpte.com.cn/destination-australia/visas)
-
-[小白必读：如何快速入门PTE——官方教材篇 - 知乎](https://zhuanlan.zhihu.com/p/60464453)
-
-[蜜罐网 --- Honeypot.net](https://honeypot.net/)
-
-[001 - Singular & Plural Nouns (cup→cups) 1 - Beginning English Lesson - Basic English Grammar - YouTube](https://www.youtube.com/watch?v=Rp3LqMYBhkQ&list=PL2621D8F6B6B29B7B)
-
-[(2) X 上的 Mr 影子：“我也想要吉卜力风格的照片，但我又不想给OpenAI 钱，贫穷限制了我的欲望” / X](https://x.com/lanyard285634/status/1905255758523965622/photo/1)
-
-[Raycast快捷链接参考 | Goalonez Blog](https://blog.goalonez.site/blog/Raycast%E5%BF%AB%E6%8D%B7%E9%93%BE%E6%8E%A5%E5%8F%82%E8%80%83.html)
-
-[Microsoft Edge 的新增功能](https://www.microsoft.com/zh-cn/edge/update/135?form=MT00YD&channel=stable&version=135.0.3179.54&cs=3067342595)
-
-[Z-Library – 世界上最大的电子图书馆。自由访问知识和文化。](https://zh.101ml.sbs/)
-
-[安娜的档案](https://zh.annas-archive.li/)
-
-[GIMP - 💘 Thank you for your support! 💌](https://www.gimp.org/downloads/thanks.html)
-
-[Follow](https://app.follow.is/discover)
-
-[巨量学职业认证\_营销职业认证\_电商运营营销师-巨量学官网](https://school.life-partner.cn/exam/7064910557379302295?transactionId=7472640005777687347)
-
-[3.听力篇](https://byoungd.github.io/English-level-up-tips/#/part-1/3-listening)
-
-[知名BT下载站 rarbg.to 宣布关闭网站 - 知乎](https://zhuanlan.zhihu.com/p/633874030)
-
-[Indie Hackers: Work Together to Build Profitable Online Businesses](https://www.indiehackers.com/)
-
-[富友作业平台](https://8.fuioupay.com/main.fuiou##)
-
-[新闻极简主义 — 只有重要新闻](https://www.newsminimalist.com/)
-
-[https://life.douyin.com/h5/download](https://life.douyin.com/h5/download)
-
-[aming.xyz/smallgames/](edge://newtab/)
-
-[阿明](http://aming.xyz/blog/)
-
-[goal/todo.md at master · hanyudeye/goal · GitHub](https://github.com/hanyudeye/goal/blob/master/todo.md)
-
-
-## AI 数字人生成工具
-
-https://github.com/modstart-lib/aigcpanel
-
-
-## 免费的 AI 挡脸工具，将脸部替换成 Emoji 符号
-https://emojimyface.com/
-
-## 免费的 AI 字幕文件翻译
-
-https://aisubtranslate.top/
-
-## AI 生成表情包
-
-![](images/2025-04-14-17-23-01.png)
-
-提示词是："请把照片里面的角色画成 Q 版，并用12个动作和文字做成表情包。"
-
-## 模糊图片变清晰  
-
-https://github.com/upscayl/upscayl?tab=readme-ov-file
-
-## 文生成图工具  
-https://designer.microsoft.com/
-
-## 免登录文件中转站
-https://www.airportal.cn/
-https://www.wenshushu.cn/
-
-## 好博客
-[投资与生活哲理]https://mercurychong.blogspot.com/
-
-## 免费 v2ray,clash 节点的获取方式
-https://github.com/MeeGooBoo/2025/blob/main/6/18/2/2025-6-18.md
 
 
 # Docker 虚拟机
@@ -588,6 +391,3 @@ docker rmi <image_name>
 docker build  -f ubuntu.dockerfile . -t zhonger/ubuntu:latest
 ```
 
-# autokey
-
-给我创建 autokey 脚本，按Windows + A 按键 可以 显示或隐藏 edge 浏览器窗口
