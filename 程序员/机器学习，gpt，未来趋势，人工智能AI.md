@@ -8,6 +8,10 @@ Anaconda（https://store.continuum.io/cshop/anaconda/）
 
  模型 相当于 学习方法，有的死记硬背，有的理解记忆，学习后掌握的知识是不同的，而且各个学科要用不同的学习方法
 
+## 深度学习架构
+
+![深度学习架构](images/deep1.png)
+
 ## 样本数据集
 
 
@@ -47,6 +51,10 @@ Anaconda（https://store.continuum.io/cshop/anaconda/）
 但搜索引擎不懂语义，所以要多次改变搜索描述反复更正。
 
 gpt 理解语义，还了解上下文，，
+
+# 大模型API价格，gpt 价格，llm 价格
+
+https://chenshake.com/2025/03/01/all-model-api-price/
 
 # 模型微调可视化UI
 

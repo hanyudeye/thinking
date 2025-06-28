@@ -11,6 +11,14 @@
  git config --global i18n.commitencoding utf-8
 ```
 
+## scoop
+
+``` sh
+#ripgrep 文本搜索
+scoop install main/rga
+```
+
+
 ## 生产力
 
 ### 窗口管理
@@ -580,3 +588,6 @@ docker rmi <image_name>
 docker build  -f ubuntu.dockerfile . -t zhonger/ubuntu:latest
 ```
 
+# autokey
+
+给我创建 autokey 脚本，按Windows + A 按键 可以 显示或隐藏 edge 浏览器窗口

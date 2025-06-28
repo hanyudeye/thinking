@@ -34,4 +34,19 @@ iris_dataset =load_iris()
 # DESCR 键对应的值是数据集的简要说明。
 # 输出描述的前面部分
 # print(iris_dataset['DESCR'][:193] + "\n...")
-print(iris_dataset['DESCR'] + "\n...")
+# print(iris_dataset['DESCR'] + "\n...")
+
+# 波士顿房价数据集，在version 1.0.2 之后被移除
+# from sklearn.datasets import load_boston
+# boston_dataset = load_boston()
+
+
+# 乳腺癌数据集
+from sklearn.datasets import load_breast_cancer
+breast_cancer_dataset = load_breast_cancer()
+# print("keys of breast_cancer_dataset:\n{}".format(breast_cancer_dataset.keys()))
+print("Shape of cancer data: {}".format(breast_cancer_dataset.data.shape))
+# Out[5]:
+# Shape of cancer data: (569, 30)
+# 这个数据集共包含 569 个数据点，每个数据点有 30 个特征
+
