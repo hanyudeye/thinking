@@ -5,3 +5,4 @@ passwd.md
 *.class
 myenv/
 etc/
+/cache/
