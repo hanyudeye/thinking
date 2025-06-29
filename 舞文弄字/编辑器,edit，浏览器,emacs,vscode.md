@@ -55,33 +55,47 @@ inoremap kj <ESC>   kj 按键绑定<ESC> 键
 # vscode 编辑器
 同 emacs 一样，也是配置灵活，但更快更官方
 
-### 配置 折叠文件所有大纲 快捷键
+## 配置 折叠文件所有大纲 快捷键
 
 完成
-
-``` json
-{
-		"key": "z m",
-		"command": "editor.foldAll",
-		"when": "editorTextFocus && foldingEnabled"
-	},
-	{
-		"key": "ctrl+k ctrl+0",
-		"command": "-editor.foldAll",
-		"when": "editorTextFocus && foldingEnabled"
-	},
-	{
-		"key": "z o",
-		"command": "editor.unfoldAll",
-		"when": "editorTextFocus && foldingEnabled"
-	},
-	{
-		"key": "ctrl+k ctrl+j",
-		"command": "-editor.unfoldAll",
-		"when": "editorTextFocus && foldingEnabled"
-	}
+``` js
+// settings.json
+"vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "z",
+                "c"
+            ],
+            "commands": [
+                "editor.fold"
+            ]
+        },
+        {
+            "before": [
+                "z",
+                "u"
+            ],
+            "commands": [
+                "editor.unfold"
+            ]
+        },
+        {
+            "before": [
+                "z",
+                "m"
+            ],
+            "commands": [
+                "editor.foldAll"
+            ]
+        },
+        {
+            "before": [
+                "z",
+                "o"
+            ],
+            "commands": [
+                "editor.unfoldAll"
+            ]
+        }
+]
 ```
-
-
-
-

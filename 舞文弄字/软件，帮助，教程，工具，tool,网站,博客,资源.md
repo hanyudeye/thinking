@@ -88,6 +88,7 @@ ssh-keygen -t rsa -C "youremail@example.com"
 
 命令行 Python 工具，用来将扫描的 PDF 文件转为 Markdown 和 EPUB，并通过 AI 进行 OCR。
 
+# 网站
 ## 视频资源 [视频网站]
 
 https://www.pexels.com/zh-cn/search/videos/{query}
@@ -238,7 +239,7 @@ https://huggingface.co/
 [SparkFun Electronics](https://www.sparkfun.com/)
 
 
-# Docker 虚拟机
+# Docker 虚拟机 
 
 提供隔离的环境
 
@@ -379,15 +380,4 @@ docker rmi <image_name>
      ```
 5. **点击 "Apply & Restart"** 以应用更改并重启 Docker。
 
-
-# Nvidia Docker
-
-# 利用Docker搭建私有云盘
-
-使用的是一个开源的云存储方案OwnCloud来搭建私有云盘
-
-# 创建镜像
-``` sh
-docker build  -f ubuntu.dockerfile . -t zhonger/ubuntu:latest
-```
 
