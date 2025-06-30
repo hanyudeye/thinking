@@ -2,7 +2,6 @@
 # BASICS
 # *****************************************************************************
 
-
 redis-server /path/redis.conf        # start redis with the related configuration file
 redis-cli                            # opens a redis prompt
 sudo systemctl restart redis.service # Restart Redis
@@ -11,7 +10,6 @@ sudo systemctl status redis          # Check Redis status
 # *****************************************************************************
 # STRINGS
 # *****************************************************************************
-
 
 APPEND key value                  # append a value to a key
 BITCOUNT key [start end]          # count set bits in a string
