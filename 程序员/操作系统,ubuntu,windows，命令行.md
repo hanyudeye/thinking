@@ -47,6 +47,24 @@ apt show - 显示软件包细节
 apt edit-sources - 编辑软件源信息
 ```
 
+## 查看打开的端口
+
+``` sh
+ss -tuln
+-t：显示 TCP 端口
+-u：显示 UDP 端口
+-l：仅显示监听（listening）状态
+-n：显示数字（不解析域名/服务名）
+
+# 快速看所有监听端口 + 进程名
+sudo ss -tulpn
+```
+
+lsof 查看某个端口被谁占用
+```
+sudo lsof -i :80
+```
+
 ## nginx 网站资源服务软件
 
 ``` sh

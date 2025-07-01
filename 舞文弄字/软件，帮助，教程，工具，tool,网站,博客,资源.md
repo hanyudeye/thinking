@@ -60,7 +60,7 @@ b 站视频下载 downKyi
 
 - Ultimate vocal remover gui
 
-## 远程拷贝 [文件远程操作]
+## Secure Copy 远程拷贝 [文件远程操作]
 ``` sh
 scp /path/to/file user@server:/path/to/destination # Copy file from local to server
 
