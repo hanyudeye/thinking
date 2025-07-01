@@ -4,7 +4,18 @@
 带风扇
 
 https://github.com/debuginn/blog
-使用 子模块 链接到这个 博客，使用 git action 发布博客  
+使用 子模块 链接到这个 博客，使用 git action 发布博客 [先不处理，因为 github 服务器速度够慢 -_- ]  
+
+# 写博客
+
+在 Obsidian 书写草稿：先完成博文的初步内容；
+AI 润色与校对：使用 AI 工具润色博文，并检查错别字；
+上传文章到 GitHub：博客文章存储在 GitHub 仓库，我通过 VSCode 将文章上传；
+替换内部超链接：在 VSCode 中替换超链接，方便文章内链；
+提交代码并合并分支：将文章推送到 GitHub 的 dev 分支，随后提交合并到 main 分支；
+触发 Hugo 编译：利用 Hugo Actions，将文章生成为静态网页；
+部署到 Cloudflare Pages：通过 Cloudflare Pages 获取编译好的网页，并全球分发；
+访问文章：完成以上步骤后，文章即可通过网站访问。
 
 
 所谓终生事业，基本就是要维护10年的事情
