@@ -1,11 +1,15 @@
 # TODO
-安装 windows emacs doom emacs
-https://www.emacswiki.org/emacs/GccEmacs#h5o-13
-
 用笔记录进行学习
-拿走垫子，带 风扇
+
+带风扇
 
 所谓终生事业，基本就是要维护10年的事情
+
+# 每天看2篇订阅文章，2年看完 [终身事业]
+
+
+https://xiaozhou.net/from-spacemacs-to-doom-emacs-2020-03-26.html
+
 
 # 机器学习，商业科技、扩展社交、查找靠谱需求 (兼职餐饮烧烤)看博客 [终生事业]
 
