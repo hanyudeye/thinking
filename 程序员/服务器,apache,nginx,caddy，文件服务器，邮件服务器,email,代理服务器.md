@@ -16,7 +16,7 @@ https://example.com       → 实际走的是端口 443
 ## caddy
 
 ### Caddyfile 配置实例
-把两个 非 https 请求转发到 https
+把两个 非 https 请求转发到 https，端口转发
 ``` json
 https://xiaozhou.net
 {
