@@ -1,3 +1,12 @@
+---
+layout: default
+toc: false
+title: 实现，linux,Unix软件开发,运维，系统管理员，shell
+date:  2025-07-03T05:48:34+08:00
+categories: ['']
+---
+
+
 ## 文件操作 
 ! 给软件 一个 文件操作的功能
 
@@ -13,9 +22,11 @@ cat < a.file > b.file
 
 ## 文件的底层，文件系统
 
-![alt text](./images/apue-filestat-13.png)
+![](../images/apue-filestat-13.png)
+![](images/apue-filestat-13.png)
 
-![alt text](./images/apue-filestat-14.jpg)
+![](../images/apue-filestat-14.jpg)
+![](images/apue-filestat-14.jpg)
 
 stat: 获取与 pathpath 文件名有关的信息结构，存在 buf 中
 文件属性
