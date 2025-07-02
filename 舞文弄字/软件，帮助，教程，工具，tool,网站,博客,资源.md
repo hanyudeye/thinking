@@ -21,6 +21,14 @@ git branch -D origin/branch-name
  # 设置 Git 使用 UTF-8 编码来处理提交信息和文件名
  git config --global i18n.commitencoding utf-8
 ```
+### 子模块操作
+
+``` sh
+# 添加
+git submodule add <子模块仓库地址> <子模块路径>
+
+
+```
 
 ## scoop [软件管理]
 
