@@ -1,3 +1,11 @@
+---
+layout: default
+toc: false
+title: 机器学习，gpt，未来趋势，人工智能AI
+date:  2025-07-03T07:34:37+08:00
+categories: ['']
+---
+
 
 
 # 机器学习

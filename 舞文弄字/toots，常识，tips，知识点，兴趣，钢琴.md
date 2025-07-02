@@ -1,3 +1,13 @@
+---
+layout: default
+toc: false
+title: toots，常识，tips，知识点，兴趣，钢琴
+date:  2025-07-03T07:35:11+08:00
+categories: ['']
+---
+
+
+
 # 注意
 
 自媒体群发软件

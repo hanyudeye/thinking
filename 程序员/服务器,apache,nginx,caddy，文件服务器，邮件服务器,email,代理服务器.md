@@ -1,3 +1,13 @@
+---
+layout: default
+toc: false
+title: 服务器,apache,nginx,caddy，文件服务器，邮件服务器,email,代理服务器
+date:  2025-07-03T07:33:16+08:00
+categories: ['']
+---
+
+
+
 # web服务器，http服务器，富文本服务器 的基本功能
 
 监控协议，监控端口 (http 80，https 443[ 实用SSL 证书])
@@ -6,11 +16,8 @@
 
 返回响应内容到目标客户端
 
-
-
 http://example.com        → 实际走的是端口 80
 https://example.com       → 实际走的是端口 443
-
 
 
 ## caddy
