@@ -8,7 +8,7 @@ categories: ['']
 
 
 # TODO
-用笔记录进行学习
+用笔记录进行学习 - 好的
 
 https://github.com/debuginn/blog
 使用 子模块 链接到这个 博客，使用 git action 发布博客 [先不处理，因为 github 服务器速度够慢 -_- ]  
