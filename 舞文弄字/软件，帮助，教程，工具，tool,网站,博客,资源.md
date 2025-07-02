@@ -26,7 +26,8 @@ git branch -D origin/branch-name
 ``` sh
 # 添加
 git submodule add <子模块仓库地址> <子模块路径>
-
+# 拉取
+git submodule update
 
 ```
 
