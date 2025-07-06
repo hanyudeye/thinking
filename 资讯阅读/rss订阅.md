@@ -1,4 +1,8 @@
+唐巧的博客
+https://blog.devtang.com/2025/01/01/2024-summary/
+
 https://v2ex.com/feed/create.xml
+
 https://v2ex.com/feed/share.xml
 https://v2ex.com/feed/programmer.xml
 
