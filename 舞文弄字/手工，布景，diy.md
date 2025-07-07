@@ -1,3 +1,12 @@
+---
+layout: default
+toc: false
+title: 手工，布景，diy
+date:  2025-07-07T11:01:26+08:00
+draft: true
+---
+
+
 1. 怎么手工做一个风铃，灯光打他上面，足够美观
 
 

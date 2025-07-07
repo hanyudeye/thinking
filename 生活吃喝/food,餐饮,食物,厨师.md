@@ -1,3 +1,12 @@
+---
+layout: default
+toc: false
+title: food,餐饮,食物,厨师
+date:  2025-07-07T11:00:52+08:00
+draft: true
+---
+
+
 ## 微波炉鸡柳，肉串，肉丝
 
 ## 使用微波炉制作花生米

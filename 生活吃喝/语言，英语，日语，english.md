@@ -1,3 +1,12 @@
+---
+layout: default
+toc: false
+title: 语言，英语，日语，english
+date:  2025-07-07T11:00:37+08:00
+draft: true
+---
+
+
 # 日语
 
 ## 添加日语

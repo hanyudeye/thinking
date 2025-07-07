@@ -4,6 +4,7 @@ toc: false
 title: todo,代办，计划，清单，策略，任务，goal，项目，拯救涉恐，副业查询，目标
 date:  2025-07-03T04:42:43+08:00
 categories: ['']
+draft: true
 ---
 
 把自己的实用软件，看有没有推广链接放一放，listary ,下载工具， 请作者喝咖啡
@@ -220,8 +221,6 @@ start writing brief thougths in English and  post them on RED.
 - 积极者可以浏览任务并“申请帮助”
 - 所有数据保存在本地数据库
 - 仅限本机访问，用于测试
-
----
 
 ## 技术选型（适合初学者）：
 
