@@ -1,61 +1,9 @@
-> 参考
-> * [linw7的github](https://github.com/linw7/Skill-Tree/blob/master/Linux%E5%B7%A5%E5%85%B7.md)
-> * 《鸟哥的Linux私房菜》
-
-<br>
-
-<!-- GFM-TOC -->
-* [一.文件管理](#一文件管理)
-    * [1.文件查找：find](#1文件查找find)
-    * [2.文件拷贝：cp](#2文件拷贝cp)
-    * [3.打包解包：tar](#3打包解包tar)
-* [二.文本处理](#二文本处理)
-    * [1.(显示行号)查看文件：nl](#1显示行号查看文件nl)
-    * [2.文本查找：grep](#2文本查找grep)
-    * [3.排序：sort](#3排序sort)
-    * [4.转换：tr](#4转换tr)
-    * [5.切分文本：cut](#5切分文本cut)
-    * [6.拼接文本：paste](#6拼接文本paste)
-    * [7.统计：wc](#7统计wc)
-    * [8.数据处理：sed](#8数据处理sed)
-    * [9.数据处理：awk](#9数据处理awk)
-* [三.性能分析](#三性能分析)
-    * [1.进程查询：ps](#1进程查询ps)
-    * [2.进程监控：top](#2进程监控top)
-    * [3.打开文件查询：lsof](#3打开文件查询lsof)
-    * [4.内存使用量：free](#4内存使用量free)
-    * [5.shell进程的资源限制：ulimit](#5shell进程的资源限制ulimit)
-* [四.网络工具](#四网络工具)
-    * [1.网卡配置：ifconfig](#1网卡配置ifconfig)
-    * [2.查看当前网络连接：netstat](#2查看当前网络连接netstat)
-    * [3.查看路由表：route](#3查看路由表route)
-    * [4.检查网络连通性：ping](#4检查网络连通性ping)
-    * [5.转发路径：traceroute](#5转发路径traceroute)
-    * [6.网络Debug分析：nc](#6网络debug分析nc)
-    * [7.命令行抓包：tcpdump](#7命令行抓包tcpdump)
-    * [8.域名解析工具：dig](#8域名解析工具dig)
-    * [9.网络请求：curl](#9网络请求curl)
-* [五.开发及调试](#五开发及调试)
-    * [1.编辑器：vim](#1编辑器vim)
-    * [2.编译器：gcc和g++](#2编译器gcc和g++)
-    * [3.调试工具：gdb](#3调试工具gdb)
-    * [4.查看依赖库：ldd](#4查看依赖库ldd)
-    * [5.二进制文件分析：objdump](#5二进制文件分析objdump)
-    * [6.ELF文件格式分析：readelf](#6elf文件格式分析readelf)
-    * [7.跟踪进程中系统调用：strace](#7跟踪进程中系统调用strace)
-    * [8.跟踪进程栈：pstack](#8跟踪进程栈pstack)
-    * [9.进程内存映射：pmap](#9进程内存映射pmap)
-* [六.其他](#六其他)
-    * [1.终止进程：kill](#1终止进程kill)
-    * [2.修改文件权限：chmod](#2修改文件权限chmod)
-    * [3.创建链接：ln](#3创建链接ln)
-    * [4.显示文件尾：tail](#4显示文件尾tail)
-    * [5.版本控制：git](#5版本控制git)
-    * [6.设置别名：alias](#6设置别名alias)
-<!-- GFM-TOC -->
-
-
-<br>
+---
+layout: default
+toc: true
+title: Linux常用命令
+date:  2025-07-07T13:13:14+08:00
+---
 
 # 一.文件管理
 

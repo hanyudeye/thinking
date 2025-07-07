@@ -1,4 +1,14 @@
+---
+layout: default
+toc: false
+title: Redis
+date:  2025-07-07T13:11:28+08:00
+draft: true
+---
+
+
 # Redis
+
 <!-- GFM-TOC -->
 * [Redis](#redis)
     * [一、概述](#一概述)

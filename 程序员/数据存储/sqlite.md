@@ -1,3 +1,12 @@
+---
+layout: default
+toc: false
+title: sqlite
+date:  2025-07-07T13:11:34+08:00
+draft: true
+---
+
+
 SQLite 是一种轻量级的、基于文件的数据库管理系统，它在许多应用程序中被广泛使用，包括移动应用程序、桌面应用程序和嵌入式设备。以下是一个简单的 SQLite 教程，涵盖了基本的概念和操作：
 
 ### 1. 安装 SQLite

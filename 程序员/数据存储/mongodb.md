@@ -1,3 +1,12 @@
+---
+layout: default
+toc: false
+title: mongodb
+date:  2025-07-07T13:11:12+08:00
+draft: true
+---
+
+
 ## 结构
 
 ![](images/2024-11-04-12-58-36.png)
