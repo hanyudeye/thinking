@@ -499,8 +499,6 @@ netstat [选项]
     -s：打印网络统计数据，包括某个协议下的收发包数量
 ```
 
-![](../pic/linux-netstat-1.png)
-
 * **Active Internet connections（w/o servers）：网络相关的连接**
     - **Recv-Q**：接收队列(已接收还未递交给应用)
     - **Send-Q**：发送队列(接收方未确认的数据)
@@ -548,6 +546,9 @@ sudo tcpdump -i lo tcp port 9877
 ## 8.域名解析工具：dig
 
 ## 9.网络请求：curl
+
+## 另一个用于调查套接字的实用程序: ss
+
 
 # 五.开发及调试
 
