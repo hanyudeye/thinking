@@ -16,7 +16,7 @@
         xmlUrl="http://annevankesteren.nl/feeds/weblog" htmlUrl="https://annevankesteren.nl/" />
       <outline text="Rebecca Murphey - Adventures in JavaScript Development"
         title="Rebecca Murphey - Adventures in JavaScript Development" type="rss"
-        xmlUrl="http://rmurphey.com/atom.xml" htmlUrl="http://rmurphey.github.com/" />
+        xmlUrl="http://rmurphey.com/atom.xml" htmlUrl="https://rmurphey.com/posts/" />
       <outline text="rapid-enlargement 2023" title="rapid-enlargement 2023" type="rss"
         xmlUrl="http://feeds.feedburner.com/456bereastreet"
         htmlUrl="https://rapid-enlargement.info/" />
