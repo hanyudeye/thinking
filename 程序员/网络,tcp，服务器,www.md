@@ -61,4 +61,20 @@ www.example.com.  IN  CNAME  example.com.
 blog.example.com. IN  CNAME  anotherdomain.com.
 ```
 
+## 如果你想让多个域名都指向你的 GitHub Pages 站点，你应该：
+
+1. **在 DNS 里配置多个 CNAME/A 记录** 指向 GitHub 的服务器。
+2. **`CNAME` 文件中只保留一个“主域名”**，作为 GitHub Pages 的绑定域。
+
+> 例如你可以：
+> - DNS 添加：`www.example.com` 和 `alias.example.org` 都指向 GitHub Pages IP 或 `yourusername.github.io`
+> - `CNAME` 文件只写：
+>   ```
+>   www.example.com
+>   ```
+
+这样访问 `alias.example.org` 也会跳转到你的站点，或者你通过域名服务商设置 URL 转发。
+> ! 注意，因为 github 可以配置多个站点了，所以要在github custom 域名里重新设置
+
+
 > 历史记录： www	CNAME	cname.vercel-dns.com 
