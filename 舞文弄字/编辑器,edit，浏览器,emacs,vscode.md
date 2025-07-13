@@ -45,8 +45,6 @@ inoremap kj <ESC>   kj 按键绑定<ESC> 键
 ```
 > 在 windows 中是 _vimrc 文件
 
-
-
 # spacemacs
 ## 小片段，模板，snippet
 
