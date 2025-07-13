@@ -26,7 +26,7 @@
 - [后端技术杂谈](https://rowkey.cn)
 - [zhonger 前端开发者，喜爱运维管理](https://blog.lui8.cn)
 - [依云's Blog](https://blog.lilydjwg.me)
-- [zgh's Blog](https://hundren.github.io)
+<!-- - [zgh's Blog](https://hundren.github.io) [reading] -->
 - [前端工程师 Toweave](https://toweave.github.io)[reading]
 - [MouT.me](https://mout.me)
 - [diss带码](https://dumplingbao.github.io)
