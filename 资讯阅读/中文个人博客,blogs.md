@@ -95,7 +95,7 @@
 - [Est's Blog](https://blog.est.im/)
 - [Wiken](https://www.hehuapei.com)
 - [炸裂志](https://zh.fyi/)
-- [kok的笔记本](https://wocai.de)
+<!-- - [kok的笔记本](https://wocai.de) [reading] -->
 - [搞搞震](https://www.wujingquan.com)
 - [Qt进阶之路-涛哥的博客](https://jaredtao.github.io/)
 - [Fred Wu's Blog](https://persumi.com/u/fredwu)

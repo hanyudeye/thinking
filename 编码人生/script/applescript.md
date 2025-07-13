@@ -1,3 +1,13 @@
+---
+layout: default
+toc: false
+title: applescript
+date:  2025-07-13T05:39:33+08:00
+categories: ['']
+draft: true
+---
+
+
 AppleScript 是苹果公司开发的一种脚本语言，专门用于在 macOS 上自动化和控制各种应用程序和操作系统功能。它的设计目的是让用户能够通过编写脚本来完成重复性任务、跨应用程序的工作流自动化，以及自定义自己的 macOS 使用体验。
 
 ### AppleScript 的特点
