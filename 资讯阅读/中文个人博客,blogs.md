@@ -23,7 +23,7 @@
 - [开源实验室](https://kymjs.com)
 - [技术小黑屋](https://droidyue.com)
 - [vzard's blog](https://vzardlloo.github.io)
-- [后端技术杂谈](https://rowkey.cn)
+<!-- - [后端技术杂谈](https://rowkey.cn) [reading] -->
 - [zhonger 前端开发者，喜爱运维管理](https://blog.lui8.cn)
 - [依云's Blog](https://blog.lilydjwg.me)
 <!-- - [zgh's Blog](https://hundren.github.io) [reading] -->
