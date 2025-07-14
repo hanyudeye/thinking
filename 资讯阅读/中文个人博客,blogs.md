@@ -82,7 +82,7 @@
 - [可能吧](https://kenengba.com/)
 - [鸟窝](https://colobu.com/)
 - [libfeihu Blog](https://feihu.me/blog/)
-- [Nic Lin's Blog](https://blog.niclin.tw/)
+- [Nic Lin's Blog](https://blog.niclin.tw/) [reading]
 - [Halfrost's Field](https://halfrost.com/)
 - [limboy's HQ](https://limboy.me)
 - [sunnyxx的技术博客](https://blog.sunnyxx.com/)
