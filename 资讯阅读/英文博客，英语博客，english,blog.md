@@ -1,0 +1,101 @@
+---
+layout: default
+toc: false
+title: 英文博客，英语博客
+date:  2025-07-12T09:14:49+08:00
+draft: true
+---
+
+# 英文个人博客与开发者博客推荐
+
+## 前端开发 / Web 技术
+
+- [Jonathan Snook](https://snook.ca/)  
+- [Zeldman on Web and Interaction Design](https://zeldman.com/)  
+- [Anne’s Weblog](https://annevankesteren.nl/)  
+- [Rebecca Murphey - Adventures in JavaScript Development](https://rmurphey.com/posts/)  
+- [Adactio: Journal](https://adactio.com/journal/)  
+- [Simurai](http://simurai.com)  
+- [LukeW | Digital Product Design + Strategy](http://www.lukew.com)  
+- [Tab Atkins](http://www.xanthir.com/blog/)   [reading]
+- [Bruce Lawson's personal site](https://brucelawson.co.uk)  
+- [Carrer Blog](http://www.vcarrer.com/)  [reading]
+- [Christian Heilmann](https://christianheilmann.com)  
+- [Mathias Bynens](https://mathiasbynens.be/notes)  
+- [Remy Sharp](https://remysharp.com)  
+- [Nicolas Gallagher — Blog & Ephemera » Code](https://nicolasgallagher.com)  
+- [David Walsh Blog](https://davidwalsh.name)  
+- [Lea Verou’s blog](https://lea.verou.me/)  
+- [Rachel Andrew](http://rachelandrew.co.uk)  
+- [Paul Irish](https://paulirish.com/)  
+- [CSS Wizardry](https://csswizardry.com/)  
+- [Josh Comeau's blog](https://www.joshwcomeau.com/)  
+- [overreacted — A blog by Dan Abramov](https://overreacted.io/)  
+- [Adam Wathan's Blog](https://adamwathan.me/)  
+- [Tania Rascia](https://www.taniarascia.com)  
+- [Bram.us](https://www.bram.us)  
+- [HeydonWorks](https://heydonworks.com)  
+- [CSS { In Real Life }](https://css-irl.info/)  
+- [Sara Soueidan](https://sarasoueidan.com/)  
+- [Max Böck](https://mxb.dev)  
+- [Chris Coyier](https://chriscoyier.net)  
+- [Amelia Wattenberger](https://wattenberger.com)  
+- [Robin Rendle](https://robinrendle.com/)  
+- [Rachel Nabors](http://rachelnabors.com/)  
+- [Brad Frost](https://bradfrost.com)  
+- [Val Head](https://valhead.com)  
+- [Monica Dinculescu](https://meowni.ca/)  
+- [Joel on Software](https://www.joelonsoftware.com)  
+- [Ethan Marcotte](https://ethanmarcotte.com)  
+- [Zell Liew](https://zellwk.com/)  
+- [Jake Archibald's blog](https://jakearchibald.com/)  
+- [Nicky Meuleman](https://nickymeuleman.netlify.com)  
+- [Tobias Ahlin](https://tobiasahlin.com)  
+- [Ben Frain](https://benfrain.com)  
+- [CodyHouse](https://codyhouse.co)  
+- [Frontstuff](https://frontstuff.io)  
+- [Clagnut](https://clagnut.com/)  
+- [Big Medium](https://bigmedium.com/)  
+- [Impressive Webs](https://www.impressivewebs.com/)  
+- [Web Designer Notebook](https://webdesignernotebook.com)  
+- [SpyreStudios](https://spyrestudios.com/)  
+- [typegoodness](https://typegoodness.com)  
+- [Manorisms](https://elijahmanor.com)  
+- [Kilian Valkhof](https://kilianvalkhof.com)  
+- [Boris Smus](https://smus.com)  
+- [HTML + CSS + JavaScript](https://htmlcssjavascript.com)  
+- [Tantek Çelik](https://tantek.com/)  
+- [Matt Wilcox](https://mattwilcox.net/)  
+- [MarcySutton.com](https://marcysutton.com)  
+- [Go Make Things](https://gomakethings.com/articles)  
+- [CSS Ninja](https://ryanseddon.com/)  
+- [Scalable CSS](https://scalablecss.com/)  
+- [Andy Bell Design](https://andy-bell.design/)  
+- [Matthias Ott](http://matthiasott.com)  
+- [Paul Robert Lloyd](https://paulrobertlloyd.com)  
+- [Bramstein.com news](https://www.bramstein.com/)  
+- [Hey Georgie](https://hey.georgie.nu)  
+- [Hey Jovo Design](https://www.jovo.design/writing/)  
+- [Josh Collinsworth](https://joshcollinsworth.com)  
+- [Josh Tumath](https://www.joshtumath.uk/)  
+- [Jim Nielsen’s Blog](https://blog.jim-nielsen.com)  
+- [Sarah Higley](https://sarahmhigley.com/)  
+- [Sia Karamalegos](https://sia.codes)  
+- [Taha Shashtari's Blog](https://tahazsh.com/)  
+- [Sarah Fossheim's Blog](https://fossheim.io/)  
+- [skovy.dev](https://skovy.dev)  
+- [Anthony Fu](https://antfu.me/)  
+- [yuanchuan.dev](https://yuanchuan.dev/)  
+- [swyx's site](https://www.swyx.io)  
+- [Paul Kinlan](https://paul.kinlan.me/)  
+- [Jxnblk](https://jxnblk.com)  
+- [j.Money](https://jmoney.biz/blog/) [reading]
+
+## 设计 / 用户体验 / 可访问性
+
+- [Marco's accessibility blog](https://www.marcozehe.de/)  
+- [Web Axe](http://www.webaxe.org)  
+
+## 综合技术 / 个人成长 / 其他
+
+- [Julia Evans](http://jvns.ca)
