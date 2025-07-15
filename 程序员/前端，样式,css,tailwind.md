@@ -16,11 +16,6 @@ This is a cheatsheet which shows the TailwindCSS classnames paired with the regu
 
 The details used in this cheatsheet have been taken from the 3.0.24 version of the online cheatsheet provided by the website [tailwindcomponents.com](https://tailwindcomponents.com/cheatsheet/). It was then formatted into markdown.
 
-## How to use this list
-- You can search for your desired CSS classes with `Ctrl + F` (or `Cmd + F` on macOS). 
-- Click on a link in the Contents section to take you to the details.
-- Or simply copy/download everything, to use offline.
-
 ## Contents
 [Layout](#layout)
  - [Aspect Ratio](#aspect-ratio)
@@ -5826,7 +5821,19 @@ Defines the algorithm used to lay out table cells, rows, and columns.
 | table-auto  | table-layout: auto;  |       |
 | table-fixed | table-layout: fixed; |       |
 
+# CSS 中的背景图像不透明度
 
+```css
+div {
+  /* Use some images */
+  background-image: 
+      url(image-one.jpg),
+      url(image-two.jpg);
 
----
+  /* Turn down their 'opacity' by blending them into
+     the background color */
+  background-color: rgba(255,255,255,0.6);
+  background-blend-mode: lighten;
+}
 
+```
