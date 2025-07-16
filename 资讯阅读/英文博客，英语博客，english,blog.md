@@ -10,9 +10,9 @@ draft: true
 
 ## 前端开发 / Web 技术
 
-- [Jonathan Snook](https://snook.ca/)
+- [Jonathan Snook](https://snook.ca/) [reading]
 - [Zeldman on Web and Interaction Design](https://zeldman.com/)
-- [Anne’s Weblog](https://annevankesteren.nl/)
+- [Anne’s Weblog](https://annevankesteren.nl/) [reading]
 - [Rebecca Murphey - Adventures in JavaScript Development](https://rmurphey.com/posts/)
 - [Adactio: Journal](https://adactio.com/journal/)
 - [Simurai](http://simurai.com)
@@ -54,7 +54,7 @@ draft: true
 - [Ben Frain](https://benfrain.com)
 - [CodyHouse](https://codyhouse.co)
 - [Frontstuff](https://frontstuff.io)
-- [Clagnut](https://clagnut.com/)
+- [Clagnut](https://clagnut.com/) [博客，设计，网页技术]
 - [Big Medium](https://bigmedium.com/)
 - [Impressive Webs](https://www.impressivewebs.com/)
 - [Web Designer Notebook](https://webdesignernotebook.com)
@@ -100,12 +100,12 @@ draft: true
 
 - [Julia Evans](http://jvns.ca)
 
-## Learning
+## Learning，行为，创业咨询
 
-- [The Decision Lab](https://thedecisionlab.com)
-- [Ness Labs](https://nesslabs.com)
-- [Farnam Street](https://fs.blog)
-- [The Sunday Wisdom](https://coffeeandjunk.substack.com)
+- [The Decision Lab](https://thedecisionlab.com) [科学行为养成，策略实验室，创新咨询公司]
+- [Ness Labs](https://nesslabs.com) [提供内容、辅导、课程和社区，帮助制作者集中精力工作。]
+- [Farnam Street](https://fs.blog)[学习，思维]
+- [The Sunday Wisdom](https://coffeeandjunk.substack.com)[书籍，旅行，股市，健身，语言，应用程序]
 - [Commonplace - The Commoncog Blog](https://commoncog.com/blog/)
 - [Scott H Young](https://www.scotthyoung.com/blog)
 - [Big Think](https://bigthink.com/)

@@ -81,3 +81,18 @@ blog.example.com. IN  CNAME  anotherdomain.com.
 
 
 > 历史记录： www	CNAME	cname.vercel-dns.com 
+
+## 域名解析流程
+
+![](images/2025-07-16-15-28-32.png)
+![](../images/2025-07-16-15-28-32.png)
+> !  似乎有问题啊？
+
+1. 浏览器访问域名时，首先会查询本地的 hosts 文件，看是否有该域名的解析记录（如有则直接使用）。
+2. 如果 hosts 文件没有，则会向本地 DNS 服务器发起查询，DNS 服务器会递归或迭代查询，最终获得域名对应的 IP 地址。
+3. 获得 IP 后，浏览器用该 IP 访问服务器。
+## hosts 文件/localhost [本地服务器，本地域名解析]
+
+
+
+
