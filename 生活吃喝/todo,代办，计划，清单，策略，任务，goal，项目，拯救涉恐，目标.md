@@ -9,8 +9,16 @@ draft: true
 
 # 完成后剪切到 toots 页面
 
+todo: 把生意的本质想明白，啰里啰唆的内容太多，总结删除掉
+
+todo: 熟悉 营销,副业探索，运营，推广,商业，摆摊，广告，销售，兼职，生意，私域.md
+
 todo: 增加自己的编程技能，这个有点掉线了 (用AI 辅助很容易学的)
 学习下前端技术 vue，react ,后端技术 go ,python，node
+
+- todo 这周 把 java 技术学完 [ISLAND](https://youngxhui.top)[学生，java,android,flutter,vim,go]
+
+- 下周把 go 学完
 
 todo: 看我保险 app 里面的状况
 

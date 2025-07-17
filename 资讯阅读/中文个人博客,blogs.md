@@ -99,10 +99,10 @@
 - [搞搞震](https://www.wujingquan.com)
 - [Qt进阶之路-涛哥的博客](https://jaredtao.github.io/)
 - [Fred Wu's Blog](https://persumi.com/u/fredwu)
-- [ISLAND](https://youngxhui.top)
-- [贺叶霜的树](https://blog.heysh.xyz/)
-- [Frytea's Blog](https://www.frytea.com)[计算机技术]
-- [Mohuishou's Blog](https://lailin.xyz) [go,程序员]
+- [ISLAND](https://youngxhui.top)[学生，java,android,flutter,vim,go]
+<!-- - [贺叶霜的树](https://blog.heysh.xyz/)[大学生] -->
+<!-- - [Frytea's Blog](https://www.frytea.com)[计算机技术] -->
+<!-- - [Mohuishou's Blog](https://lailin.xyz) [go,程序员] -->
 - [算法花园](https://xiang578.com) [算法]
 - [1A23 Studio](https://1a23.com/)
 - [Jiajun的编程随想](https://jiajunhuang.com/)
@@ -1279,12 +1279,11 @@
 - [乱象，印迹](http://www.luanxiang.org/blog/)
 - [zhengziying.com](https://zhengziying.com/)
 - [孤岛客 - 几支无用笔，半打有心人。](http://www.huangjiwei.com/blog/)
-- [最好金龟换酒](http://fz0512.com/) [生活，旅游 ，摄影]
 - [Taiwan 2.0 – 展望一個更美好的台灣](https://taiwan.chtsai.org/)
 - [Huiris's Blog](http://huiris.com/)
 - [白板报](http://www.baibanbao.net/)
 - [比目鱼博客：Bimuyu's Blog](http://www.bimuyu.com/blog/)
-- [Elizen - 人间不值得](https://blog.elizen.me/)
+<!-- - [Elizen - 人间不值得](https://blog.elizen.me/) [完成] -->
 - [Neverland – Wherefore art thou?](https://type.cyhsu.xyz/)
 - [杨钦元 - 博客](http://yangqinyuan.com/)
 - [Jarodise – 数字游民部落 – A Chinese Digital Nomad Blog](https://jarodise.com/)
@@ -1293,3 +1292,7 @@
 ## 投资
 
 - [水星投资理财](https://mercurychong.blogspot.com/)
+
+## 时常看看
+
+- [最好金龟换酒](http://fz0512.com/) [生活，旅游 ，摄影，亲子][可以感受幸福，放松心情]
