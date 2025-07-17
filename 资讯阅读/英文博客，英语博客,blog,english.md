@@ -230,7 +230,7 @@ draft: true
 - [overreacted — A blog by Dan Abramov](https://overreacted.io/)  
 - [Adam Wathan's Blog](https://adamwathan.me/)  
 - [Tania Rascia](https://www.taniarascia.com)  
-- [Max Böck](https://mxb.dev)  
+- [Max Böck](https://mxb.dev)  [reading] 
 - [Chris Coyier](https://chriscoyier.net)  
 - [Amelia Wattenberger](https://wattenberger.com)  
 - [Robin Rendle](https://robinrendle.com/)  
