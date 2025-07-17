@@ -48,6 +48,7 @@ inoremap kj <ESC>   kj 按键绑定<ESC> 键
 # spacemacs
 ## 小片段，模板，snippet
 
+
 经常使用的 **小片文字** 可以存储为一个模板，使用时直接嵌入
 
 ``` lisp
@@ -58,6 +59,18 @@ inoremap kj <ESC>   kj 按键绑定<ESC> 键
 
 完成 
 ```
+
+## epub
+
+| ~H~ or ~[~  | Previous chapter    |
+| ~L~ or ~]~  | Next chapter        |
+| ~K/u~       | Scroll up           |
+| ~J/d~       | Scroll down         |
+| ~g t~       | Table of contents   |
+
+Hint: use ~SPC w c~ to center the buffer.
+
+
 
 # vscode 编辑器
 同 emacs 一样，也是配置灵活，但更快更官方
