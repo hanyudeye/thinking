@@ -7,3 +7,4 @@ myenv/
 etc/
 /cache/
 xlsx
+.vscode
