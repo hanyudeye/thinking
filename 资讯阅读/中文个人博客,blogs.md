@@ -98,8 +98,8 @@
 <!-- - [kok的笔记本](https://wocai.de) [reading] -->
 - [搞搞震](https://www.wujingquan.com)
 - [Qt进阶之路-涛哥的博客](https://jaredtao.github.io/)
-- [Fred Wu's Blog](https://persumi.com/u/fredwu)
-- [ISLAND](https://youngxhui.top)[学生，java,android,flutter,vim,go]
+<!-- - [Fred Wu's Blog](https://persumi.com/u/fredwu) -->
+<!-- - [ISLAND](https://youngxhui.top)[学生，java,android,flutter,vim,go] -->
 <!-- - [贺叶霜的树](https://blog.heysh.xyz/)[大学生] -->
 <!-- - [Frytea's Blog](https://www.frytea.com)[计算机技术] -->
 <!-- - [Mohuishou's Blog](https://lailin.xyz) [go,程序员] -->
