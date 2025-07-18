@@ -117,7 +117,7 @@
 - [卢昌海的个人主页](https://www.changhai.org/)
 - [UsubeniFantasy](https://ssshooter.com)
 - [Alexander D Huang's Blog](https://alxddh.github.io)
-- [KAIX.IN](https://kaix.in)
+<!-- - [KAIX.IN](https://kaix.in) -->
 - [朝舞](https://ii74.com)
 - [Matrix67: The Aha Moments](http://www.matrix67.com/blog/)
 - [Livid](https://livid.v2ex.com/)
