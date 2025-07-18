@@ -89,7 +89,7 @@ draft: true
 - [swyx's site](https://www.swyx.io)
 - [Paul Kinlan](https://paul.kinlan.me/)
 - [Jxnblk](https://jxnblk.com)
-- [j.Money](https://jmoney.biz/blog/) [reading]
+<!-- - [j.Money](https://jmoney.biz/blog/) [reading] -->
 
 ## 设计 / 用户体验 / 可访问性
 

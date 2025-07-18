@@ -119,3 +119,28 @@ Hint: use ~SPC w c~ to center the buffer.
         }
 ]
 ```
+
+# cursor
+
+## 解决 CTRL-L 在 Terminal 窗口中调用 "add to chat" 而不是 clear the terminal screen 的 question
+
+> 重新配置键盘快捷键 keybindings.json
+```
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+l",
+        "command": "aichat.newchataction",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "-aichat.newchataction"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.terminal.selectCurrentLine",
+        "when": "terminalFocus"
+    }
+]
+```

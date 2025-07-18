@@ -104,11 +104,11 @@
 <!-- - [Frytea's Blog](https://www.frytea.com)[计算机技术] -->
 <!-- - [Mohuishou's Blog](https://lailin.xyz) [go,程序员] -->
 - [算法花园](https://xiang578.com) [算法]
-- [1A23 Studio](https://1a23.com/)
-- [Jiajun的编程随想](https://jiajunhuang.com/)
-- [贼拉正经的技术博客](https://www.stackoverflow.wiki/blog/)
-- [Lenix Blog](https://blog.p2hp.com/)
-- [西秦公子](https://www.ixiqin.com/)
+<!-- - [1A23 Studio](https://1a23.com/)[wordpress] -->
+- [Jiajun的编程随想](https://jiajunhuang.com/) [web，go,python,javascript]
+<!-- - [贼拉正经的技术博客](https://www.stackoverflow.wiki/blog/) -->
+<!-- - [Lenix Blog](https://blog.p2hp.com/) -->
+<!-- - [西秦公子](https://www.ixiqin.com/)[外包，投资，美国旅行，独立开发] -->
 - [OnionTalk](https://hateonion.me)
 - [Nicksxs's Blog](https://nicksxs.me)
 - [Allen's Blog](https://www.capallen.top)

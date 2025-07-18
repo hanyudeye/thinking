@@ -678,3 +678,20 @@ chmod [选项] 权限的数字表示 文件或目录
 ## 5.版本控制：git
 
 ## 6.设置别名：alias
+
+# Wake on LAN 实现工作机的自动开关机
+
+## 自动关机
+
+``` 
+<!-- root用户设置一个crontab -->
+0 22 * * * /usr/sbin/shutdown -h now
+```
+
+## 自动开机
+主板打开  Wake on LAN 局域网开机功能
+
+路由器是 OpenWRT，可以直接添加一个 crontab:
+```
+0 8 * * * /usr/bin/etherwake -D -i br-lan <MAC地址>
+```
