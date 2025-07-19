@@ -35,8 +35,7 @@
 - [云原生](https://jimmysong.io)
 - [Hawstein's Blog](https://hawstein.com/)
 - [Skywind Inside](https://www.skywind.me/blog/)
-- [陈沙克日志](http://www.chenshake.com)
-- [Cat in Chinese](https://chinese.catchen.me)
+<!-- - [陈沙克日志](http://www.chenshake.com)[数字游民，IT] -->
 - [Randy's Blog](https://lutaonan.com)
 - [iTimothy](https://xiaozhou.net)
 - [idea's blog](http://www.ideawu.net/blog)
@@ -1271,28 +1270,28 @@
 - [卢昌海个人主页](https://www.changhai.org/)
 - [Home - 阳志平的网志](https://www.yangzhiping.com/)
 - [吕小荣](http://mednoter.com/)
-- [huangyang.me](https://blog.huangyang.me/)
-- [MrToyy's Blog – 探赜索隐 勾深致远 厚德博学 经济匡时](http://www.mrtoyy.com/)
-- [海德沙龙（HeadSalon）](http://headsalon.org/)
+- [huangyang.me](http://huangyang.me/)
+<!-- - [MrToyy's Blog – 探赜索隐 勾深致远 厚德博学 经济匡时](http://www.mrtoyy.com/)[打不开] -->
 - [土木坛子](https://tumutanzi.com/)
-- [奔跑中的奶酪](https://www.runningcheese.com/)
-- [乱象，印迹](http://www.luanxiang.org/blog/)
-- [zhengziying.com](https://zhengziying.com/)
-- [孤岛客 - 几支无用笔，半打有心人。](http://www.huangjiwei.com/blog/)
-- [Taiwan 2.0 – 展望一個更美好的台灣](https://taiwan.chtsai.org/)
-- [Huiris's Blog](http://huiris.com/)
-- [白板报](http://www.baibanbao.net/)
-- [比目鱼博客：Bimuyu's Blog](http://www.bimuyu.com/blog/)
+<!-- - [奔跑中的奶酪](https://www.runningcheese.com/)[推广目的严重] -->
+<!-- - [乱象，印迹](http://www.luanxiang.org/blog/) [网站打不开] -->
+- [zhengziying.com](https://zhengziying.com/)[生活文章很多，有点卡]
+<!-- - [Taiwan 2.0 – 展望一個更美好的台灣](https://taiwan.chtsai.org/)[游记，拍台湾的路的] -->
+- [Huiris's Blog](http://huiris.com/)[读书，写作]
+<!-- - [比目鱼博客：Bimuyu's Blog](http://www.bimuyu.com/blog/)[偏文学作品] -->
 <!-- - [Elizen - 人间不值得](https://blog.elizen.me/) [完成] -->
-- [Neverland – Wherefore art thou?](https://type.cyhsu.xyz/)
-- [杨钦元 - 博客](http://yangqinyuan.com/)
+- [Neverland – Wherefore art thou?](https://hsu.cy/posts/)[技术文章偏多]
+
+## 投资、数字游民
+
 - [Jarodise – 数字游民部落 – A Chinese Digital Nomad Blog](https://jarodise.com/)
-- [林林杂语](https://linlinzzo.top/)
-
-## 投资
-
-- [水星投资理财](https://mercurychong.blogspot.com/)
 
 ## 时常看看
 
 - [最好金龟换酒](http://fz0512.com/) [生活，旅游 ，摄影，亲子][可以感受幸福，放松心情]
+- [Cat in Chinese](https://chinese.catchen.me) [移民，演讲者、技术]
+- [水星投资理财](https://mercurychong.blogspot.com/)[ 投资]
+- [杨钦元 - 博客](http://yangqinyuan.com/) [投资]
+- [白板报](http://www.baibanbao.net/)[剧作家，作家]
+- [孤岛客 - 几支无用笔，半打有心人。](http://www.huangjiwei.com/blog/)
+- [海德沙龙（HeadSalon）](http://headsalon.org/)[随笔，小文章居多]
