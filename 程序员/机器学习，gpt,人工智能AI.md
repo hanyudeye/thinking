@@ -1,18 +1,23 @@
 ---
 layout: default
 toc: false
-title: 机器学习，gpt，未来趋势，人工智能AI
+title: 机器学习，gpt，人工智能AI
 date:  2025-07-03T07:34:37+08:00
 categories: ['']
 draft: true
 ---
 
 人工智能的前提是思考 人的大脑是如何从经验中提取信息进行思考的。
-# 未来
 
-人进化的外型一直没怎么变，但 人的知识，人接触的工具，一直在改变，更智能。
 
-人，要有未来，要寻找未来，适应未来。
+
+# 大模型API价格，gpt 价格，llm 价格
+
+https://chenshake.com/2025/03/01/all-model-api-price/
+
+# AI 工具
+- [模型微调可视化UI]( https://github.com/hiyouga/LLaMA-Factory)
+
 
 # 深度学习
 
@@ -88,14 +93,8 @@ draft: true
 4. 编写训练循环
 5. 监控训练过程
 
-# 大模型API价格，gpt 价格，llm 价格
-
-https://chenshake.com/2025/03/01/all-model-api-price/
-
-# AI 工具
-- [模型微调可视化UI]( https://github.com/hiyouga/LLaMA-Factory)
-
 # 机器学习 
+
 ### 1. 数据
 
 机器学习的核心是数据驱动的学习过程。数据包括输入数据（特征）和相应的输出标签（对应的目标），用于训练模型和评估模型的性能。
@@ -128,6 +127,7 @@ https://chenshake.com/2025/03/01/all-model-api-price/
 
 机器学习基础不仅限于理论和算法，还包括实际问题的解决方法和技巧。了解数据处理、模型选择和调优是成为有效机器学习工程师或研究人员的重要基础。
 
+# 人工神经网络
 
 **人工神经网络（Artificial Neural Networks, ANN）**是一种受生物神经网络启发的计算模型，广泛应用于机器学习和人工智能中，用于解决各种问题，如分类、回归、图像识别、语音处理等。神经网络模拟了大脑中神经元之间的连接与信号传递，能够自动从数据中学习特征并进行预测。
 

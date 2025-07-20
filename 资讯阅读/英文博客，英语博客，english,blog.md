@@ -70,25 +70,25 @@ draft: true
 - [Go Make Things](https://gomakethings.com/articles)
 - [CSS Ninja](https://ryanseddon.com/)
 - [Scalable CSS](https://scalablecss.com/)
-- [Andy Bell Design](https://andy-bell.design/)
-- [Matthias Ott](http://matthiasott.com)
-- [Paul Robert Lloyd](https://paulrobertlloyd.com)
-- [Bramstein.com news](https://www.bramstein.com/)
-- [Hey Georgie](https://hey.georgie.nu)
-- [Hey Jovo Design](https://www.jovo.design/writing/)
-- [Josh Collinsworth](https://joshcollinsworth.com)
-- [Josh Tumath](https://www.joshtumath.uk/)
+<!-- - [Andy Bell Design](https://andy-bell.design/) -->
+<!-- - [Matthias Ott](http://matthiasott.com) -->
+<!-- - [Paul Robert Lloyd](https://paulrobertlloyd.com) -->
+<!-- - [Bramstein.com news](https://www.bramstein.com/) -->
+- [Hey Georgie](https://hey.georgie.nu)[UI engineer]
+- [Hey Jovo Design](https://www.jovo.design/writing/)[设计师]
+- [Josh Collinsworth](https://joshcollinsworth.com) [软件工程师]
+- [Josh Tumath](https://www.joshtumath.uk/) [BBC Senior Software Engineer]
 - [Jim Nielsen’s Blog](https://blog.jim-nielsen.com) [reading]
-- [Sarah Higley](https://sarahmhigley.com/)
+<!-- - [Sarah Higley](https://sarahmhigley.com/)[read] -->
 - [Sia Karamalegos](https://sia.codes)
 - [Taha Shashtari's Blog](https://tahazsh.com/)
-- [Sarah Fossheim's Blog](https://fossheim.io/)
-- [skovy.dev](https://skovy.dev)
-- [Anthony Fu](https://antfu.me/)
+- [Sarah Fossheim's Blog](https://fossheim.io/)[read]
+- [skovy.dev](https://skovy.dev)[read]
+- [Anthony Fu](https://antfu.me/)[开发]
 - [yuanchuan.dev](https://yuanchuan.dev/)
 - [swyx's site](https://www.swyx.io)
-- [Paul Kinlan](https://paul.kinlan.me/)
-- [Jxnblk](https://jxnblk.com)
+- [Paul Kinlan](https://paul.kinlan.me/)[web开发]
+- [Jxnblk](https://jxnblk.com)[设计师，程序员，游戏开发]
 <!-- - [j.Money](https://jmoney.biz/blog/) [reading] -->
 
 ## 设计 / 用户体验 / 可访问性
