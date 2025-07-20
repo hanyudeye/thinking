@@ -9,13 +9,6 @@
             xmlUrl="http://allinthehead.com/rss/" htmlUrl="https://allinthehead.com/" />
         <outline text="Jason Santa Maria" title="Jason Santa Maria" type="rss"
             xmlUrl="http://feeds.feedburner.com/jsm-rss" htmlUrl="http://jasonsantamaria.com/" />
-        <outline text="Jonathan Snook" title="Jonathan Snook" type="rss"
-            xmlUrl="http://feeds.feedburner.com/snookca" htmlUrl="https://snook.ca/" />
-        <outline text="QuirksBlog" title="QuirksBlog" type="rss"
-            xmlUrl="http://www.quirksmode.org/blog/atom.xml"
-            htmlUrl="http://www.quirksmode.org/blog/" />
-        <outline text="24 ways" title="24 ways" type="rss"
-            xmlUrl="http://feeds.feedburner.com/24ways" htmlUrl="https://24ways.org/" />
         <outline text="Zeldman on Web and Interaction Design"
             title="Zeldman on Web and Interaction Design" type="rss"
             xmlUrl="http://www.zeldman.com/feed/" htmlUrl="https://zeldman.com/" />
