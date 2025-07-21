@@ -172,3 +172,4 @@ for i in range(len(chengji)-1):
 s='ab\tc'
 print(len(s))  # ab	c
 
+print(502/9027)
