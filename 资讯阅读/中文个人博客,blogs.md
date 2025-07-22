@@ -1270,6 +1270,7 @@
 - [卢昌海个人主页](https://www.changhai.org/)
 - [Home - 阳志平的网志](https://www.yangzhiping.com/)
 - [吕小荣](http://mednoter.com/)
+- [v2ex](https://v2ex.com/)
 - [huangyang.me](http://huangyang.me/)
 <!-- - [MrToyy's Blog – 探赜索隐 勾深致远 厚德博学 经济匡时](http://www.mrtoyy.com/)[打不开] -->
 - [土木坛子](https://tumutanzi.com/)
