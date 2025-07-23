@@ -1262,12 +1262,12 @@
 - [宇宙的心弦 - 细推物理须行乐 何用浮名绊此身](https://www.physixfan.com/)
 - [智识@IdeoBook™](http://www.ideobook.com/)
 - [Beyond the Void](http://www.byvoid.com/)
-- [木遥的窗子](http://blog.farmostwood.net/)
-- [一座島 - 一座島，一個人，一個世界。](https://island.shaform.com/zh/)
+<!-- - [木遥的窗子](http://blog.farmostwood.net/) -->
+<!-- - [一座島 - 一座島，一個人，一個世界。](https://island.shaform.com/zh/) -->
 - [水八口记 • 记录当下赠与未来](https://blog.shuiba.co/)
-- [扫地老僧的Blog](https://doyj.com/)
-- [扯氮集 -- 上海魏武挥的Blog](http://weiwuhui.com/)
-- [卢昌海个人主页](https://www.changhai.org/)
+<!-- - [扫地老僧的Blog](https://doyj.com/) -->
+<!-- - [扯氮集 -- 上海魏武挥的Blog](http://weiwuhui.com/) -->
+<!-- - [卢昌海个人主页](https://www.changhai.org/) [个人博客] -->
 - [Home - 阳志平的网志](https://www.yangzhiping.com/)
 - [吕小荣](http://mednoter.com/)
 - [v2ex](https://v2ex.com/)

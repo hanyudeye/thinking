@@ -119,6 +119,12 @@ Hint: use ~SPC w c~ to center the buffer.
         }
 ]
 ```
+## VS Code Vim 模式出现的中文插入与标点符号错误
+
+在VS Code v1.101.0后，更新了editor.experimentalEditContextEnabled，并将它默认开启
+操作方法：
+
+设置 -> 搜索 'editor.experimentalEditContextEnabled' -> 关闭勾选
 
 # cursor
 
