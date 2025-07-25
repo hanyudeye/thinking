@@ -32,6 +32,8 @@ categories: ['']
 
 快速跳转到某处  使用查找 search 
 
+显示/关闭侧边栏 Ctrl+Shift+.
+
 ## vimium 
 
 [done] 把 t 按键 映射到 T 同样的功能

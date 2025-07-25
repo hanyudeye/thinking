@@ -342,7 +342,6 @@
 - [Bingwhispers](https://cyril3.github.io)
 - [PlayerCatboy](https://ralf.ren)
 - [木匣子](https://mutoo.im)
-- [欧雷流](https://ourai.ws/)
 - [VictriD's blog](https://victrid.dev/)
 - [挥舞思绪的博客](https://asazero.blogspot.com/)
 - [ddadaal.me](https://ddadaal.me)
@@ -1254,9 +1253,8 @@
 - [TonyHe](https://www.ouorz.com/)
 - [程序员的喵](https://catcoding.me/archives/)
 - [学无止境](http://gtdstudy.com/)
-- [涛叔](https://taoshu.in/)
-- [This Cute World](https://thiscute.world/)
-- [欧雷流](https://ourai.ws/)
+- [涛叔](https://taoshu.in/)[技术]
+- [This Cute World](https://thiscute.world/)[程序员，旅游]
 - [贤民的博客](https://www.xianmin.org/) [独立开发者，旅游]
 - [智识@IdeoBook™](http://www.ideobook.com/)[网站关了]
 <!-- - [木遥的窗子](http://blog.farmostwood.net/) -->
@@ -1298,3 +1296,6 @@
 - [海德沙龙（HeadSalon）](http://headsalon.org/)[随笔，小文章居多]
 - [水八口记 • 记录当下赠与未来](https://blog.shuiba.co/)
 - [宇宙的心弦 - 细推物理须行乐 何用浮名绊此身](https://www.physixfan.com/)[物理]
+- [美卡论坛](https://www.uscardforum.com/)
+- [投资](https://www.reddit.com/r/wallstreetbets/)
+- [欧雷流]( https://ourai.ws/posts/)[程序员]
