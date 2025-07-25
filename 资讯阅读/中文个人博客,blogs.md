@@ -1251,8 +1251,7 @@
 - [Hi, DIYgod](https://diygod.me/)
 - [Blanboom](https://blanboom.org/)
 - [TonyHe](https://www.ouorz.com/)
-- [程序员的喵](https://catcoding.me/archives/)
-- [学无止境](http://gtdstudy.com/)
+<!-- - [学无止境](http://gtdstudy.com/) -->
 - [涛叔](https://taoshu.in/)[技术]
 - [This Cute World](https://thiscute.world/)[程序员，旅游]
 - [贤民的博客](https://www.xianmin.org/) [独立开发者，旅游]
@@ -1276,6 +1275,7 @@
 <!-- - [比目鱼博客：Bimuyu's Blog](http://www.bimuyu.com/blog/)[偏文学作品] -->
 <!-- - [Elizen - 人间不值得](https://blog.elizen.me/) [完成] -->
 - [Neverland – Wherefore art thou?](https://hsu.cy/posts/)[技术文章偏多]
+- [欧雷流]( https://ourai.ws/posts/)[程序员]
 
 ## 投资、数字游民
 
@@ -1285,7 +1285,15 @@
 
 - [Beyond the Void](http://www.byvoid.com/)[环球旅游]
 
+## 查看博客评论
+- [hanyudeye](https://github.com/hanyudeye/blog/issues)
+
+## 参与开源项目
+- [位于 根特 的编程小组](https://sysghent.be)
+- [参与开源项目](https://github.com/chenyukang)
+
 ## 时常看看
+
 
 - [最好金龟换酒](http://fz0512.com/) [生活，旅游 ，摄影，亲子][可以感受幸福，放松心情]
 - [Cat in Chinese](https://chinese.catchen.me) [移民，演讲者、技术]
@@ -1298,4 +1306,4 @@
 - [宇宙的心弦 - 细推物理须行乐 何用浮名绊此身](https://www.physixfan.com/)[物理]
 - [美卡论坛](https://www.uscardforum.com/)
 - [投资](https://www.reddit.com/r/wallstreetbets/)
-- [欧雷流]( https://ourai.ws/posts/)[程序员]
+- [程序员的喵](https://catcoding.me/archives/)
