@@ -31,6 +31,8 @@ categories: ['']
 
 快速跳转到某处  使用查找 search 
 
+显示/关闭侧边栏 Ctrl+Shift+.
+
 ## vimium 
 
 [done] 把 t 按键 映射到 T 同样的功能
@@ -118,6 +120,12 @@ Hint: use ~SPC w c~ to center the buffer.
         }
 ]
 ```
+## VS Code Vim 模式出现的中文插入与标点符号错误
+
+在VS Code v1.101.0后，更新了editor.experimentalEditContextEnabled，并将它默认开启
+操作方法：
+
+设置 -> 搜索 'editor.experimentalEditContextEnabled' -> 关闭勾选
 
 # cursor
 
@@ -143,3 +151,10 @@ Hint: use ~SPC w c~ to center the buffer.
     }
 ]
 ```
+
+# visual studio
+
+## 自定义快捷键
+
+工具- 选项- 环境- 键盘
+

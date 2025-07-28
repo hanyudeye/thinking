@@ -17,3 +17,5 @@ IndexTTS基于XTTS和Tortoise开发，并做了改进
 结合Conformer条件编码器和BigVGAN2语音解码器，提高了训练稳定性、音色相似性以及声音质量
 
 vs  coqui tts
+
+# dify 或 fastgpt 二次开发

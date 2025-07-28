@@ -229,3 +229,9 @@ https://huggingface.co/
 [SparkFun Electronics](https://www.sparkfun.com/)
 
 
+# video to gif 
+视频转gif 文件
+
+# 照片处理
+
+ashampoo

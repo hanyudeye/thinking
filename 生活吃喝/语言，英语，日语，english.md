@@ -94,3 +94,8 @@ F7：转换为候选词（比如将“にほん”转换为“日本”）。
 parallel 平行
 neverland 梦幻岛
 Milestone 里程碑
+
+1月 January January
+2月 february 
+6 月 june
+7 月  july

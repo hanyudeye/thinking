@@ -256,7 +256,6 @@
 - [编程沉思录](https://www.cyhone.com)
 - [LiesAuer's Blog](https://www.liesauer.net/blog/)
 - [Blog of Music](https://www.blogofmusic.com)
-- [Beyond the Void](https://www.byvoid.com/)
 - [Yi's blog](https://wangyi.ai/)
 - [1 Byte](https://1byte.io/)
 - [Inevitable](https://www.inevitable.tech/)
@@ -343,7 +342,6 @@
 - [Bingwhispers](https://cyril3.github.io)
 - [PlayerCatboy](https://ralf.ren)
 - [木匣子](https://mutoo.im)
-- [欧雷流](https://ourai.ws/)
 - [VictriD's blog](https://victrid.dev/)
 - [挥舞思绪的博客](https://asazero.blogspot.com/)
 - [ddadaal.me](https://ddadaal.me)
@@ -1250,26 +1248,22 @@
 - [Randy's Blog](https://lutaonan.com/)
 - [范叶亮的博客 - Leo Van's Blog](https://leovan.me/)
 - [ZMonster's Blog](https://www.zmonster.me/)
-- [Hi, DIYgod](https://diygod.me/)
-- [Blanboom](https://blanboom.org/)
-- [TonyHe](https://www.ouorz.com/)
-- [程序员的喵](https://catcoding.me/archives/)
-- [学无止境](http://gtdstudy.com/)
-- [涛叔](https://taoshu.in/)
-- [This Cute World](https://thiscute.world/)
-- [欧雷流](https://ourai.ws/)
-- [贤民的博客](https://www.xianmin.org/)
-- [宇宙的心弦 - 细推物理须行乐 何用浮名绊此身](https://www.physixfan.com/)
-- [智识@IdeoBook™](http://www.ideobook.com/)
-- [Beyond the Void](http://www.byvoid.com/)
-- [木遥的窗子](http://blog.farmostwood.net/)
-- [一座島 - 一座島，一個人，一個世界。](https://island.shaform.com/zh/)
-- [水八口记 • 记录当下赠与未来](https://blog.shuiba.co/)
-- [扫地老僧的Blog](https://doyj.com/)
-- [扯氮集 -- 上海魏武挥的Blog](http://weiwuhui.com/)
-- [卢昌海个人主页](https://www.changhai.org/)
+<!-- - [Hi, DIYgod](https://diygod.me/) -->
+- [Blanboom](https://blanboom.org/)[软件]
+- [TonyHe](https://www.ouorz.com/)[学生][英语写作]
+<!-- - [学无止境](http://gtdstudy.com/) -->
+- [涛叔](https://taoshu.in/)[技术]
+- [This Cute World](https://thiscute.world/)[程序员，旅游]
+- [贤民的博客](https://www.xianmin.org/) [独立开发者，旅游]
+- [智识@IdeoBook™](http://www.ideobook.com/)[网站关了]
+<!-- - [木遥的窗子](http://blog.farmostwood.net/) -->
+<!-- - [一座島 - 一座島，一個人，一個世界。](https://island.shaform.com/zh/) -->
+<!-- - [扫地老僧的Blog](https://doyj.com/) -->
+<!-- - [扯氮集 -- 上海魏武挥的Blog](http://weiwuhui.com/) -->
+<!-- - [卢昌海个人主页](https://www.changhai.org/) [个人博客] -->
 - [Home - 阳志平的网志](https://www.yangzhiping.com/)
 - [吕小荣](http://mednoter.com/)
+- [v2ex](https://v2ex.com/)
 - [huangyang.me](http://huangyang.me/)
 <!-- - [MrToyy's Blog – 探赜索隐 勾深致远 厚德博学 经济匡时](http://www.mrtoyy.com/)[打不开] -->
 - [土木坛子](https://tumutanzi.com/)
@@ -1281,12 +1275,25 @@
 <!-- - [比目鱼博客：Bimuyu's Blog](http://www.bimuyu.com/blog/)[偏文学作品] -->
 <!-- - [Elizen - 人间不值得](https://blog.elizen.me/) [完成] -->
 - [Neverland – Wherefore art thou?](https://hsu.cy/posts/)[技术文章偏多]
+- [欧雷流]( https://ourai.ws/posts/)[程序员]
 
 ## 投资、数字游民
 
 - [Jarodise – 数字游民部落 – A Chinese Digital Nomad Blog](https://jarodise.com/)
 
+## 旅游
+
+- [Beyond the Void](http://www.byvoid.com/)[环球旅游]
+
+## 查看博客评论
+- [hanyudeye](https://github.com/hanyudeye/blog/issues)
+
+## 参与开源项目
+- [位于 根特 的编程小组](https://sysghent.be)
+- [参与开源项目](https://github.com/chenyukang)
+
 ## 时常看看
+
 
 - [最好金龟换酒](http://fz0512.com/) [生活，旅游 ，摄影，亲子][可以感受幸福，放松心情]
 - [Cat in Chinese](https://chinese.catchen.me) [移民，演讲者、技术]
@@ -1295,3 +1302,8 @@
 - [白板报](http://www.baibanbao.net/)[剧作家，作家]
 - [孤岛客 - 几支无用笔，半打有心人。](http://www.huangjiwei.com/blog/)
 - [海德沙龙（HeadSalon）](http://headsalon.org/)[随笔，小文章居多]
+- [水八口记 • 记录当下赠与未来](https://blog.shuiba.co/)
+- [宇宙的心弦 - 细推物理须行乐 何用浮名绊此身](https://www.physixfan.com/)[物理]
+- [美卡论坛](https://www.uscardforum.com/)
+- [投资](https://www.reddit.com/r/wallstreetbets/)
+- [程序员的喵](https://catcoding.me/archives/)
