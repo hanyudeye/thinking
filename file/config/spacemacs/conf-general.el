@@ -17,12 +17,10 @@
  )
 
 ;; 添加代码片段目录
+;; (setq my-snippet-path "/home/wuming/.spacemacs.d/snippets")
 (add-to-list 'yas-snippet-dirs my-snippet-path)
 ;; 取消光标所在行的高亮
 ;; (global-hl-line-mode -1)
-;;snippet
-;; (setq my-snippet "/home/wuming/.spacemacs.d/snippets")
-;; (add-to-list 'yas-snippet-dirs my-snippet)
 
 ;; (defun find-org-passwd()
 ;;   (interactive)
