@@ -1248,9 +1248,9 @@
 - [Randy's Blog](https://lutaonan.com/)
 - [范叶亮的博客 - Leo Van's Blog](https://leovan.me/)
 - [ZMonster's Blog](https://www.zmonster.me/)
-- [Hi, DIYgod](https://diygod.me/)
-- [Blanboom](https://blanboom.org/)
-- [TonyHe](https://www.ouorz.com/)
+<!-- - [Hi, DIYgod](https://diygod.me/) -->
+- [Blanboom](https://blanboom.org/)[软件]
+- [TonyHe](https://www.ouorz.com/)[学生][英语写作]
 <!-- - [学无止境](http://gtdstudy.com/) -->
 - [涛叔](https://taoshu.in/)[技术]
 - [This Cute World](https://thiscute.world/)[程序员，旅游]
