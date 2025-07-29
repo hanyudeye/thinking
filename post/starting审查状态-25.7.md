@@ -1,7 +1,7 @@
 ---
 layout: default
 toc: false
-title: 审查状态-25.7
+title: 审查状态
 date:  2025-07-15T06:53:10+08:00
 categories: ['']
 ---

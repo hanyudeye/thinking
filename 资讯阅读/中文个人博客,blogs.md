@@ -642,7 +642,6 @@
 - [赫尔米娜及其他](https://hermine.in)
 - [jtr109's Castle](https://www.jtr109.com/)
 - [乔克叔叔的床边故事](https://lifeodyssey.github.io/)
-- [印记](https://yinji.org/)
 - [林林杂语](https://www.xiaozonglin.cn/)
 - [一叶斋](https://xieguanglei.github.io)
 - [WangDeer](https://w.toomore.us)
@@ -1307,3 +1306,4 @@
 - [美卡论坛](https://www.uscardforum.com/)
 - [投资](https://www.reddit.com/r/wallstreetbets/)
 - [程序员的喵](https://catcoding.me/archives/)
+- [印记](https://yinji.org/) [网友][很厉害的小年轻][互联网从业]
