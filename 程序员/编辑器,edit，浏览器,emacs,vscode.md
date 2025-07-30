@@ -72,7 +72,6 @@ inoremap kj <ESC>   kj 按键绑定<ESC> 键
 Hint: use ~SPC w c~ to center the buffer.
 
 
-
 # vscode 编辑器
 同 emacs 一样，也是配置灵活，但更快更官方
 
