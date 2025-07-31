@@ -7,15 +7,12 @@ categories: ['']
 ---
 
 
-软件，可以因为不同的行为，分为不同的类型
-如有： 功能软件，游戏软件，编辑软件，浏览软件，行业软件....
 
-# 功能软件
+# 好用工具
 
 ## scoop [软件管理]
 
 ``` sh
-#ripgrep 文本搜索
 scoop install main/rga
 ```
 
@@ -78,37 +75,44 @@ ssh-keygen -t rsa -C "youremail@example.com"
 
 命令行 Python 工具，用来将扫描的 PDF 文件转为 Markdown 和 EPUB，并通过 AI 进行 OCR。
 
-# 网站
-## 视频资源 [视频网站]
+## ripgrep [文本搜索]
 
-https://www.pexels.com/zh-cn/search/videos/{query}
 
-https://search.bilibili.com/all?keyword={query}
+# 资源网站
+## 视频、字幕资源 
 
-https://4khdr.cn/
+- https://www.pexels.com/zh-cn/search/videos/{query}
+- https://search.bilibili.com/all?keyword={query}
+- https://4khdr.cn/
 https://www.aliyundrive.com/s/McXw86wJaBU/folder/649489ae5421e049b19242feb641b7415488a43e
-https://www.cilixiong.org/
-
-
-网络电视台  https://tv.garden/
-电影字幕下载 : https://yts.mx/
-字幕转换 https://converter.app/cn/vtt-srt/
+- https://www.cilixiong.org/
+- 网络电视台  https://tv.garden/
+- 电影字幕下载 : https://yts.mx/
+- 字幕转换 https://converter.app/cn/vtt-srt/
 
 ## 图片 [图片网站]
 
 https://cn.bing.com/images/search?q={query}&form=HDRSC2&first=1
 https://www.pexels.com/zh-cn/search/{query}
 
+# 工具网站
+
 ## 图片去背景 [图像处理]
 https://remove.photos/zh-cn/
+
+## video to gif 
+视频转gif 文件
+
+## 照片处理
+ashampoo
 
 ## 白板 [笔记软件]
 
 https://excalidraw.com/
 
 ## 查找相似图片 [图片网站，相似图片查找]
-https://tineye.com/how
-https://www.google.com/
+- https://tineye.com/how
+- https://www.google.com/
 
 ## 什么值得买 [购物比对网站]
 
@@ -126,24 +130,20 @@ https://ai.bingal.com/cn/ai-tts/
 
 https://sc.chinaz.com/yinxiao/
 
-## 小工具
+## 实用小工具
 
-二维码 https://cli.im/
-IP 地址  https://tool.lu/ip/
-站长之家 https://tool.chinaz.com/
+- 二维码 https://cli.im/
+- IP 地址  https://tool.lu/ip/
+- 站长之家 https://tool.chinaz.com/
+- [HTML to JSX](https://transform.tools/html-to-jsx)
+- [文件或文本共享Pastebin](https://paste.c-net.org/)
+- [Scoop - Apps](https://scoop.sh/#/apps)
+- https://scoop.sh/#/apps?q={query}
+- [云鸽 - 文件传输助手网页版](https://yunge.in/)
 
-[HTML to JSX](https://transform.tools/html-to-jsx)
-[文件或文本共享Pastebin](https://paste.c-net.org/)
-[Scoop - Apps](https://scoop.sh/#/apps)
-https://scoop.sh/#/apps?q={query}
-
-[云鸽 - 文件传输助手网页版](https://yunge.in/)
-
-免登录文件中转站
-https://www.airportal.cn/
-https://www.wenshushu.cn/
-
-
+## 免登录文件中转站
+- https://www.airportal.cn/
+- https://www.wenshushu.cn/
 
 ## huggingface [大模型、人工智能]
 
@@ -151,49 +151,38 @@ https://huggingface.co/
 
 ## 短视频 [视频网站，社交媒体]
 
-[快手]https://cp.kuaishou.com/profile
-
-[Facebook](https://www.facebook.com/)
-
-[头条号](https://mp.toutiao.com/profile_v4/index)
-
-[小红书创作服务平台](https://creator.xiaohongshu.com/creator/home)
-
-[抖音创作服务平台](https://creator.douyin.com/creator-micro/home)
-
-[西瓜创作平台](https://studio.ixigua.com/content)
-
-[创作中心 - 哔哩哔哩弹幕视频网 - ( ゜- ゜)つロ 乾杯~](https://member.bilibili.com/platform/upload-manager/article)
+- [快手]https://cp.kuaishou.com/profile
+- [Facebook](https://www.facebook.com/)
+- [头条号](https://mp.toutiao.com/profile_v4/index)
+- [小红书创作服务平台](https://creator.xiaohongshu.com/creator/home)
+- [抖音创作服务平台](https://creator.douyin.com/creator-micro/home)
+- [西瓜创作平台](https://studio.ixigua.com/content)
+- [创作中心 - 哔哩哔哩弹幕视频网 - ( ゜- ゜)つロ 乾杯~](https://member.bilibili.com/platform/upload-manager/article)
 
 
 ## 数学 ,物理，英语 [教学网站]
 
-数学
-[Desmos | 图形计算器](https://www.desmos.com/calculator?lang=zh-CN)
-[计算器套件 - GeoGebra](https://www.geogebra.org/calculator)
-[Wolfram|Alpha：计算型智能](https://www.wolframalpha.com/)
+### 数学
+- [Desmos | 图形计算器](https://www.desmos.com/calculator?lang=zh-CN)
+- [计算器套件 - GeoGebra](https://www.geogebra.org/calculator)
+- [Wolfram|Alpha：计算型智能](https://www.wolframalpha.com/)
 
-物理
+### 物理
 [Filter - PhET Simulations](https://phet.colorado.edu/en/simulations/filter?subjects=physics&type=html)
 
-学习外语
-[🌐 italki - 最好的语言学习应用，有认证的导师和小组课程](https://www.italki.com/zh-cn)
-
-[Learn with the best online language tutors - Preply](https://preply.com/)
-[Notion – The all-in-one workspace for your notes, tasks, wikis, and databases.](https://inky-fold-a31.notion.site/a658257f925d45a8a0a4c3422dad1ddb?p=1f27423904b542aa91f41288e13b0ec5&pm=s)
-
-[Notion笔记](https://www.notion.so/c1795493060d4edc9829f2cbcfa3d83f)
+### 学习外语
+- [🌐 italki - 最好的语言学习应用，有认证的导师和小组课程](https://www.italki.com/zh-cn)
+- [Learn with the best online language tutors - Preply](https://preply.com/)
+- [Notion – The all-in-one workspace for your notes, tasks, wikis, and databases.](https://inky-fold-a31.notion.site/a658257f925d45a8a0a4c3422dad1ddb?p=1f27423904b542aa91f41288e13b0ec5&pm=s)
+- [Notion笔记](https://www.notion.so/c1795493060d4edc9829f2cbcfa3d83f)
 
 ## 投资 [金融网站]
 
-[财报SEC.gov | Home](https://www.sec.gov/)
-
-[做独立开发前，你应该先了解 FIRE 运动 | 鸟飞鱼跃](https://sunnyd.top/blog/why-indie-devs-need-financial-management)
-
-[POLOXUE's BLOG](https://www.poloxue.com/)
-
-[Innomad一挪迈](https://innomad.io/)
-[吕小荣](https://mednoter.com/)
+- [财报SEC.gov | Home](https://www.sec.gov/)
+- [做独立开发前，你应该先了解 FIRE 运动 | 鸟飞鱼跃](https://sunnyd.top/blog/why-indie-devs-need-financial-management)
+- [POLOXUE's BLOG](https://www.poloxue.com/)
+- [Innomad一挪迈](https://innomad.io/)
+- [吕小荣](https://mednoter.com/)
 
 ## 版权 [行业网站，版权]
 
@@ -214,24 +203,12 @@ https://huggingface.co/
 
 ### 电子手工
 
-[Adafruit Industries, Unique & fun DIY electronics and kits](https://www.adafruit.com/)
-
-[blog.arduino.cc](https://blog.arduino.cc/2025/03/17/arduino-days-2025-is-almost-here/)
-
-[您的制作 - Instructables --- Yours for the making - Instructables](https://www.instructables.com/)
-
-[Etsy - Shop for handmade, vintage, custom, and unique gifts for everyone](https://www.etsy.com/)
-
-[Craftsy.com | Express Your Creativity! | Craftsy](https://www.craftsy.com/)
-
-[Arts & Crafts, Frames, Seasonal Décor | DIY & Inspiration | Michaels](https://www.michaels.com/)
-
-[SparkFun Electronics](https://www.sparkfun.com/)
+- [Adafruit Industries, Unique & fun DIY electronics and kits](https://www.adafruit.com/)
+- [blog.arduino.cc](https://blog.arduino.cc/2025/03/17/arduino-days-2025-is-almost-here/)
+- [您的制作 - Instructables --- Yours for the making - Instructables](https://www.instructables.com/)
+- [Etsy - Shop for handmade, vintage, custom, and unique gifts for everyone](https://www.etsy.com/)
+- [Craftsy.com | Express Your Creativity! | Craftsy](https://www.craftsy.com/)
+- [Arts & Crafts, Frames, Seasonal Décor | DIY & Inspiration | Michaels](https://www.michaels.com/)
+- [SparkFun Electronics](https://www.sparkfun.com/)
 
 
-# video to gif 
-视频转gif 文件
-
-# 照片处理
-
-ashampoo

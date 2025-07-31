@@ -5,6 +5,7 @@ title: 网站，前端，front，网页，html
 date:  2025-07-07T13:12:53+08:00
 draft: true
 ---
+
 # 前端简述
 
 前端（html,css，javascript)， 它使用这 3个 技术 ，html,css两个技术 简化了 视觉显示 (用简化的代码就能形成样式），javascript 技术是功能执行的核心。
