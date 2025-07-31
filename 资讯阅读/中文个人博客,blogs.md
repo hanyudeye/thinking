@@ -15,28 +15,16 @@
 - [Reorx’s Forge](https://reorx.com/)
 - [ZDDHUB 的博客](https://zddhub.com/)
 - [全栈应用开发:精益实践](https://www.phodal.com)
-- [Python 工匠](https://www.zlovezl.cn)
-- [Ric's Blog](https://www.lichong.work)
 - [罗磊的独立博客](https://luolei.org)
-- [阁子](https://dfine.tech)
 - [代码家](https://daimajia.com)
 - [开源实验室](https://kymjs.com)
-- [技术小黑屋](https://droidyue.com)
-- [vzard's blog](https://vzardlloo.github.io)
-<!-- - [后端技术杂谈](https://rowkey.cn) [reading] -->
 - [zhonger 前端开发者，喜爱运维管理](https://blog.lui8.cn)
 - [依云's Blog](https://blog.lilydjwg.me)
-<!-- - [zgh's Blog](https://hundren.github.io) [reading] -->
-- [前端工程师 Toweave](https://toweave.github.io)[reading]
-- [MouT.me](https://mout.me)
-- [diss带码](https://dumplingbao.github.io)
 - [王登科-DK博客](https://greatdk.com)
-- [chai2010 的博客](https://chai2010.cn)
 - [云原生](https://jimmysong.io)
 - [Hawstein's Blog](https://hawstein.com/)
 - [Skywind Inside](https://www.skywind.me/blog/)
 <!-- - [陈沙克日志](http://www.chenshake.com)[数字游民，IT] -->
-- [Randy's Blog](https://lutaonan.com)
 - [iTimothy](https://xiaozhou.net)
 - [idea's blog](http://www.ideawu.net/blog)
 - [xiaix's Blog](https://xiaix.me)
@@ -1307,3 +1295,4 @@
 - [投资](https://www.reddit.com/r/wallstreetbets/)
 - [程序员的喵](https://catcoding.me/archives/)
 - [印记](https://yinji.org/) [网友][很厉害的小年轻][互联网从业]
+- [Randy's Blog](https://lutaonan.com) [做产品]
