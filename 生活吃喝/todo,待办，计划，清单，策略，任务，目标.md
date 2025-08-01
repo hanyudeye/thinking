@@ -6,17 +6,21 @@ date:  2025-07-29T13:02:28+08:00
 draft: true
 ---
 
-todo
-如何分发 github page
+todo: 使用双语听英语，提高英语听力
+英语翻译AI，现在哪个Ai 便宜，先试试翻译质量
+不行，安装本地的 翻译 ai，估计卡
 
-todo : 都市牧场薄荷糖的推广链接
-小睡小困吃两粒
 
--  推广 cc
-- 推广公众号
+
+todo: 轻松看完 paulgraham 的文章
+todo： 以前电子电路的书籍，找出来倾听
+todo:  gpt 如何 做 hugo 好的主题，设计 (平面的那种？)还是 高分辨率那种
+> 决定平面那种，不突兀 ,细小分割线 就行
+
+
+
+- 推广 cc
 - 推广好物[剁手安利库](https://huhexian.notion.site/66a7d139a06b46ccac9236d1e58b9a2a)，
-
-- 似乎有点太世俗、太功利，但一不偷二不抢，赚钱，谁也别瞧不起谁。我的目的就是尽早实现经济独立，减轻父母的负担。
 
 1.  [找到一个有利可图的利基市场](https://ahrefs.com/blog/zh/start-a-blog/?utm_source=yinji.org#find-a-profitable-niche "1. 找到一个有利可图的利基市场")
 2.  [找到一个独特的角度](https://ahrefs.com/blog/zh/start-a-blog/?utm_source=yinji.org#find-a-unique-angle "2. 找到一个独特的角度")

@@ -1220,37 +1220,18 @@
 - [宋春林](http://sixf.org/)
 - [虞双齐爱折腾](https://yushuangqi.com/)
 - [依云's Blog](https://blog.lilydjwg.me/)
-- [XiaoHui.com](https://www.xiaohui.com/)
-- [Caos](http://blog.caos.me/)
-- [透明思考](http://gigix.thoughtworkers.org/)
-- [DBA Notes](http://dbanotes.net/)
-- [思圆笔记 – 促成良性循环](https://hintsnet.com/pimgeek/)
-- [DebugUself with DAMA ;-)](https://du.101.camp/)
-- [/ 是也乎(￣▽￣) / ZoomQuiet.io](￣▽￣)
-- [小胡子哥的个人网站](https://www.barretlee.com/entry/)
-- [笨方法学写作](https://www.cnfeat.com/)
 - [王登科-DK博客 - 布洛芬爱好者](https://greatdk.com/)
-- [Linghao's Blog](https://linghao.io/)
-- [forecho 的独立博客](https://blog.forecho.com/)
 - [Randy's Blog](https://lutaonan.com/)
 - [范叶亮的博客 - Leo Van's Blog](https://leovan.me/)
 - [ZMonster's Blog](https://www.zmonster.me/)
-<!-- - [Hi, DIYgod](https://diygod.me/) -->
 - [Blanboom](https://blanboom.org/)[软件]
 - [TonyHe](https://www.ouorz.com/)[学生][英语写作]
-<!-- - [学无止境](http://gtdstudy.com/) -->
 - [涛叔](https://taoshu.in/)[技术]
 - [This Cute World](https://thiscute.world/)[程序员，旅游]
 - [贤民的博客](https://www.xianmin.org/) [独立开发者，旅游]
 - [智识@IdeoBook™](http://www.ideobook.com/)[网站关了]
-<!-- - [木遥的窗子](http://blog.farmostwood.net/) -->
-<!-- - [一座島 - 一座島，一個人，一個世界。](https://island.shaform.com/zh/) -->
-<!-- - [扫地老僧的Blog](https://doyj.com/) -->
-<!-- - [扯氮集 -- 上海魏武挥的Blog](http://weiwuhui.com/) -->
-<!-- - [卢昌海个人主页](https://www.changhai.org/) [个人博客] -->
 - [Home - 阳志平的网志](https://www.yangzhiping.com/)
 - [吕小荣](http://mednoter.com/)
-- [v2ex](https://v2ex.com/)
 - [huangyang.me](http://huangyang.me/)
 <!-- - [MrToyy's Blog – 探赜索隐 勾深致远 厚德博学 经济匡时](http://www.mrtoyy.com/)[打不开] -->
 - [土木坛子](https://tumutanzi.com/)
@@ -1260,7 +1241,6 @@
 <!-- - [Taiwan 2.0 – 展望一個更美好的台灣](https://taiwan.chtsai.org/)[游记，拍台湾的路的] -->
 - [Huiris's Blog](http://huiris.com/)[读书，写作]
 <!-- - [比目鱼博客：Bimuyu's Blog](http://www.bimuyu.com/blog/)[偏文学作品] -->
-<!-- - [Elizen - 人间不值得](https://blog.elizen.me/) [完成] -->
 - [Neverland – Wherefore art thou?](https://hsu.cy/posts/)[技术文章偏多]
 - [欧雷流]( https://ourai.ws/posts/)[程序员]
 
@@ -1296,3 +1276,27 @@
 - [程序员的喵](https://catcoding.me/archives/)
 - [印记](https://yinji.org/) [网友][很厉害的小年轻][互联网从业]
 - [Randy's Blog](https://lutaonan.com) [做产品]
+
+## 其他
+
+https://blogroll.org/： 英文站为主，手动提交，人工整理，质量比较高。
+
+https://hotlinewebring.club/： 英文站为主，项目暂时停止更新，但已有内容可以发现不错的 blog。
+
+https://xn–sr8hvo.ws/directory： 英文站为主，每个 blog 都有介绍，可参考。
+
+https://defaults.rknight.me/： 本质上不是 Blog 聚合，是 App Defaults 项目延伸的聚合站。
+
+https://t.me/FindBlog： @小胡同学 _Hu 维护的 Telegram 频道，内容相对比较全，比如文章分享、博主推荐、主题等。
+
+https://github.com/timqian/chinese-independent-blogs： 国内相对较全的 blog 聚合仓库，参差不齐吧。
+
+https://github.com/qianguyihao/blog-list： @千古壹号 维护的，用 RSS 订阅了仓库更新，我相信他的选择。
+
+https://chuanliu.org/： 漂亮的博客聚合站，通过博主发现找内容。
+
+https://firewood.news： 漂亮的博客聚合站，和「川流」类似；通过内容发现博主。
+
+https://bf.zzxworld.com/s： 简单的博客聚合，我看的比较少。
+
+https://storeweb.cn： 简单的博客聚合，有登录注册系统，可以自行提交。
