@@ -64,5 +64,10 @@
         "key": "cmd+k v",
         "command": "-markdown.showPreviewToSide",
         "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "workbench.action.toggleActivityBarVisibility"
     }
+
 ]
