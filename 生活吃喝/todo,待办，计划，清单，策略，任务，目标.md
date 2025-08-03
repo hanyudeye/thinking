@@ -7,7 +7,11 @@ draft: true
 ---
 
 
+todo； 问下，台湾，香港，马来西亚有彩礼吗
 todo: 退保险，看合同详情
+
+下面还有课程的，付款，可以尝试下
+https://blog.miniasp.com/post/2024/11/08/Smart-use-of-ChatGPT-search-function-helps-you-solve-daily-tasks
 
 todo: 轻松看完 paulgraham 的文章
 

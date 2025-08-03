@@ -26,11 +26,10 @@
 - [Skywind Inside](https://www.skywind.me/blog/)
 - [陈沙克日志](http://www.chenshake.com)[数字游民，IT]
 - [iTimothy](https://xiaozhou.net)
-- [idea's blog](http://www.ideawu.net/blog)
 - [xiaix's Blog](https://xiaix.me)
 - [The Will Will Web](https://blog.miniasp.com)
-- [程序师](https://www.techug.com)
-- [解道jdon.com](https://www.jdon.com)
+- [程序师](https://www.techug.com)[推广过多]
+- [解道jdon.com](https://www.jdon.com) [推广过多]
 - [小胡子哥的个人网站](https://www.barretlee.com)
 - [晚晴幽草轩](https://www.jeffjade.com)
 - [林小沐](https://immmmm.com)
