@@ -74,27 +74,95 @@ MsgBox hello
 return
  }
 
-;切换窗口
-ToggleQuakeWindowT(windowT)
+
+;弹出式切换窗口
+ToggleQuakeWindow(identifier, type = "class")
 {
-    ; 查找窗口
-    WinGet, windowID, ID,  %windowT%
-    ; 如果窗口存在，则隐藏/显示
+    ; 根据类型查找窗口
+    if (type = "class")
+        WinGet, windowID, ID, ahk_class %identifier%
+    else if (type = "exe")
+        WinGet, windowID, ID, ahk_exe %identifier%
+    else
+        WinGet, windowID, ID, %identifier%
+
+   ; 如果窗口存在，则隐藏/显示
     if (windowID)
     {
 
         WinGet, windowState, MinMax, ahk_id %windowID%
+        if (windowState) ;如果最小化
+	{
+            WinRestore ahk_id %windowID%
+            WinWaitActive ahk_id %windowID%, , 2
+            WinActivate ahk_id %windowID%
+	}
+        else ; 否则最小化
+        {
+            WinMinimize ahk_id %windowID%
+}
+    }
+ else
+    {
+        MsgBox, 未找到窗口: %identifier%
+    }
+}
+
+;切换窗口2,这种如果窗口存在，就激活，不再最小化窗口了
+ToggleQuakeWindow(identifier, type = "class")
+{
+    ; 根据类型查找窗口
+    if (type = "class")
+        WinGet, windowID, ID, ahk_class %identifier%
+    else if (type = "exe")
+        WinGet, windowID, ID, ahk_exe %identifier%
+    else
+        WinGet, windowID, ID, %identifier%
+    ; 如果窗口存在，则激活
+    if (windowID)
+    {
+        	  WinGet, windowState, MinMax, ahk_id %windowID%
         if (windowState)
 	{
             WinRestore ahk_id %windowID%
-            WinWait,%windowT%
-            WinActivate
-	}
-        else
-            WinMinimize ahk_id %windowID%
-    }
-
+            WinWait,ahk_id %windowID%
+            WinActivate ahk_id %windowID%
+	}   else{
+             WinActivate ahk_id %windowID%
+      } 
 }
+}
+
+
+;弹出式 窗口，像Quake那种的
+ToggleQuakeWindowQuake(identifier, type = "class")
+{
+    ; 根据类型查找窗口
+    if (type = "class")
+        WinGet, windowID, ID, ahk_class %identifier%
+    else if (type = "exe")
+        WinGet, windowID, ID, ahk_exe %identifier%
+    else
+        WinGet, windowID, ID, %identifier%
+    ; 如果窗口存在，则激活
+    if (windowID)
+    {
+        	  WinGet, windowState, MinMax, ahk_id %windowID%
+
+        if (windowState) ;如果窗口隐藏，则激活
+	{
+            WinRestore ahk_id %windowID%
+            WinWait,ahk_id %windowID%
+            WinActivate ahk_id %windowID%
+	}  else {
+
+            WinWait,ahk_id %windowID%
+            WinMinimize ahk_id %windowID%
+    } 
+}
+}
+
+
 
 
 ;激活资源管理器
