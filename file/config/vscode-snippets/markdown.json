@@ -53,5 +53,12 @@
 			"${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}\n",
 		],
 		"description": "格式为 20:47:48"
+	},
+	"插入引用": {
+		"prefix": "source",
+		"body": [
+			"?utm_source=aming.xyz"
+		],
+		"description": "插入引用"
 	}
 }

@@ -15,28 +15,16 @@
 - [Reorx’s Forge](https://reorx.com/)
 - [ZDDHUB 的博客](https://zddhub.com/)
 - [全栈应用开发:精益实践](https://www.phodal.com)
-- [Python 工匠](https://www.zlovezl.cn)
-- [Ric's Blog](https://www.lichong.work)
 - [罗磊的独立博客](https://luolei.org)
-- [阁子](https://dfine.tech)
 - [代码家](https://daimajia.com)
 - [开源实验室](https://kymjs.com)
-- [技术小黑屋](https://droidyue.com)
-- [vzard's blog](https://vzardlloo.github.io)
-<!-- - [后端技术杂谈](https://rowkey.cn) [reading] -->
 - [zhonger 前端开发者，喜爱运维管理](https://blog.lui8.cn)
 - [依云's Blog](https://blog.lilydjwg.me)
-<!-- - [zgh's Blog](https://hundren.github.io) [reading] -->
-- [前端工程师 Toweave](https://toweave.github.io)[reading]
-- [MouT.me](https://mout.me)
-- [diss带码](https://dumplingbao.github.io)
 - [王登科-DK博客](https://greatdk.com)
-- [chai2010 的博客](https://chai2010.cn)
 - [云原生](https://jimmysong.io)
 - [Hawstein's Blog](https://hawstein.com/)
 - [Skywind Inside](https://www.skywind.me/blog/)
-<!-- - [陈沙克日志](http://www.chenshake.com)[数字游民，IT] -->
-- [Randy's Blog](https://lutaonan.com)
+- [陈沙克日志](http://www.chenshake.com)[数字游民，IT]
 - [iTimothy](https://xiaozhou.net)
 - [idea's blog](http://www.ideawu.net/blog)
 - [xiaix's Blog](https://xiaix.me)
@@ -94,20 +82,15 @@
 - [Est's Blog](https://blog.est.im/)
 - [Wiken](https://www.hehuapei.com)
 - [炸裂志](https://zh.fyi/)
-<!-- - [kok的笔记本](https://wocai.de) [reading] -->
 - [搞搞震](https://www.wujingquan.com)
 - [Qt进阶之路-涛哥的博客](https://jaredtao.github.io/)
-<!-- - [Fred Wu's Blog](https://persumi.com/u/fredwu) -->
-<!-- - [ISLAND](https://youngxhui.top)[学生，java,android,flutter,vim,go] -->
-<!-- - [贺叶霜的树](https://blog.heysh.xyz/)[大学生] -->
-<!-- - [Frytea's Blog](https://www.frytea.com)[计算机技术] -->
-<!-- - [Mohuishou's Blog](https://lailin.xyz) [go,程序员] -->
+- [ISLAND](https://youngxhui.top)[学生，java,android,flutter,vim,go]
+- [Frytea's Blog](https://www.frytea.com)[计算机技术]
+- [Mohuishou's Blog](https://lailin.xyz) [go,程序员]
 - [算法花园](https://xiang578.com) [算法]
-<!-- - [1A23 Studio](https://1a23.com/)[wordpress] -->
+- [1A23 Studio](https://1a23.com/)[wordpress]
 - [Jiajun的编程随想](https://jiajunhuang.com/) [web，go,python,javascript]
-<!-- - [贼拉正经的技术博客](https://www.stackoverflow.wiki/blog/) -->
-<!-- - [Lenix Blog](https://blog.p2hp.com/) -->
-<!-- - [西秦公子](https://www.ixiqin.com/)[外包，投资，美国旅行，独立开发] -->
+- [西秦公子](https://www.ixiqin.com/)[外包，投资，美国旅行，独立开发]
 - [OnionTalk](https://hateonion.me)
 - [Nicksxs's Blog](https://nicksxs.me)
 - [Allen's Blog](https://www.capallen.top)
@@ -116,7 +99,6 @@
 - [卢昌海的个人主页](https://www.changhai.org/)
 - [UsubeniFantasy](https://ssshooter.com)
 - [Alexander D Huang's Blog](https://alxddh.github.io)
-<!-- - [KAIX.IN](https://kaix.in) -->
 - [朝舞](https://ii74.com)
 - [Matrix67: The Aha Moments](http://www.matrix67.com/blog/)
 - [Livid](https://livid.v2ex.com/)
@@ -160,7 +142,6 @@
 - [Xiaoi's Blog](https://blog.xiaoi.me/)
 - [小蘿蔔丁](https://www.xlbd.me/)
 - [Realcat](https://www.vincentqin.tech/)
-- [范叶亮的博客](https://leovan.me/)
 - [自由人的 BLOG](https://ifttl.com)
 - [WEB VIEW](https://webview.tech/)
 - [后端进阶](https://objcoding.com/)
@@ -184,7 +165,6 @@
 - [陈看川博客](https://kanchuan.com/blog)
 - [崎径 其镜赵安琪的博客](http://www.z16388.top/)
 - [The Art of Chawye Hsu](https://chawyehsu.com/)
-- [吕小荣的网志](https://mednoter.com/)
 - [加菲猫的创客工坊](https://gaficat.com)
 - [胡涂说](https://hutusi.com/)
 - [张佳圆](https://jiayuanzhang.com/)
@@ -235,7 +215,6 @@
 - [木子](https://blog.k8s.li/)
 - [wuxinhua's Blog](https://wuxinhua.com/)
 - [静かな森](https://innei.ren/)
-- [土木坛子](https://tumutanzi.com/)
 - [seisamuse](https://www.seis-jun.xyz/)
 - [爪哇堂](https://www.javatang.com/)
 - [暗无天日](https://www.lujun9972.win)
@@ -336,7 +315,6 @@
 - [云游君的小站](https://www.yunyoujun.cn/)
 - [骁之屋 - 孙天骁的随身记录个人网站](https://www.ybusad.com)
 - [WuSiYu Blog](https://wusiyu.me)
-- [政子的博客](https://blog.zhengzi.me)
 - [飞刀博客](https://www.feidaoboke.com)
 - [宇宙的心弦](https://www.physixfan.com)
 - [Bingwhispers](https://cyril3.github.io)
@@ -431,7 +409,6 @@
 - [乌托邦是个理想国](https://shenyongfan.com)
 - [Anillc's blog](https://anillc.cn)
 - [墨守](https://moshou.me)
-- [This cute world](https://thiscute.world/)
 - [崮生 • 一些随笔 🎨](https://shenzilong.cn/)
 - [I'm OWenT](https://owent.net/)
 - [Android Performance](https://www.androidperformance.com/)
@@ -572,7 +549,6 @@
 - [思泉-Jev0n](https://Jev0n.com/)
 - [橘子味的心](https://www.52xml.cn/)
 - [hqingLau的博客](https://orzlinux.cn)
-- [涛叔](https://taoshu.in/)
 - [czp's blog](https://www.hiczp.com)
 - [iMaeGoo's Blog](https://www.imaegoo.com)
 - [大大的小蜗牛](https://eallion.com/)
@@ -1232,47 +1208,21 @@
 - [宋春林](http://sixf.org/)
 - [虞双齐爱折腾](https://yushuangqi.com/)
 - [依云's Blog](https://blog.lilydjwg.me/)
-- [XiaoHui.com](https://www.xiaohui.com/)
-- [Caos](http://blog.caos.me/)
-- [透明思考](http://gigix.thoughtworkers.org/)
-- [DBA Notes](http://dbanotes.net/)
-- [思圆笔记 – 促成良性循环](https://hintsnet.com/pimgeek/)
-- [DebugUself with DAMA ;-)](https://du.101.camp/)
-- [/ 是也乎(￣▽￣) / ZoomQuiet.io](￣▽￣)
-- [小胡子哥的个人网站](https://www.barretlee.com/entry/)
-- [笨方法学写作](https://www.cnfeat.com/)
 - [王登科-DK博客 - 布洛芬爱好者](https://greatdk.com/)
-- [Linghao's Blog](https://linghao.io/)
-- [forecho 的独立博客](https://blog.forecho.com/)
-- [Randy's Blog](https://lutaonan.com/)
 - [范叶亮的博客 - Leo Van's Blog](https://leovan.me/)
 - [ZMonster's Blog](https://www.zmonster.me/)
-<!-- - [Hi, DIYgod](https://diygod.me/) -->
 - [Blanboom](https://blanboom.org/)[软件]
 - [TonyHe](https://www.ouorz.com/)[学生][英语写作]
-<!-- - [学无止境](http://gtdstudy.com/) -->
 - [涛叔](https://taoshu.in/)[技术]
 - [This Cute World](https://thiscute.world/)[程序员，旅游]
 - [贤民的博客](https://www.xianmin.org/) [独立开发者，旅游]
 - [智识@IdeoBook™](http://www.ideobook.com/)[网站关了]
-<!-- - [木遥的窗子](http://blog.farmostwood.net/) -->
-<!-- - [一座島 - 一座島，一個人，一個世界。](https://island.shaform.com/zh/) -->
-<!-- - [扫地老僧的Blog](https://doyj.com/) -->
-<!-- - [扯氮集 -- 上海魏武挥的Blog](http://weiwuhui.com/) -->
-<!-- - [卢昌海个人主页](https://www.changhai.org/) [个人博客] -->
 - [Home - 阳志平的网志](https://www.yangzhiping.com/)
 - [吕小荣](http://mednoter.com/)
-- [v2ex](https://v2ex.com/)
 - [huangyang.me](http://huangyang.me/)
-<!-- - [MrToyy's Blog – 探赜索隐 勾深致远 厚德博学 经济匡时](http://www.mrtoyy.com/)[打不开] -->
 - [土木坛子](https://tumutanzi.com/)
-<!-- - [奔跑中的奶酪](https://www.runningcheese.com/)[推广目的严重] -->
-<!-- - [乱象，印迹](http://www.luanxiang.org/blog/) [网站打不开] -->
 - [zhengziying.com](https://zhengziying.com/)[生活文章很多，有点卡]
-<!-- - [Taiwan 2.0 – 展望一個更美好的台灣](https://taiwan.chtsai.org/)[游记，拍台湾的路的] -->
 - [Huiris's Blog](http://huiris.com/)[读书，写作]
-<!-- - [比目鱼博客：Bimuyu's Blog](http://www.bimuyu.com/blog/)[偏文学作品] -->
-<!-- - [Elizen - 人间不值得](https://blog.elizen.me/) [完成] -->
 - [Neverland – Wherefore art thou?](https://hsu.cy/posts/)[技术文章偏多]
 - [欧雷流]( https://ourai.ws/posts/)[程序员]
 
@@ -1307,3 +1257,28 @@
 - [投资](https://www.reddit.com/r/wallstreetbets/)
 - [程序员的喵](https://catcoding.me/archives/)
 - [印记](https://yinji.org/) [网友][很厉害的小年轻][互联网从业]
+- [Randy's Blog](https://lutaonan.com) [做产品]
+
+## 其他
+
+https://blogroll.org/： 英文站为主，手动提交，人工整理，质量比较高。
+
+https://hotlinewebring.club/： 英文站为主，项目暂时停止更新，但已有内容可以发现不错的 blog。
+
+https://xn–sr8hvo.ws/directory： 英文站为主，每个 blog 都有介绍，可参考。
+
+https://defaults.rknight.me/： 本质上不是 Blog 聚合，是 App Defaults 项目延伸的聚合站。
+
+https://t.me/FindBlog： @小胡同学 _Hu 维护的 Telegram 频道，内容相对比较全，比如文章分享、博主推荐、主题等。
+
+https://github.com/timqian/chinese-independent-blogs： 国内相对较全的 blog 聚合仓库，参差不齐吧。
+
+https://github.com/qianguyihao/blog-list： @千古壹号 维护的，用 RSS 订阅了仓库更新，我相信他的选择。
+
+https://chuanliu.org/： 漂亮的博客聚合站，通过博主发现找内容。
+
+https://firewood.news： 漂亮的博客聚合站，和「川流」类似；通过内容发现博主。
+
+https://bf.zzxworld.com/s： 简单的博客聚合，我看的比较少。
+
+https://storeweb.cn： 简单的博客聚合，有登录注册系统，可以自行提交。

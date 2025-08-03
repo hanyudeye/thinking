@@ -10,28 +10,27 @@ draft: true
 !技能直接可以变现，而不是看文档
 重心，专注，实际操作学的更快
 
-# 做贡献 contributor
+## 查看git 项目 的远程地址
+
+1.  git remote -v
+2. 打开 .git/config 文件查看
+
+## 做贡献 contributor
 
 分叉 别人的项目 ，创建 分支后 进行  修改[ 使用  git add -p ]，然后提交到线上分支 [git push -u origin 分支名]，然后请求合并 
+
+## github page
+
+- 每个账号最多支持 1 个用户主页仓库（username.github.io）
+- 其他项目可以用子路径托管（如 username.github.io/project-name/）
 
 
 ## 初学者项目
 
 ## 适合初学者的 github 项目
 
- 对于 **GitHub** 上的初学者来说，参与开源项目可以大大提高编程技能，并且帮助理解版本控制、代码协作以及开发的实际流程。以下是一些适合初学者的 **GitHub 项目**，它们通常具有友好的文档、较低的学习曲线，并且很适合用于练习和提高技能。
 
-### 1. **First Contributions**
-   - **项目简介**：这是一个旨在帮助初学者第一次提交开源贡献的项目。它提供了详细的指导，教你如何使用 Git 和 GitHub 提交代码。
-   - **适合初学者的理由**：这个项目为初学者提供了非常基础且清晰的指导，适合零基础的人通过实际操作完成第一次开源贡献。
-   - **GitHub链接**：[First Contributions](https://github.com/firstcontributions/first-contributions)
-
-### 2. **FreeCodeCamp**
-   - **项目简介**：FreeCodeCamp 是一个非常受欢迎的开源项目，致力于为全球学习者提供免费学习编程的机会。该项目包含了大量的练习题、项目，以及帮助用户掌握编程技能的内容。
-   - **适合初学者的理由**：FreeCodeCamp 项目本身也支持贡献者进行开源代码贡献，提供了很多有意义的课题，初学者可以在这个项目上练习 HTML、CSS、JavaScript 等技术。
-   - **GitHub链接**：[FreeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp)
-
-### 3. **The Algorithms**
+## 3. **The Algorithms**
    - **项目简介**：这是一个包含了各种常见算法和数据结构的开源项目，支持多种编程语言。初学者可以通过阅读和实现这些算法来提高编程技能。
    - **适合初学者的理由**：它是一个很好的练习平台，帮助你理解并实现算法和数据结构，提升编码水平，同时还能学习如何编写高效的代码。
    - **GitHub链接**：[The Algorithms](https://github.com/TheAlgorithms)
@@ -70,11 +69,6 @@ draft: true
    - **项目简介**：这个项目提供了如何参与开源项目的全面指南。它帮助初学者了解开源文化、如何寻找项目以及如何贡献代码。
    - **适合初学者的理由**：如果你对开源项目有兴趣但不确定如何开始，Open Source Guides 提供了详细的步骤，可以帮助你快速上手。
    - **GitHub链接**：[Open Source Guides](https://github.com/github/opensource.guide)
-
-### 总结：
-这些项目不仅可以帮助你提升编程技能，还能让你更好地理解开源社区的运作方式。在参与这些项目时，记得从 **文档、代码提交、issue** 等基础任务做起，
-逐步提升自己的能力。此外，了解如何有效地使用 **Git** 和 **GitHub** 也是初学者必须掌握的重要技能。
-
 
 
 ## github action

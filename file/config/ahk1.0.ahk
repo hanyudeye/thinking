@@ -1,3 +1,18 @@
+; 使用箭头键移动鼠标
+#Up::MouseMove, 0, -10, 0, R
+#Down::MouseMove, 0, 10, 0, R
+#Left::MouseMove, -10, 0, 0, R
+#Right::MouseMove, 10, 0, 0, R
+#^k::MouseMove, 0, -10, 0, R
+#^j::MouseMove, 0, 10, 0, R
+#^h::MouseMove, -10, 0, 0, R
+#^;::MouseMove, 10, 0, 0, R
+
+; #Z 键左键点击，#X 键右键点击
+#z::
+#u::Click
+#x::Click right
+
 ; 使用 3 个键控制，^; 作为前缀键
 ^;::
 Input, key1, L1 T1
@@ -22,8 +37,8 @@ Send, {Delete}  ; 模拟按下 Delete 键
 return
 
 ;切换虚拟桌面
-#^;::Send #^{Right}
-#^j::Send #^{Left}
+;#^;::Send #^{Right}
+;#^j::Send #^{Left}
 
 Active(t){
 ;     IfWinActive,%t%
