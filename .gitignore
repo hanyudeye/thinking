@@ -8,3 +8,4 @@ etc/
 /cache/
 xlsx
 .vscode
+*.o
