@@ -38,8 +38,7 @@
 - [余海峯 David 物理喵 phycat](https://hfdavidyu.com)
 - [Mr. PM 下午先生](https://mrpm.cc/)
 - [人人都是产品经理——iamsujie](http://iamsujie.com)
-- [转个弯日誌](https://blog.turn.tw/)
-- [余果的博客](https://yuguo.us)
+<!-- - [转个弯日誌](https://blog.turn.tw/) -->
 - [O3noBLOG](https://blog.othree.net)
 - [Vivaxy's blog](https://vivaxyblog.github.io)
 - [Debug客栈](https://blog.debuginn.com)
