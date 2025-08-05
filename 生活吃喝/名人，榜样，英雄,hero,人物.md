@@ -45,6 +45,7 @@ Roger Penrose: I don't believe it is consciousness that collapses the wave funct
 自由 > 金钱 > 物质
 
 ## rowkey
+
 面对新事物，先接纳，再判断。不要轻易就否定，即使经过自己的思考后确实没啥价值，这期间的思考过程也是一种知识梳理和思维锻炼。
 
 ## 天下文化 郝旭烈（郝哥）
@@ -58,3 +59,10 @@ Roger Penrose: I don't believe it is consciousness that collapses the wave funct
 > 就像爱情一样，继续找
 
 > 我要不要学习做维修？脑力一点的
+
+## 牛顿
+
+牛顿 **选择** 了 3件事，物理、炼金术、神学。只有物理是有前景的事；其他都选错做错了。
+> 敢于冒险，发现，尝试
+
+

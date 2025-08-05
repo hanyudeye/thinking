@@ -1,7 +1,7 @@
 ---
 layout: default
 toc: false
-title: toots，常识，tips，知识点，兴趣，钢琴
+title: toots，常识，tips，知识点，兴趣
 date:  2025-07-03T07:35:11+08:00
 categories: ['']
 draft: true
