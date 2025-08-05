@@ -1203,7 +1203,6 @@
 - [刘未鹏 Mind Hacks – 思维改变生活](http://mindhacks.cn/)
 - [云风的 BLOG](http://blog.codingnow.com/)
 - [M-x Chris-An-Emacser](https://chriszheng.science/)
-- [宋春林](http://sixf.org/)
 - [虞双齐爱折腾](https://yushuangqi.com/)
 - [依云's Blog](https://blog.lilydjwg.me/)
 - [王登科-DK博客 - 布洛芬爱好者](https://greatdk.com/)
