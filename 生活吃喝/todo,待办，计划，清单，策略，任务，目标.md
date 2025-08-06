@@ -8,7 +8,6 @@ draft: true
 
 todo : 看 100 本必看书籍，并做笔记，并下载文本版本，放到仓库中
 
-
 在项目留言还有没有其他书籍  https://github.com/dwgeneral/Awesome-Ebooks
 
 todo：寻找一个工具，可以语音交流，可以边运动边学习课程，？视频吗？
