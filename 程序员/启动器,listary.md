@@ -36,6 +36,7 @@ Listary 不只是本地启动器，它还内置了强大的 **网络搜索** 功
 * 淘宝购物：`https://s.taobao.com/search?q={query}`
 * Pixabay 图片搜索：`https://pixabay.com/images/search/{query}`
 * ChatGPT 查询：`https://www.chatgpt.com/?temporary-chat=true&q={query}`
+* 看小说： `https://www.qimao.com/search/index/?keyword={query}`
 
 设置方法也很简单，只需在 Listary 的“网络搜索”选项中添加对应条目即可。一次配置，长期受益。
 

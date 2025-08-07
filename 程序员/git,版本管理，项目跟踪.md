@@ -14,6 +14,8 @@ draft: true
 ``` sh
  #配置用户名 
 git config --global user.name "你的新用户名"
+# 查看配置
+git config list
 ```
 
 
