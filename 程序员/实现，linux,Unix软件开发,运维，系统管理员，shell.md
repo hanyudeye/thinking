@@ -86,3 +86,25 @@ exit  正常终止
 
 ### 管道
 ### FIFO
+
+# python
+## 创建虚拟环境
+``` sh
+python3 -m venv myenv
+```
+
+## 自动激活虚拟环境
+
+
+``` sh
+cd ~/your_project && source venv/bin/activate
+```
+ ## pip 
+
+``` sh
+# 列出所关联的 Python 环境中已安装的所有包
+pip list
+# 显示特定包的详细信息
+pip show <package_name>
+```
+

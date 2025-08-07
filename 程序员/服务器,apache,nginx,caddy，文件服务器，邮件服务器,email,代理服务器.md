@@ -6,6 +6,70 @@ date:  2025-07-03T07:33:16+08:00
 categories: ['']
 ---
 
+## nginx 网站资源服务软件
+
+``` sh
+sudo apt install -y nginx-full
+# 创建站点资源
+sudo mkdir -p /var/www/WEB.com
+sudo chown -R ubuntu:ubuntu /var/www/WEB.com
+sudo chown -R www-data:www-data /var/www/WEB.com
+sudo chmod -R 755 /var/www/WEB.com
+
+# 创建配置文件
+sudo vim /etc/nginx/sites-available/WEB.com
+
+# 激活虚拟主机配置
+cd /etc/nginx/sites-enabled
+sudo ln -s ../sites-available/lisz.me lisz.me
+
+# 检查语法
+sudo nginx -t
+
+# 重载配置文件使虚拟主机生效
+sudo nginx -s reload
+sudo systemctl reload nginx
+
+# 上传本地 _site 文件夹内容到远程主机
+scp -r _site/* /var/www/lisz.me/
+
+```
+
+``` conf
+# 配置文件内容
+
+server {
+    listen 80;  # 监听 80 端口
+    server_name example.com www.example.com;  # 配置域名
+
+    # 网站根目录
+    root /var/www/example.com;  
+
+    # 默认主页
+    index index.html index.htm index.php;
+
+    # 访问日志
+    access_log /var/log/nginx/example.com.access.log;
+
+    # 错误日志
+    error_log /var/log/nginx/example.com.error.log;
+
+    # 配置文件路径
+    location / {
+        try_files $uri $uri/ =404;  # 如果文件不存在，则返回 404 错误
+    }
+
+    # 配置 PHP 支持（如果需要）
+    location ~ \.php$ {
+        fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;  # 根据 PHP 版本调整
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME /var/www/example.com$document_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+}
+
+```
+
 
 # web服务器，http服务器，富文本服务器 的基本功能
 
@@ -357,3 +421,22 @@ services:
 
 # 安全远程登录 SSH	22
 
+# php-fpm
+
+``` sh
+# 前台运行
+sudo php-fpm7.4 -F
+# 后台运行
+nohup php-fpm7.4 -F > /var/log/php-fpm.log 2>&1 &
+
+# 查看是否运行
+sudo systemctl status php7.4-fpm
+ps aux | grep php-fpm
+
+# 配置文件
+/etc/php/7.4/fpm/pool.d/www.conf
+
+# 日志
+tail -f /var/log/php7.4-fpm.log
+
+```
