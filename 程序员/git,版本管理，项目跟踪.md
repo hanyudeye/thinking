@@ -9,6 +9,14 @@ draft: true
 
 ## git  [历史追踪/项目管理]
 
+### 配置
+
+``` sh
+ #配置用户名 
+git config --global user.name "你的新用户名"
+```
+
+
 ### 分支管理
 
 ``` sh
