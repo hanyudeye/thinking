@@ -27,12 +27,6 @@ todo: 晚上能做哪些有意义的事 [晚上能找点什么活干呢，有钱
 
 > 晚上真的相比早晨是 好时间，时间长，有4-5小时，早晨只有2小时，能做好多事情(如推广，看贴)
 
-todo: 编程向更复杂的对象函数学习，算法深入
-
-todo：寻找一个工具，可以语音交流，可以边运动边学习课程，？视频吗？
-现在 一个 gpt 有一定语音功能
-- 带好蓝牙，找运动型蓝牙
-
 
 下面还有课程的，付款，可以尝试下
 https://blog.miniasp.com/post/2024/11/08/Smart-use-of-ChatGPT-search-function-helps-you-solve-daily-tasks
