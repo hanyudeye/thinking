@@ -211,9 +211,14 @@ https://huggingface.co/
 - [Arts & Crafts, Frames, Seasonal Décor | DIY & Inspiration | Michaels](https://www.michaels.com/)
 - [SparkFun Electronics](https://www.sparkfun.com/)
 
+## links
+
+- [google 指数](https://trends.google.com/trends/explore?q=gpt&date=now%201-d&geo=US&hl=zh-CN)
+- [有道翻译](https://dict.youdao.com/result?word={Argument}&lang=en)
 
 ## 数据统计
 
 ### 指数
 
 - [google index](https://trends.google.com/trends/explore?q=UNH)
+
