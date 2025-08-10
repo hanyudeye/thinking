@@ -1,69 +1,67 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>简约计算器</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-        }
+---
+layout: default
+toc: false
+title: 简易计算器
+date: 2025-08-10T06:00:41+08:00
+categories: ['编码']
+---
+
+<style>
+    .calculator {
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0 8px 32px rgba(60, 60, 120, 0.15);
+        padding: 2rem 1.5rem;
+        width: 90vw;
+        max-width: 350px;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .calculator input,
+    .calculator select,
+    .calculator textarea {
+        font-size: 1.2rem;
+        padding: 0.7rem;
+        border-radius: 10px;
+        border: 1px solid #dbeafe;
+        outline: none;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 0.5rem;
+    }
+
+    .calculator textarea {
+        resize: none;
+        height: 3rem;
+        background: #f1f5f9;
+    }
+
+    .calculator label {
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+
+    .calculator .title {
+        font-size: 1.6rem;
+        font-weight: bold;
+        text-align: center;
+        color: #6366f1;
+        margin-bottom: 0.5rem;
+        letter-spacing: 2px;
+    }
+
+    @media (max-width: 500px) {
         .calculator {
-            background: #fff;
-            border-radius: 20px;
-            box-shadow: 0 8px 32px rgba(60, 60, 120, 0.15);
-            padding: 2rem 1.5rem;
-            width: 90vw;
-            max-width: 350px;
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
+            padding: 1.2rem 0.7rem;
+            max-width: 98vw;
         }
-        .calculator input,
-        .calculator select,
-        .calculator textarea {
-            font-size: 1.2rem;
-            padding: 0.7rem;
-            border-radius: 10px;
-            border: 1px solid #dbeafe;
-            outline: none;
-            width: 100%;
-            box-sizing: border-box;
-            margin-bottom: 0.5rem;
-        }
-        .calculator textarea {
-            resize: none;
-            height: 3rem;
-            background: #f1f5f9;
-        }
-        .calculator label {
-            font-size: 1.5rem;
-            text-align: center;
-            margin: 0.5rem 0;
-        }
-        .calculator .title {
-            font-size: 1.6rem;
-            font-weight: bold;
-            text-align: center;
-            color: #6366f1;
-            margin-bottom: 0.5rem;
-            letter-spacing: 2px;
-        }
-        @media (max-width: 500px) {
-            .calculator {
-                padding: 1.2rem 0.7rem;
-                max-width: 98vw;
-            }
-        }
-    </style>
-</head>
+    }
+</style>
+
 <body>
     <div class="calculator">
         <div class="title">计算器</div>
@@ -107,4 +105,3 @@
         document.querySelector('select[name="operation"]').addEventListener('change', calculate);
     </script>
 </body>
-</html>
