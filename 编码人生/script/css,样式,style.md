@@ -13,6 +13,7 @@ CSS 排版与网格布局是现代前端开发中非常重要的技能。它们�
 CSS 排版主要涉及如何控制文字的排列、行高、间距、对齐等。了解这些基础是构建网页时的第一步。
 
 #### 1.1 **字体设置**
+
 ```css
 body {
     font-family: Arial, sans-serif; /* 设置字体 */
@@ -56,6 +57,29 @@ p {
 ```
 - `column-count`：设置列的数量。
 - `column-gap`：设置列之间的间距。
+
+
+#### 1.5 **字体**
+- sans-serif 无衬线字体 (字体圆润)
+- 常用无衬线字体
+  - Arial 是一种无衬线（sans-serif）字体
+  - Helvetica
+  - Segoe UI
+  - Open Sans
+  - Microsoft YaHei（微软雅黑）
+
+
+- 有衬线字体（Serif fonts）
+- 常用于书籍、报纸、正式文档标题等。
+  - 常见有衬线字体
+   - Times New Roman
+   - Georgia
+   - Garamond
+   - 宋体（SimSun）在中文里也算有衬线
+
+#### 1.6 **汉字竖排**
+- writing-mode: vertical-rl; /* 从右到左的竖排 */
+- text-orientation: upright; /* 每个字直立显示 */
 
 ---
 

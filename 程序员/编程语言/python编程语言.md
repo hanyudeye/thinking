@@ -213,3 +213,120 @@ draft: true
 | 自动化       | 《Python自动化运维：技术与最佳实践》   | 中高级  |
 | Web 开发    | 《Flask Web开发实战》         | 中高级  |
 
+
+## 环境
+
+1. 对于多个版本的 python ，要安装不同版本的 python ，然后 设置 全局的python版本
+2. 然后创建 venv 环境，激活环境后，用对应版本的 python 初始化安装 环境
+
+
+在 Windows 下切换不同 Python 版本，有几种常用工具，各自适用的场景不同。
+我帮你按「是否要用 Scoop 管理」来分类整理一下。
+
+---
+
+## **1. Scoop 自带的多版本管理**
+
+* **适合**：你已经用 Scoop 管理软件，想方便地切换全局 Python 版本。
+* **原理**：Scoop 用 `shim` 链接来控制哪个版本是默认。
+* **常用命令**：
+
+  ```powershell
+  scoop bucket add versions          # 添加旧版本源
+  scoop install python39 python310   # 安装多个版本
+  scoop reset python39               # 切换到 Python 3.9
+  scoop reset python310               # 切换到 Python 3.10
+  ```
+* **优点**：切换快，不污染系统 PATH。
+* **缺点**：切换是全局的，不能同时使用两个版本。
+
+---
+
+## **2. pyenv-win**
+
+* **适合**：习惯 Linux 下 `pyenv` 的方式，需要频繁切换不同版本。
+* **安装（可用 Scoop 安装）**：
+
+  ```powershell
+  scoop install pyenv
+  ```
+* **用法**：
+
+  ```powershell
+  pyenv install 3.10.12
+  pyenv install 3.9.13
+  pyenv global 3.10.12     # 设置全局版本
+  pyenv local 3.9.13       # 当前目录使用 3.9
+  pyenv versions           # 查看安装的版本
+  ```
+* **优点**：支持 per-project（项目内）版本切换。
+* **缺点**：安装过程稍慢，占用空间较大。
+
+---
+
+## **3. Python 官方 `py` 启动器**
+
+* **适合**：系统已经安装了多个 Python，不想额外装管理工具。
+* **用法**（安装 Python 时勾选安装 `py launcher`）：
+
+  ```powershell
+  py -0p          # 列出所有已安装版本
+  py -3.10 script.py   # 用 3.10 运行
+  py -3.9 script.py    # 用 3.9 运行
+  ```
+* **优点**：零配置，轻量。
+* **缺点**：不方便更换默认版本（需要改配置）。
+
+---
+
+## **4. Virtual Environment（venv / virtualenv）**
+
+* **适合**：项目隔离，而不是全局切换。
+* **用法**：
+
+  ```powershell
+  python -m venv venv
+  .\venv\Scripts\activate
+  ```
+* **优点**：隔离依赖，项目之间不冲突。
+* **缺点**：不直接切换全局 Python 版本，需要已有的版本。
+
+---
+
+### **推荐组合**
+
+如果你是 **Scoop 用户** → 用 **Scoop + scoop reset** 就够了。
+如果你需要 **按项目切换** → 用 **pyenv-win**。
+如果你只偶尔切换运行版本 → 用 **py 启动器**。
+
+---
+
+我可以帮你画一张 **“Windows Python 版本切换工具选择图”**，你一看就知道用哪个。
+要我画吗？这样会很直观。
+
+## 这两个脚本干嘛用的
+
+python manage.py makemigrations
+python manage.py migrate
+
+这两个命令是 **Django** 框架里用来管理数据库结构的。
+
+* **`python manage.py makemigrations`**
+  作用：根据你在 `models.py` 中的改动，生成数据库迁移文件（migration files）。这些文件记录了模型的变化，比如新增字段、修改字段类型、删除表等。
+  简单理解：
+
+  > “我在代码里改了数据结构，请帮我写一份变更计划书。”
+
+* **`python manage.py migrate`**
+  作用：执行这些迁移文件，把变更应用到数据库中，实际创建或修改数据库的表和字段。
+  简单理解：
+
+  > “按照变更计划书，把数据库真正改掉。”
+
+一般流程是：
+
+1. 改 `models.py`
+2. `makemigrations` → 生成迁移计划
+3. `migrate` → 执行计划，更新数据库结构
+
+如果你愿意，我可以给你画一张**流程示意图**，让这两个命令的关系更直观。这样你一眼就能记住。

@@ -6,6 +6,14 @@ date:  2025-07-29T13:02:28+08:00
 draft: true
 ---
 
+todo: 把洗发水，洗面奶扔掉
+
+todo: F:\me\do\程序员\git,版本管理，项目跟踪.md
+1. 换 换行符规则 2. 换文件名显示规则
+
+todo; 企业站 模板 学习，vue技术，内容不要讲究样式  https://github.com/liyunkun11/official-website.git
+think 企业站
+
 
 
 todo: 短视频 发布转载 ，一周一个，有趣的，时间控制半小时内。
