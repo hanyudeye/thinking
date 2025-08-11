@@ -3,7 +3,7 @@ layout: default
 toc: false
 title: 启动器 Listary
 date:  2025-08-04T19:09:08+08:00
-categories: ['']
+categories: ['生产力']
 ---
 
 # 高效启动工具推荐：Listary 使用体验分享

@@ -1,9 +1,10 @@
 ---
 layout: default
 toc: true
-title: Linux常用命令
+title: Linux环境下开发人员常用命令
 date:  2025-07-07T13:13:14+08:00
 ---
+
 
 # 一.文件管理
 
@@ -381,8 +382,6 @@ free [选项]
 * **- buffers/cache**：实际使用的内存。used-buffers-cached
 * **+ buffers/cache**：可用内存。free+buffers+cached（在内存紧张时，buffers和cached可以回收）
 
-[详细结果说明](https://fixatom.com/linux-free-cmd-buffers-and-cached/)
-
 ## 5.shell进程的资源限制：ulimit
 
 #### 使用方法
@@ -511,8 +510,6 @@ netstat [选项]
     - **Type**：socket访问的类型
     - **Path**：连接到此socket的相关程序的路径
 
-[netstat的10个基本用法](https://linux.cn/article-2434-1.html)
-
 ## 3.查看路由表：route
 
 ## 4.检查网络连通性：ping
@@ -539,10 +536,6 @@ sudo tcpdump [选项] ...
 sudo tcpdump -i lo tcp port 9877
 ```
 
-下图为tcp回射服务器，客户端分别键入"hello"和“world”时，使用tcpdump抓取到的数据包
-
-<div align="center"> <img src="../pic/linux-tcpdump-1.png"/> </div>
-
 ## 8.域名解析工具：dig
 
 ## 9.网络请求：curl
@@ -555,8 +548,6 @@ sudo tcpdump -i lo tcp port 9877
 ## 1.编辑器：vim
 
 ## 2.编译器：gcc和g++
-
-[C程序的编译过程](https://www.cnblogs.com/CarpenterLee/p/5994681.html)
 
 #### 使用方法
 
