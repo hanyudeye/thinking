@@ -6,6 +6,8 @@ date:  2025-07-29T13:02:28+08:00
 draft: true
 ---
 
+todo: 如果 listary 不灵敏，换 ctrl + 空格 试下
+
 todo: 考虑自己博客站的推广，流量，流畅度
 
 todo; 企业站 模板 学习，vue技术，内容不要讲究样式  https://github.com/liyunkun11/official-website.git
@@ -18,6 +20,7 @@ todo: 网上的信息太集中于消极，要积极点
 todo: 拿本数学书看看
 
 todo: 日语考试，命运的齿轮在转动 [9月开始]
+- 购买新的苹果手机，能用吗(卡不同)
 
 todo : 看 100 本必看书籍 book ，并做笔记，并下载文本版本，放到仓库中? 要弄个章节，目录 方便导航。
 

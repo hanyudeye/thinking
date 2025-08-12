@@ -240,3 +240,20 @@ CSS Grid 是一种强大的布局系统，它可以让我们创建更加灵活�
     <!--给 box1 增加拖拽的属性-->
     <div class="box1" draggable="true"></div>
  ```
+
+# CSS 中的背景图像不透明度
+
+```css
+div {
+  /* Use some images */
+  background-image: 
+      url(image-one.jpg),
+      url(image-two.jpg);
+
+  /* Turn down their 'opacity' by blending them into
+     the background color */
+  background-color: rgba(255,255,255,0.6);
+  background-blend-mode: lighten;
+}
+
+```

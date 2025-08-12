@@ -25,12 +25,11 @@
 - [Skywind Inside](https://www.skywind.me/blog/)
 - [陈沙克日志](http://www.chenshake.com)[数字游民，IT]
 - [iTimothy](https://xiaozhou.net)
-- [xiaix's Blog](https://xiaix.me)
-- [The Will Will Web](https://blog.miniasp.com)
+- [The Will Will Web](https://blog.miniasp.com)[看过一部分]
 - [程序师](https://www.techug.com)[推广过多]
 - [解道jdon.com](https://www.jdon.com) [推广过多]
-- [小胡子哥的个人网站](https://www.barretlee.com)
-- [晚晴幽草轩](https://www.jeffjade.com)
+- [小胡子哥的个人网站](https://www.barretlee.com)[更新慢]
+<!-- - [晚晴幽草轩](https://www.jeffjade.com) -->
 - [林小沐](https://immmmm.com)
 - [HelloDog](https://wsgzao.github.io)
 - [the5fire的技术博客](https://www.the5fire.com/)
@@ -1254,6 +1253,7 @@
 - [程序员的喵](https://catcoding.me/archives/)
 - [印记](https://yinji.org/) [网友][很厉害的小年轻][互联网从业]
 - [Randy's Blog](https://lutaonan.com) [做产品]
+- [安迪龙](https://sydneyuberer.com/)
 
 ## 其他
 
