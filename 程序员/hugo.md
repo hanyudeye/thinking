@@ -75,4 +75,98 @@ rm -rf resources/_gen # 或删除缓存目录
 
 ```
 
+## 添加描述 
+
+在 **Hugo** 中为页面或站点添加 **description**（描述）和 **link**（通常指 canonical link 或 meta 链接）有几种常见方式，取决于是针对整站还是单个页面。下面详细说明方法：
+
+---
+
+### ✅ 1. **在站点配置文件中添加默认 description 和 link**
+
+编辑你的 `config.toml`（或 `config.yaml`、`config.json`），添加全局参数：
+
+**TOML 示例：**
+
+```toml
+baseURL = "https://example.com/"
+title = "我的Hugo站点"
+languageCode = "zh-cn"
+
+[params]
+  description = "这是我的网站描述"
+```
+
+**作用：**
+
+* `params.description` 可以在模板中调用 `{{ .Site.Params.description }}`。
+* `baseURL` 会用于 `<link rel="canonical" href="...">` 生成。
+
+---
+
+### ✅ 2. **在页面 front matter 中添加 description**
+
+每个内容文件（如 `content/posts/my-post.md`）可以在 **front matter** 里设置 `description` 和 `link`。
+
+**YAML 示例：**
+
+```yaml
+---
+title: "文章标题"
+date: 2025-08-13
+description: "这是这篇文章的描述"
+---
+```
+
+**TOML 示例：**
+
+```toml
++++
+title = "文章标题"
+date = "2025-08-13"
+description = "这是这篇文章的描述"
++++
+```
+
+---
+
+### ✅ 3. **在模板中输出 description**
+
+在 `layouts/_default/baseof.html` 或你的模板里，添加 meta 标签：
+
+```html
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+```
+
+**逻辑解释：**
+
+* 如果页面有 `.Description`（即 front matter 里 `description`），优先使用。
+* 否则 fallback 到站点的全局 `params.description`。
+
+---
+
+### ✅ 4. **添加 link 标签（canonical 或自定义）**
+
+通常 canonical link 用 `.Permalink` 或 `.RelPermalink`：
+
+```html
+<link rel="canonical" href="{{ .Permalink }}">
+```
+
+如果你想加自定义的 link（比如 RSS、CSS 等），可以写在 `head` 部分：
+
+```html
+<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ .Site.BaseURL }}index.xml">
+```
+
+---
+
+### ✅ 5. **检查 Hugo 内置变量**
+
+* `.Description` → 来自 front matter 或自动生成摘要。
+* `.Permalink` → 页面绝对 URL。
+* `.Site.Params.description` → 配置文件定义的全局描述。
+
+---
+
+要不要我帮你 **直接写一个完整的 `head` 模板示例**，里面包含 **description + canonical link + favicon + Open Graph**？这会让你的 Hugo 站点更 SEO 友好。
 
