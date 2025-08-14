@@ -41,7 +41,7 @@
 - [O3noBLOG](https://blog.othree.net)
 - [Vivaxy's blog](https://vivaxyblog.github.io)
 - [Debug客栈](https://blog.debuginn.com)
-- [isaced](https://www.isaced.com/)
+<!-- - [isaced](https://www.isaced.com/) [程序员，内容少] -->
 - [Jason](https://atjason.com)
 - [forecho 的独立博客](https://blog.forecho.com)
 - [Jack Liu博客](https://www.jack-liu.com)

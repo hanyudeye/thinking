@@ -686,3 +686,4 @@ chmod [选项] 权限的数字表示 文件或目录
 ```
 0 8 * * * /usr/bin/etherwake -D -i br-lan <MAC地址>
 ```
+

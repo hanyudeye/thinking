@@ -1,9 +1,9 @@
 ---
 layout: default
 toc: false
-title: 实现，linux,Unix软件开发,运维，系统管理员，shell
-date:  2025-07-03T05:48:34+08:00
-categories: ['']
+title: Linux环境下系统编程
+date:  2025-08-14T11:19:55+08:00
+draft: true
 ---
 
 ## 文件操作 

@@ -17,9 +17,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from boards import views
+from blog import views as blog_views
 
 
 urlpatterns = [
     path('boards/',views.home),
     path('admin/', admin.site.urls),
+
+
+
+
+    # 博客链接    # path('blog/', include('blog.urls')),
+    path('blog/',blog_views.home),
 ]
