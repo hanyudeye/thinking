@@ -30,7 +30,6 @@
 - [解道jdon.com](https://www.jdon.com) [推广过多]
 - [小胡子哥的个人网站](https://www.barretlee.com)[更新慢]
 <!-- - [晚晴幽草轩](https://www.jeffjade.com) -->
-- [林小沐](https://immmmm.com)
 - [HelloDog](https://wsgzao.github.io)
 - [the5fire的技术博客](https://www.the5fire.com/)
 - [余海峯 David 物理喵 phycat](https://hfdavidyu.com)
@@ -42,8 +41,7 @@
 - [Vivaxy's blog](https://vivaxyblog.github.io)
 - [Debug客栈](https://blog.debuginn.com)
 <!-- - [isaced](https://www.isaced.com/) [程序员，内容少] -->
-- [Jason](https://atjason.com)
-- [forecho 的独立博客](https://blog.forecho.com)
+<!-- - [Jason](https://atjason.com) [硬件,mac开发] -->
 - [Jack Liu博客](https://www.jack-liu.com)
 - [GeekPlux](https://geekplux.com)
 - [王子亭的博客](https://jysperm.me)
@@ -864,7 +862,6 @@
 - [Max的技术札记](https://www.immaxfang.com/)
 - [Fernweh](https://blog.wohin.me)
 - [Suiko的自留地](https://suiko.dev/)
-- [杜老师说](https://dusays.com/)
 - [世界观察日记](https://fiftysixtimes7.github.io/MyWorldObservationJournal/)
 - [plus studio](https://studyinglover.com/)
 - [Wayne的技术博客](https://blog.michealwayne.cn/)
@@ -942,27 +939,19 @@
 - [晚风博客](https://xlog.me)
 - [质数人生](https://2357.life)
 - [HikariLan's Blog](https://my.minecraft.kim)
-- [Rehtt's Blog](https://rehtt.com)
-- [Bluemangoo;s Blog](https://blog.bluemangoo.net/)
-- [trudbot's blog](https://trudbot.cn)
-- [这里是L](https://liuuzaki.net)
-- [shimmer](https://wp-boke.work)
-- [豌豆花下猫 - Python猫](https://pythoncat.top)
-- [WAYJAM's Blog](https://wayjam.me)
-- [重生云](https://xiaochopin.github.io/)
-- [柒月是你的谎言](https://www.huangdf.xyz)
-- [FKY&JYQ](https://blog.fkynjyq.com)
-- [Vincent' blog](https://wekic.com)
-- [闲人Life](https://www.xianrenlife.com/)
-- [良说](https://xijingxu.blog)
-- [古时的风筝](https://www.moonkite.cn/)
-- [菜皮日记](https://www.lipijin.com/)
+<!-- - [Rehtt's Blog](https://rehtt.com)[go程序员，博客界面花里胡哨] -->
+<!-- - [Bluemangoo;s Blog](https://blog.bluemangoo.net/)[学生] -->
+- [trudbot's blog](https://trudbot.cn) [算法]
+- [豌豆花下猫 - Python猫](https://pythoncat.top) [有推广的订阅性质的，可以借鉴]
+<!-- - [WAYJAM's Blog](https://wayjam.me)[技术博主] -->
+<!-- - [重生云](https://xiaochopin.github.io/) -->
+<!-- - [柒月是你的谎言](https://www.huangdf.xyz) -->
+<!-- - [FKY&JYQ](https://blog.fkynjyq.com) -->
+<!-- - [Vincent' blog](https://wekic.com)[网站卡顿] -->
+<!-- - [菜皮日记](https://www.lipijin.com/) -->
 - [虹线](https://1q43.blog)
-- [无名小站](https://waahah.xyz/)
-- [秋色部落](https://qiu.se/)
-- [Seraphineの小窝](https://www.helloseraphine.top/)
-- [东评西就](https://dongjunke.cn)
-- [Leon Fong 的个人网站](https://leonfong.me)
+<!-- - [无名小站](https://waahah.xyz/) -->
+<!-- - [秋色部落](https://qiu.se/) [很简洁的博客] -->
 - [Ke's blog](https://mengke.me)
 - [蛮荆](https://dbwu.tech)
 - [文武科技柜](https://www.wangdu.site)
@@ -1225,6 +1214,8 @@
 ## 投资、数字游民
 
 - [Jarodise – 数字游民部落 – A Chinese Digital Nomad Blog](https://jarodise.com/)
+- [forecho 的独立博客](https://blog.forecho.com) [有营销性质]
+
 
 ## 旅游
 
@@ -1240,6 +1231,8 @@
 ## 时常看看
 
 
+- [Leon Fong 的个人网站](https://leonfong.me) [独立旅行]
+- [闲人Life](https://www.xianrenlife.com/)[旅游，作家]
 - [最好金龟换酒](http://fz0512.com/) [生活，旅游 ，摄影，亲子][可以感受幸福，放松心情]
 - [Cat in Chinese](https://chinese.catchen.me) [移民，演讲者、技术]
 - [水星投资理财](https://mercurychong.blogspot.com/)[ 投资]
@@ -1255,7 +1248,12 @@
 - [印记](https://yinji.org/) [网友][很厉害的小年轻][互联网从业]
 - [Randy's Blog](https://lutaonan.com) [做产品]
 - [安迪龙](https://sydneyuberer.com/)
-
+- [杜老师说](https://dusays.com/)[内容丰富]
+- [东评西就](https://dongjunke.cn)[内容丰富，闲时看看]
+- [koobai](https://koobai.com/posts/) [开了淘宝网店、网店]
+- [hux](https://hux.ink/) [文章挺多的]
+- [林小沐](https://immmmm.com)[内容多]
+- [Seraphineの小窝](https://www.helloseraphine.top/)[机器学习]
 ## 其他
 
 https://blogroll.org/： 英文站为主，手动提交，人工整理，质量比较高。
