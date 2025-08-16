@@ -58,19 +58,10 @@
 - [ChrAlpha 的幻想乡（博客）](https://blog.ichr.me)
 - [褪墨・时间管理](https://www.mifengtd.cn/)
 - [我爱自然语言处理](https://www.52nlp.cn/)
-- [唐巧的博客](https://blog.devtang.com/)
 - [OneV's Den](https://onevcat.com/)
 - [Garan no dou](https://blog.ibireme.com/)
 - [可能吧](https://kenengba.com/)
-- [鸟窝](https://colobu.com/)
-- [libfeihu Blog](https://feihu.me/blog/)
-- [Nic Lin's Blog](https://blog.niclin.tw/) [reading]
-- [Halfrost's Field](https://halfrost.com/)
-- [limboy's HQ](https://limboy.me)
-- [sunnyxx的技术博客](https://blog.sunnyxx.com/)
-- [阿毛的蛋疼地](https://xiangwangfeng.com/)
-- [Kevin Blog](https://blog.kevinzhow.com)
-- [bang's blog](https://blog.cnbang.net/)
+- [bang's blog](https://blog.cnbang.net/)[人工智能]
 - [I'm TualatriX](https://imtx.me)
 - [Wujunze's Blog](https://wujunze.com)
 - [夜行人](https://wwj718.github.io)
@@ -949,7 +940,7 @@
 <!-- - [FKY&JYQ](https://blog.fkynjyq.com) -->
 <!-- - [Vincent' blog](https://wekic.com)[网站卡顿] -->
 <!-- - [菜皮日记](https://www.lipijin.com/) -->
-- [虹线](https://1q43.blog)
+- [虹线](https://1q43.blog)[作家]
 <!-- - [无名小站](https://waahah.xyz/) -->
 <!-- - [秋色部落](https://qiu.se/) [很简洁的博客] -->
 - [Ke's blog](https://mengke.me)
@@ -1179,7 +1170,7 @@
 - [0xd00's blog](https://blog.0xd00.com/)
 - [OneV's Den](http://onevcat.com)
 - [Limboy 无网不剩](https://limboy.me/)
-- [唐巧的技术博客](https://blog.devtang.com)
+- [唐巧的技术博客](https://blog.devtang.com)[内容挺多]
 - [bang's blog](https://blog.cnbang.net/)
 - [Kevin Blog](http://zhowkev.in)
 - [I'm TualatriX](http://imtx.me)

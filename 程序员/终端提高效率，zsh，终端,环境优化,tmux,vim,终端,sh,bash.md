@@ -135,16 +135,12 @@ cron 的格式是：
 0 8 * * 1 echo "Weekly report generation"
 ```
 
----
-
 ### **3. 保存并退出**
 
 * 如果是 `vi` 或 `vim`，按 `ESC`，输入 `:wq` 回车
 * 如果是 `nano`，按 `Ctrl+O` 保存，`Ctrl+X` 退出
 
 保存后，`cron` 会自动加载新任务。
-
----
 
 ### **4. 查看当前定时任务**
 
