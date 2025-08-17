@@ -9,3 +9,4 @@ etc/
 xlsx
 .vscode
 *.o
+node_modules/
