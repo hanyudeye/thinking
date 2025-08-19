@@ -199,7 +199,8 @@ https://huggingface.co/
 
 ### 招聘
 
-[SEEK - Australia's no. 1 jobs, employment, career and recruitment site](https://www.seek.com.au/)
+- [SEEK - Australia's no. 1 jobs, employment, career and recruitment site](https://www.seek.com.au/)
+- [boss直聘](https://www.zhipin.com/)
 
 ### 电子手工
 

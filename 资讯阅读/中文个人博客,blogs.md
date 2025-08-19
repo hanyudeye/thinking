@@ -1,5 +1,4 @@
 
-# 中文独立博客推荐
 
 ## 编程技术 / IT / 前端后端
 
@@ -62,7 +61,6 @@
 - [Garan no dou](https://blog.ibireme.com/)
 - [可能吧](https://kenengba.com/)
 - [bang's blog](https://blog.cnbang.net/)[人工智能]
-- [I'm TualatriX](https://imtx.me)
 - [Wujunze's Blog](https://wujunze.com)
 - [夜行人](https://wwj718.github.io)
 - [Est's Blog](https://blog.est.im/)
@@ -101,26 +99,13 @@
 - [张凯强的博客](https://zkqiang.cn/)
 - [xulihang's blog](https://blog.xulihang.me)
 - [见字如面](https://hiwannz.com)
-- [把酒诗代码](https://102no.com/)
-- [NotJustCode](https://mebtte.com/)
-- [江边的旱鸭子](https://blog.joouis.com)
-- [追风之影](https://www.devashen.com)
-- [HansChen 的博客](https://blog.hanschen.site/)
-- [IPhysResearch](https://iphysresearch.github.io/blog/)
-- [Desvl's blog](https://desvl.xyz)
-- [HaoKunT的博客](https://hkvision.cn)
-- [Deepzz's Blog](https://deepzz.com)
+- [把酒诗代码](https://102no.com/)[餐饮]
+- [NotJustCode](https://mebtte.com/)[react]
 - [lucifer的网络博客](https://lucifer.ren/blog)
-- [音视频开发进阶](https://glumes.com)
-- [Josherich的博客](https://www.josherich.me/)
-- [Zhshch`s Blog](https://xzhsh.ch/)
-- [FlyingSky's Blog](https://blog.fsky7.com/)
-- [己羊的梦](https://www.jiyang00.cn/)
 - [anran758's blog](https://anran758.github.io/blog/)
 - [思有云](https://www.ioiox.com)
 - [初等記憶體](https://axionl.me)
-- [可可托海没有海](https://darmau.co/zh)
-- [五分钟学算法](https://www.cxyxiaowu.com)
+- [五分钟学算法](https://www.cxyxiaowu.com)[算法]
 - [Tianke Youke](https://jyzhu.top)
 - [爱写代码的小书童](https://zofun.github.io/)
 - [Teach Talk](https://www.ttalk.im/)
@@ -237,7 +222,6 @@
 - [chattymoney(跟我一起来谈钱)](https://chattymoney.com/)
 - [TCPGNL](https://tcpgnl.com/)
 - [weirane's blog](https://weirane.github.io/)
-- [Joway's Blog](https://blog.joway.io/)
 - [Mayx的博客](https://mabbs.github.io/)
 - [Rapiz's Blog](https://rapiz.me/)
 - [Ground Oddity](http://idle.systems/)
@@ -361,7 +345,6 @@
 - [jax - 走在路上](https://cdjax.com/)
 - [XINDOO的博客](https://zxs.io)
 - [懒得勤快的博客](https://masuit.com)
-- [极客兔兔](https://geektutu.com)
 - [极客中心](https://www.geekzl.com)
 - [陈少文的博客](https://www.chenshaowen.com/blog/)
 - [一切皆有可能](https://kubesphereio.com/)
@@ -743,10 +726,6 @@
 - [造壳 MkShell](https://www.mkshell.com/)
 - [流年石刻](https://www.timeshike.com/)
 - [六个周](https://blog.liugezhou.online/)
-- [孙威的阳光海](https://www.sunnyfly.com/)
-- [Sean's Note](https://blog.sean.taipei/)
-- [cserwen](https://blog.cserwen.com/)
-- [云萧的咕咕屋](https://blog.crrashh.com/)
 - [xiongxinwei的个人博客](https://nsddd.top/)
 - [赫赫文王](https://kqh.me)
 - [一派胡言](https://yipai.me)
@@ -1100,9 +1079,8 @@
 - [Niracler's Blog](https://niracler.com)
 - [拒绝内耗直接发疯](https://blog.luijp.cn)
 - [gentlelucky](https://blog.gentlelucky.com)
-- [但为君故](https://dreams.plus)
+- [但为君故](https://dreams.plus) [奋斗小青年]
 - [小松鼠的博客](https://ycyin.eu.org)
-- [Taxodium](https://taxodium.ink/)
 - [酷酷的白](https://bducds.com)
 - [Yesterday17's Blog](https://blog.mmf.moe/)
 - [WSH](https://wsh233.cn)
@@ -1124,7 +1102,6 @@
 - [叶泯希](https://blog.418121.xyz/)
 - [一桐のBlog](https://blog.ytmc.fun/)
 - [Evan](https://evan.xin)
-- [假装看风景](https://pt2mu.top/)
 - [好好学习的郝](https://www.voidking.com/)
 - [喻灵的博客](https://yvling.cn/)
 - [纸鹿摸鱼处](https://blog.zhilu.cyou/)
@@ -1171,21 +1148,7 @@
 - [OneV's Den](http://onevcat.com)
 - [Limboy 无网不剩](https://limboy.me/)
 - [唐巧的技术博客](https://blog.devtang.com)[内容挺多]
-- [bang's blog](https://blog.cnbang.net/)
-- [Kevin Blog](http://zhowkev.in)
 - [I'm TualatriX](http://imtx.me)
-- [webfrogs](http://blog.nswebfrog.com/)
-- [玉令天下的Blog](http://yulingtianxia.com)
-- [土土哥的技术Blog](http://tutuge.me/)
-- [阮一峰的网络日志](https://www.ruanyifeng.com/blog/)
-- [酷 壳 - CoolShell.cn](https://coolshell.cn/)
-- [刘未鹏 Mind Hacks – 思维改变生活](http://mindhacks.cn/)
-- [云风的 BLOG](http://blog.codingnow.com/)
-- [M-x Chris-An-Emacser](https://chriszheng.science/)
-- [虞双齐爱折腾](https://yushuangqi.com/)
-- [依云's Blog](https://blog.lilydjwg.me/)
-- [王登科-DK博客 - 布洛芬爱好者](https://greatdk.com/)
-- [范叶亮的博客 - Leo Van's Blog](https://leovan.me/)
 - [ZMonster's Blog](https://www.zmonster.me/)
 - [Blanboom](https://blanboom.org/)[软件]
 - [TonyHe](https://www.ouorz.com/)[学生][英语写作]
@@ -1213,15 +1176,20 @@
 - [Beyond the Void](http://www.byvoid.com/)[环球旅游]
 
 ## 查看博客评论
+
 - [hanyudeye](https://github.com/hanyudeye/blog/issues)
 
 ## 参与开源项目
+
 - [位于 根特 的编程小组](https://sysghent.be)
 - [参与开源项目](https://github.com/chenyukang)
 
 ## 时常看看
 
 
+- [Taxodium](https://taxodium.ink/) [emacs]
+- [假装看风景](https://pt2mu.top/)[无聊的人]
+- [Joway's Blog](https://blog.joway.io/)[旅行]
 - [Leon Fong 的个人网站](https://leonfong.me) [独立旅行]
 - [闲人Life](https://www.xianrenlife.com/)[旅游，作家]
 - [最好金龟换酒](http://fz0512.com/) [生活，旅游 ，摄影，亲子][可以感受幸福，放松心情]
@@ -1245,6 +1213,8 @@
 - [hux](https://hux.ink/) [文章挺多的]
 - [林小沐](https://immmmm.com)[内容多]
 - [Seraphineの小窝](https://www.helloseraphine.top/)[机器学习]
+
+
 ## 其他
 
 https://blogroll.org/： 英文站为主，手动提交，人工整理，质量比较高。
