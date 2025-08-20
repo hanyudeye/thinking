@@ -7,25 +7,11 @@ categories: ['']
 draft: true
 ---
 
-> We write to taste life twice, in the moment and in retrospect.
-> 
-> —— Anaïs Nin
-
-[James](https://jamesg.blog/) 分享的 [「100 things you can do on your personal website」](https://jamesg.blog/2024/02/19/personal-website-ideas) 很有趣，介绍了博客作者可以尝试的 100 件事。他还参考了 [「Ideas for Your Personal Website」](https://32bit.cafe/websiteideas/) ，也有很多有趣的建议！
-
-___
-
-本文将其翻译成中文，并为一些中文读者可能疑惑的概念添加了注释：
-
--   如果你还没有个人网站，可以搭建一个！你可以使用任意喜欢的建站工具，比如 WordPress、micro.blog、omg.lol 等，不需要编程或复杂配置即可快速上手。当然，喜欢挑战的话也可以自己编写代码。
 -   写一篇博客，分享你感兴趣的事、最近让你开心的经历、过去一周学到的新东西、读完一本书后的感想、你玩喜欢的游戏的攻略，或者任何你感兴趣的话题。
 -   分享一道最近做的美味菜谱。
 -   发布一张最近拍摄的照片。
 -   创建一个友情链接（博客圈），链接你喜爱的个人网站。
 -   添加一个 robots.txt 文件，明确限制搜索引擎和AI抓取你网站的内容。
-
-hugo 中 robots.txt 应该放在网站根目录，但是生成后的，之前的应该在 static/ 目录，因为会 **原封不动**  复制到 public/ （你指定的输出目录） 中。
-
 -   为你喜欢的乐队、电视剧或其他事物创建一个特别的「纪念馆」或「粉丝小站」。
 -   制作图像热区图，让访客点击图片不同部分探索更多信息，比如你书桌上的物品介绍。
 -   分享你最喜欢的书单。

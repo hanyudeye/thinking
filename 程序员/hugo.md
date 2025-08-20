@@ -62,6 +62,8 @@ hugo
 * 生成的静态网页会放在 `public/` 文件夹
 * 可以部署到 GitHub Pages、Netlify 等服务
 
+资源文件、 robots.txt 可以放在 static/ 目录，生成后会复制到 public/ （或你指定的输出目录） 中。
+
 
 ## **6. 其他常用选项**
 

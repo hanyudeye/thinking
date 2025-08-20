@@ -76,3 +76,7 @@ Roger Penrose: I don't believe it is consciousness that collapses the wave funct
 
 - 简洁
  言要慎，行要勇
+
+## Anaïs Nin
+We write to taste life twice, in the moment and in retrospect.
+

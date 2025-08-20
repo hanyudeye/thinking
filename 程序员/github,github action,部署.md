@@ -250,8 +250,3 @@ ACTIONS_STEP_DEBUG=true
 ```
 
 在 GitHub 仓库 → **Settings → Secrets and variables → Actions → Variables** 添加 `ACTIONS_STEP_DEBUG` 变量并设为 `true`，重新运行 workflow。
-
----
-
-我可以帮你写一个**最小可运行的 GitHub Actions 测试 workflow**，这样你可以马上验证它能跑起来。
-你是想用 **本地 act** 测试还是直接在 **GitHub 上跑真机**？

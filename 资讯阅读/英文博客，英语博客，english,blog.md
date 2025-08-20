@@ -7,8 +7,11 @@ draft: true
 ---
 
 ## 时常看看、阅读
+
 - [paulgraham](https://paulgraham.com/) [互联网创业者，大佬]
-- 
+- [Ideas for Your Personal Website](https://32bit.cafe/websiteideas/) 
+- [James](https://jamesg.blog/) 
+
 
 ## 前端开发 / Web 技术
 
@@ -42,7 +45,7 @@ draft: true
 - [Max Böck](https://mxb.dev)
 - [Chris Coyier](https://chriscoyier.net)
 - [Amelia Wattenberger](https://wattenberger.com)
-- [Robin Rendle](https://robinrendle.com/)
+- [Robin Rendle](https://robinrendle.com/)[内容分散]
 - [Rachel Nabors](http://rachelnabors.com/)
 - [Brad Frost](https://bradfrost.com)
 - [Val Head](https://valhead.com)
