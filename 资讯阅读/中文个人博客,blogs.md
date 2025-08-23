@@ -1208,7 +1208,8 @@
 - [hux](https://hux.ink/) [文章挺多的]
 - [林小沐](https://immmmm.com)[内容多]
 - [Seraphineの小窝](https://www.helloseraphine.top/)[机器学习]
-
+- [Leon Fong 的个人网站](https://leonfong.me) [独立旅行]
+看看能不能交个朋友
 
 ## 其他
 
