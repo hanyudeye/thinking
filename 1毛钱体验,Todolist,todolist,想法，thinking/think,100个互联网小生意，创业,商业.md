@@ -14,6 +14,9 @@ draft: true
 3. 营销 （朋友圈广告，抖音广告）
 
 
+# pos机网站服务
+https://www.zhpos.cn/142291.html
+
 # 二次剪辑 师 
 
 ## TODO 做视频 二次剪辑 师 [提供娱乐产品]
