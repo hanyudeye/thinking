@@ -61,7 +61,6 @@ set nocursorline  " 关闭高亮当前行
 | 字符串/数值 | `set option=`  | `set option&`                   |
 
 
-
 ## 2️⃣ 常用快捷键优化
 
 ```vim

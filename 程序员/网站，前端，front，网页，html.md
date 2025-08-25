@@ -17,9 +17,10 @@ draft: true
 把 交互做成一个个小页面 进行条状
 > 参考 https://blog.jim-nielsen.com/2025/lots-of-little-html-pages/
 
-# CSS 排版与网格布局教程
+https://jakearchibald.com/2024/view-transitions-handling-aspect-ratio-changes/
 
-CSS 排版与网格布局是现代前端开发中非常重要的技能。它们能帮助我们创建灵活且响应式的布局。以下是一个详细的 CSS 排版与网格布局教程，涵盖了基础和进阶概念。
+
+# CSS 排版与网格布局教程
 
 ### 1. **CSS 排版基础**
 CSS 排版主要涉及如何控制文字的排列、行高、间距、对齐等。了解这些基础是构建网页时的第一步。
@@ -222,12 +223,6 @@ CSS Grid 是一种强大的布局系统，它可以让我们创建更加灵活�
 - **响应式设计**：结合 `@media` 查询，根据不同设备屏幕尺寸调整布局，确保网站在各种设备上表现良好。
 
 通过学习这些基础和进阶的 CSS 排版技巧，你可以轻松地设计并实现现代网页布局。
-
-## 拖拽
-``` html
-    <!--给 box1 增加拖拽的属性-->
-    <div class="box1" draggable="true"></div>
- ```
 
 # TailwindCSS Cheatsheet
 
