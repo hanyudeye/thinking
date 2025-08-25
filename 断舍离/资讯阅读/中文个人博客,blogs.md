@@ -42,9 +42,6 @@ draft: true
 - [海德沙龙（HeadSalon）](http://headsalon.org/)[随笔，小文章居多]
 - [水八口记 • 记录当下赠与未来](https://blog.shuiba.co/)
 - [宇宙的心弦 - 细推物理须行乐 何用浮名绊此身](https://www.physixfan.com/)[物理]
-- [美卡论坛](https://www.uscardforum.com/)
-- [投资](https://www.reddit.com/r/wallstreetbets/)
-- [程序员的喵](https://catcoding.me/archives/)
 - [印记](https://yinji.org/) [网友][很厉害的小年轻][互联网从业]
 - [Randy's Blog](https://lutaonan.com) [做产品]
 - [安迪龙](https://sydneyuberer.com/)
@@ -54,8 +51,6 @@ draft: true
 - [hux](https://hux.ink/) [文章挺多的]
 - [林小沐](https://immmmm.com)[内容多]
 - [Seraphineの小窝](https://www.helloseraphine.top/)[机器学习]
-- [Leon Fong 的个人网站](https://leonfong.me) [独立旅行]
-看看能不能交个朋友
 
 ## 其他
 
