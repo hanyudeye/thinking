@@ -24,7 +24,6 @@ column-gap:20px; /*列之间间隔*/
     justify-content: center; /* 水平对齐容器内容 */
 }
 
-
 /*用来测试的块元素*/
 sec{
 border: 1px solid #333;

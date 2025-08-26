@@ -16,8 +16,8 @@ categories: ['']
 
 更让我觉得贴心的是：**支持支付宝付款**，对国内用户非常友好。
 
-![](images/2025-07-29-09-16-18.png)
-![](../images/2025-07-29-09-16-18.png)
+![](images/cccloud.png)
+![](../images/cccloud.png)
 
 
 ---

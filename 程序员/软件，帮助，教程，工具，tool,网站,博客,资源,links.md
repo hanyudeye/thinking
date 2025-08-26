@@ -87,6 +87,7 @@ ssh-keygen -t rsa -C "youremail@example.com"
 - https://www.aliyundrive.com/s/McXw86wJaBU/folder/649489ae5421e049b19242feb641b7415488a43e
 - https://www.cilixiong.org/
 - 网络电视台  https://tv.garden/
+- 种子 https://thepiratebaye.org/search.php?q={query}
 - 电影字幕下载 : https://yts.mx/
 - 字幕转换 https://converter.app/cn/vtt-srt/
 
@@ -94,7 +95,6 @@ ssh-keygen -t rsa -C "youremail@example.com"
 
 https://cn.bing.com/images/search?q={query}&form=HDRSC2&first=1
 https://www.pexels.com/zh-cn/search/{query}
-
 # 工具网站
 
 ## 图片去背景 [图像处理]

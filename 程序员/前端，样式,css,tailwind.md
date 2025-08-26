@@ -5885,8 +5885,6 @@ Defines the algorithm used to lay out table cells, rows, and columns.
 | table-fixed | table-layout: fixed; |       |
 
 
-# vscode tailwind css 继承扩展
-
 # TailwindCSS 速查清单
 
 ## 📌 TailwindCSS Cheatsheet（速查表）
@@ -5998,7 +5996,3 @@ Defines the algorithm used to lay out table cells, rows, and columns.
 <div class="bg-[#1DA1F2] w-[300px] h-[150px]">...</div>
 ```
 
----
-
-如果你需要的话，我可以帮你做一份 **可打印的 TailwindCSS PDF 速查表**，整理得更紧凑方便携带。
-你是想要我在这里直接给你那份打印版吗？
