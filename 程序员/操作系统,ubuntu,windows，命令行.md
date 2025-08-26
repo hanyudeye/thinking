@@ -112,7 +112,7 @@ ps -p 1
 ``` powershell
 mklink /D "C:\Users\Alice" "D:\Users\Alice"
 ```
-这会创建一个符号链接，使得 Windows 认为用户的文件夹仍然在 C:\Users\Alice，但实际存储位置在 D:\Users\Alice
+C 是符号链接，D 是实际存储位置
 
 ## wsl
 
