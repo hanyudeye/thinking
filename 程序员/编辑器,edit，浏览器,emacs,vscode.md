@@ -147,7 +147,12 @@ Hint: use ~SPC w c~ to center the buffer.
         "key": "ctrl+l",
         "command": "workbench.action.terminal.selectCurrentLine",
         "when": "terminalFocus"
-    }
+    },
+	{
+		"key": "ctrl+d",
+		"command": "workbench.action.toggleSidebarVisibility"
+	},
+
 ]
 ```
 
