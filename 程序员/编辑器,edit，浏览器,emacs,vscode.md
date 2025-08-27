@@ -151,9 +151,3 @@ Hint: use ~SPC w c~ to center the buffer.
 ]
 ```
 
-# visual studio
-
-## 自定义快捷键
-
-工具- 选项- 环境- 键盘
-
