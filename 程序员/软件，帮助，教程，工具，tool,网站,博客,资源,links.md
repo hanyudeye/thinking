@@ -214,7 +214,6 @@ https://huggingface.co/
 
 ## links
 
-- [google 指数](https://trends.google.com/trends/explore?q=gpt&date=now%201-d&geo=US&hl=zh-CN)
 - [有道翻译](https://dict.youdao.com/result?word={Argument}&lang=en)
 - [抖音搜索](https://www.douyin.com/root/search/小狗)
 - [tiktok搜索](https://www.tiktok.com/search?q=)
@@ -227,4 +226,4 @@ https://huggingface.co/
 ### 指数
 
 - [google index](https://trends.google.com/trends/explore?q=UNH)
-
+- [google 指数](https://trends.google.com/trends/explore?q=gpt&date=now%201-d&geo=US&hl=zh-CN)
