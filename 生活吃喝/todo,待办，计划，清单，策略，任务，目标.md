@@ -5,8 +5,10 @@ title: todo,待办，计划，清单，策略，任务，目标
 date:  2025-07-29T13:02:28+08:00
 draft: true
 ---
+todo:  安装 emacs 即时翻译插件，用来查看英文 info 文档 (可能要放弃，要实用 ai api)
+https://taxodium.ink/translation-in-emacs.html
 
-todo: 刹车断电开关，1. 喷油 2. 
+todo: 刹车断电开关(拆前面板），或者堵住口子，1. 喷油 2. 
 
 9.10 后
 todo: 皮肤治疗方案，皮肤痒的时候用炉甘石 (10天后，有好转，购买治疗红疹产品)
