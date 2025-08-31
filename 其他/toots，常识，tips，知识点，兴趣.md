@@ -199,6 +199,8 @@ todo: 退保险，看合同详情 [完成]
 
 todo: 餐巾纸[完成]
 
+todo: 刹车断电开关(拆前面板），或者堵住口子，1. 喷油 2.电工胶布加厚触点 [完成]
+
 # 放弃
 
 如何免费分发 github page
@@ -229,3 +231,7 @@ todo: 如果 listary 不灵敏，换 ctrl + 空格 试下 [放弃]
 > 有时用着还行
 
 todo: 遥控灯光开关 [放弃]
+
+todo:  安装 emacs 即时翻译插件，用来查看英文 info 文档 (可能要放弃，要实用 ai api) [放弃，暂时用不到 ai ]
+https://taxodium.ink/translation-in-emacs.html
+
