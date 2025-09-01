@@ -141,3 +141,92 @@ git commit -m "Normalize line endings"
 
 如果你愿意，我可以帮你画一张 **WSL + Windows + Git 换行符工作流程图**，让整个过程一目了然。这样更容易理解为什么要这么配。
 你要我直接画出来吗？
+
+## 某个文件，原先没有加入 .gitignore 文件，后来加入了，但修改后还是需要提交，怎么把它忽略
+
+你的问题是典型的 **文件已经被 Git 追踪（tracked），后来才被加入 `.gitignore`，但仍然会出现在 `git status` 里**。
+
+原因：
+`.gitignore` 只对 **未被追踪（untracked）** 的文件有效。
+已经被提交过的文件，Git 会继续跟踪它，即使它出现在 `.gitignore` 中。
+
+### ✅ 解决方案
+
+你有两个选择：
+
+---
+
+### **方案 1：彻底不再跟踪该文件（忽略后不再提交）**
+
+如果你希望 **以后完全不再提交这个文件**，用：
+
+```bash
+git rm --cached <文件路径>
+```
+
+例如：
+
+```bash
+git rm --cached config.json
+```
+
+然后提交：
+
+```bash
+git commit -m "Stop tracking config.json"
+```
+
+之后，`.gitignore` 才会真正生效。
+
+---
+
+### **方案 2：文件仍要保留追踪，但不想每次修改都提交**
+
+这种情况 `.gitignore` 不起作用，因为文件仍然被追踪。
+解决办法是使用 **assume-unchanged** 或 **skip-worktree** 标记。
+
+#### 方法 A：`assume-unchanged`
+
+```bash
+git update-index --assume-unchanged <文件路径>
+```
+
+作用：告诉 Git “假装这个文件没变”。
+如果需要恢复：
+
+```bash
+git update-index --no-assume-unchanged <文件路径>
+```
+
+#### 方法 B：`skip-worktree`
+
+更常用，用于本地修改但不影响版本库：
+
+```bash
+git update-index --skip-worktree <文件路径>
+```
+
+取消：
+
+```bash
+git update-index --no-skip-worktree <文件路径>
+```
+
+---
+
+### **区别**
+
+* **`assume-unchanged`**：适合大型文件、本地调试不想频繁检测变化，但如果文件变大 Git 仍会检测。
+* **`skip-worktree`**：适合配置文件，每个人本地不同，但不希望版本库记录这些差异。
+
+---
+
+✅ 总结：
+
+* **不再跟踪** → `git rm --cached` + `.gitignore`
+* **继续跟踪但忽略本地修改** → `skip-worktree`
+
+---
+
+要不要我帮你整理一个 **最佳实践场景对比表**，比如“配置文件”、“日志文件”、“临时调试文件”，该用哪种方法？
+
