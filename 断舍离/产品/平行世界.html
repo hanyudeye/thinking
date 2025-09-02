@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>人类文明同期对比 · 相册网站</title>
+  <style>
+    :root{
+      --bg: #0b0c10;
+      --panel: #12131a;
+      --text: #e6e7eb;
+      --muted: #9aa0aa;
+      --border: #232532;
+      --accent: #5B8DEF;
+      --accent-2: #66D19E;
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 80% -10%, rgba(91,141,239,.15), transparent 60%),
+                  radial-gradient(1400px 700px at -10% 10%, rgba(102,209,158,.12), transparent 60%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    header{
+      position:sticky; top:0; z-index:10;
+      backdrop-filter:saturate(140%) blur(8px);
+      background: color-mix(in oklab, var(--panel) 70%, transparent);
+      border-bottom:1px solid var(--border);
+    }
+    .wrap{ max-width:1200px; margin:0 auto; padding:18px 18px; }
+    .title{ display:flex; gap:14px; align-items:center; flex-wrap:wrap; }
+    .title h1{ font-size: clamp(20px, 2.2vw, 28px); margin:0; letter-spacing:.3px }
+    .muted{ color:var(--muted) }
+
+    .controls{ display:flex; gap:12px; flex-wrap:wrap; margin-top:10px }
+    .btn{
+      appearance:none; border:1px solid var(--border); background:linear-gradient(180deg, #1b1d27, #11131b);
+      color:var(--text); padding:10px 14px; border-radius:12px; cursor:pointer;
+      box-shadow: var(--shadow);
+      transition: transform .06s ease, border-color .2s ease;
+      font-weight:600; letter-spacing:.2px
+    }
+    .btn:hover{ transform: translateY(-1px); border-color: color-mix(in oklab, var(--accent) 60%, var(--border)); }
+    .btn.active{ outline:2px solid color-mix(in oklab, var(--accent) 50%, transparent); }
+
+    .grid{ display:grid; gap:16px; margin-top:18px; align-items:start }
+    .cols-3{ grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .cols-4{ grid-template-columns: repeat(4, minmax(0,1fr)); }
+    @media (max-width: 1024px){ .cols-3, .cols-4{ grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px){ .cols-3, .cols-4{ grid-template-columns: 1fr; } }
+
+    .column{ background:linear-gradient(180deg, #151723, #10121a); border:1px solid var(--border);
+             border-radius:var(--radius); box-shadow: var(--shadow); overflow:hidden }
+    .col-header{ display:flex; align-items:center; justify-content:space-between; padding:14px 14px; border-bottom:1px solid var(--border); }
+    .col-header h2{ margin:0; font-size:18px; letter-spacing:.4px }
+
+    .cards{ display:flex; flex-direction:column; gap:12px; padding:12px }
+    .card{
+      border:1px solid var(--border); border-radius:16px; overflow:hidden; background:#0f1118;
+    }
+    .card .meta{
+      display:flex; justify-content:space-between; align-items:center; gap:8px; padding:10px 12px; border-bottom:1px dashed var(--border);
+    }
+    .badge{ font-size:12px; padding:6px 8px; border-radius:999px; border:1px solid var(--border); background:#0b0d14 }
+
+    .img-wrap{ position:relative; background:#0a0c12 }
+    .img-wrap img{ width:100%; display:block; aspect-ratio: 4/3; object-fit: cover }
+    .upload{
+      position:absolute; bottom:10px; right:10px; display:flex; gap:8px;
+      background: color-mix(in oklab, #11141c 80%, transparent); border:1px solid var(--border); padding:6px 8px; border-radius:10px;
+    }
+    .upload input[type="file"]{ display:none }
+    .upload label{ cursor:pointer; font-size:12px; padding:6px 8px; border-radius:8px; border:1px solid var(--border) }
+    .upload button{ cursor:pointer; font-size:12px; padding:6px 8px; border-radius:8px; border:1px solid var(--border); background:#121520; color:var(--text) }
+
+    .caption{ padding:10px 12px; font-size:14px; color:var(--muted); min-height:40px }
+    .caption[contenteditable="true"]{ outline:none }
+    .caption:focus{ color:var(--text) }
+
+    .tips{ margin-top:8px; font-size:13px; color:var(--muted) }
+    .footer{ text-align:center; padding:28px 0 44px; opacity:.8 }
+
+    .tag{ font-size:11px; padding:4px 8px; border-radius:8px; border:1px solid var(--border); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="title">
+        <h1>人类文明同期对比 · 相册</h1>
+        <span class="muted">用并列专栏对比同一时期东亚、欧洲、印度、北美的发展面貌（支持 3/4 列切换、图片本地上传与自动保存）。</span>
+      </div>
+      <div class="controls">
+        <button class="btn" data-cols="3">3 列布局</button>
+        <button class="btn" data-cols="4">4 列布局</button>
+        <button class="btn" id="reset">清空本地数据</button>
+      </div>
+      <div class="tips">小贴士：点击每张卡片下方文字即可编辑说明；点右下角“上传/清除”替换图片。所有改动自动保存到浏览器的 LocalStorage（仅此设备）。</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="grid" class="grid cols-4" aria-live="polite"></section>
+  </main>
+
+  <div class="footer muted">© 相册模板可自由修改与扩展 · 适合课堂展示 / 研讨会 / 课程作业</div>
+
+  <script>
+    // ======= 可自定义：时间节点与文明专栏 =======
+    const PERIODS = [
+      { id:"-2000", label:"公元前 2000 年" },
+      { id:"-1000", label:"公元前 1000 年" },
+      { id:"-500",  label:"公元前 500 年" },
+      { id:"0",     label:"公元 0 年" },
+      { id:"500",   label:"公元 500 年" },
+      { id:"1000",  label:"公元 1000 年" },
+      { id:"1500",  label:"公元 1500 年" },
+      { id:"1800",  label:"公元 1800 年" },
+      { id:"1900",  label:"公元 1900 年" },
+      { id:"2000",  label:"公元 2000 年" },
+    ];
+
+    const CIVS = [
+      { id:"eastasia",  name:"东亚文明", tags:["中国","朝鲜半岛","日本","越南"] },
+      { id:"europe",    name:"欧洲文明", tags:["地中海","中欧","北欧"] },
+      { id:"india",     name:"印度文明", tags:["南亚","恒河流域"] },
+      { id:"na",        name:"北美文明", tags:["前哥伦布","殖民时代"] },
+    ];
+
+    // ======= 占位图（SVG Data URI），方便离线演示 =======
+    function placeholderSVG(text){
+      const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='900'>
+        <defs>
+          <linearGradient id='g' x1='0' x2='1' y1='0' y2='1'>
+            <stop offset='0' stop-color='#1b2337'/>
+            <stop offset='1' stop-color='#0e1422'/>
+          </linearGradient>
+        </defs>
+        <rect width='100%' height='100%' fill='url(#g)'/>
+        <g font-family='system-ui,Segoe UI,Roboto' fill='#a8b0bd'>
+          <text x='50%' y='48%' text-anchor='middle' font-size='44'>${text}</text>
+          <text x='50%' y='58%' text-anchor='middle' font-size='20' fill='#7d8595'>点击右下角上传替换图片</text>
+        </g>
+      </svg>`;
+      return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+    }
+
+    // ======= 本地存储工具 =======
+    const KEY = 'civilization_album_v1';
+    const store = {
+      load(){ try{ return JSON.parse(localStorage.getItem(KEY)) || {}; }catch{ return {}; } },
+      save(data){ localStorage.setItem(KEY, JSON.stringify(data)); }
+    }
+
+    const state = store.load();
+
+    function saveField(civId, periodId, field, value){
+      if(!state[civId]) state[civId] = {};
+      if(!state[civId][periodId]) state[civId][periodId] = {};
+      state[civId][periodId][field] = value;
+      store.save(state);
+    }
+
+    // ======= 生成专栏与卡片 =======
+    const grid = document.getElementById('grid');
+
+    function createColumn(civ){
+      const col = document.createElement('div');
+      col.className = 'column';
+      col.dataset.civ = civ.id;
+
+      const header = document.createElement('div');
+      header.className = 'col-header';
+      const h2 = document.createElement('h2');
+      h2.textContent = civ.name;
+      const tags = document.createElement('div');
+      civ.tags.forEach(t => {
+        const s = document.createElement('span');
+        s.className = 'tag';
+        s.textContent = t;
+        s.style.marginLeft = '6px';
+        tags.appendChild(s);
+      });
+      header.appendChild(h2);
+      header.appendChild(tags);
+
+      const list = document.createElement('div');
+      list.className = 'cards';
+
+      PERIODS.forEach(p => list.appendChild(createCard(civ.id, p)));
+
+      col.appendChild(header);
+      col.appendChild(list);
+      return col;
+    }
+
+    function createCard(civId, period){
+      const card = document.createElement('article');
+      card.className = 'card';
+
+      // 顶部元信息（时间）
+      const meta = document.createElement('div');
+      meta.className = 'meta';
+      const time = document.createElement('span');
+      time.className = 'badge';
+      time.textContent = period.label;
+      meta.appendChild(time);
+      card.appendChild(meta);
+
+      // 图片区域
+      const imgWrap = document.createElement('div');
+      imgWrap.className = 'img-wrap';
+      const img = document.createElement('img');
+      const savedImg = state?.[civId]?.[period.id]?.img;
+      img.src = savedImg || placeholderSVG(`${period.label} · ${civId}`);
+      img.alt = `${period.label} · ${civId}`;
+      imgWrap.appendChild(img);
+
+      // 上传控件
+      const uploader = document.createElement('div');
+      uploader.className = 'upload';
+      const file = document.createElement('input');
+      file.type = 'file';
+      file.accept = 'image/*';
+      const fileId = `${civId}-${period.id}-file`;
+      file.id = fileId;
+      const label = document.createElement('label');
+      label.setAttribute('for', fileId);
+      label.textContent = '上传';
+      const clearBtn = document.createElement('button');
+      clearBtn.type = 'button';
+      clearBtn.textContent = '清除';
+
+      file.addEventListener('change', e => {
+        const f = e.target.files?.[0];
+        if(!f) return;
+        const reader = new FileReader();
+        reader.onload = ev => {
+          img.src = ev.target.result;
+          saveField(civId, period.id, 'img', ev.target.result);
+        };
+        reader.readAsDataURL(f);
+      });
+
+      clearBtn.addEventListener('click', () => {
+        img.src = placeholderSVG(`${period.label} · ${civId}`);
+        saveField(civId, period.id, 'img', null);
+      });
+
+      uploader.appendChild(label);
+      uploader.appendChild(clearBtn);
+      uploader.appendChild(file);
+      imgWrap.appendChild(uploader);
+      card.appendChild(imgWrap);
+
+      // 说明文字（可编辑）
+      const cap = document.createElement('div');
+      cap.className = 'caption';
+      cap.contentEditable = 'true';
+      cap.spellcheck = false;
+      cap.dataset.placeholder = '添加说明：这一时期该文明的代表性遗址、器物、城邦、艺术或制度……';
+      const savedCap = state?.[civId]?.[period.id]?.cap;
+      cap.textContent = savedCap || '';
+      cap.addEventListener('input', () => saveField(civId, period.id, 'cap', cap.textContent));
+      card.appendChild(cap);
+
+      return card;
+    }
+
+    // 渲染所有文明专栏
+    function render(){
+      grid.innerHTML = '';
+      CIVS.forEach(c => grid.appendChild(createColumn(c)));
+    }
+
+    render();
+
+    // 3/4 列切换
+    const btns = document.querySelectorAll('.btn[data-cols]');
+    btns.forEach(b => b.addEventListener('click', () => {
+      const cols = b.getAttribute('data-cols');
+      grid.classList.toggle('cols-3', cols === '3');
+      grid.classList.toggle('cols-4', cols === '4');
+      btns.forEach(x => x.classList.toggle('active', x === b));
+    }));
+    // 默认激活 4 列
+    document.querySelector('.btn[data-cols="4"]').classList.add('active');
+
+    // 清空数据
+    document.getElementById('reset').addEventListener('click', () => {
+      if(confirm('确定要清空本地保存的图片与说明吗？此操作不可恢复。')){
+        localStorage.removeItem(KEY);
+        location.reload();
+      }
+    });
+
+    // 可访问性增强：为空说明显示占位提示
+    const observer = new MutationObserver(() => {
+      document.querySelectorAll('.caption').forEach(el => {
+        if(el.textContent.trim() === ''){
+          el.style.opacity = .7;
+          el.style.fontStyle = 'italic';
+          el.textContent = '';
+          el.setAttribute('data-empty', '1');
+          el.innerHTML = `<span class="muted">${el.dataset.placeholder}</span>`;
+          el.addEventListener('focus', () => {
+            if(el.getAttribute('data-empty')==='1'){ el.textContent=''; el.style.opacity=1; el.style.fontStyle='normal'; el.removeAttribute('data-empty'); }
+          }, { once:true });
+        }
+      });
+    });
+    observer.observe(document.getElementById('grid'), { childList:true, subtree:true });
+  </script>
+
+  <!--
+  使用说明：
+  1) 打开本文件即可离线使用；
+  2) 点击“3 列布局 / 4 列布局”切换视觉布局；
+  3) 在对应时期卡片右下角上传图像，或直接粘贴截图到浏览器，再编辑文字说明；
+  4) 所有内容自动保存至浏览器 LocalStorage，仅在本设备可见；
+  5) 如需更多文明或时间点，修改上方 CIVS / PERIODS 常量即可自动生成结构。
+  -->
+</body>
+</html>
