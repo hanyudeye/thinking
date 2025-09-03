@@ -6,10 +6,15 @@ date:  2025-07-29T13:02:28+08:00
 draft: true
 ---
 
+核实下reddit ，小红书 ibkr 总回报收益怎么那么高
+
+英文内容博客，还是 同行相册，故事，博客
+
 思考问题： 实时 审查内心情绪，改变
 解决问题: 
 
 todo: 收集平行的图片，创建博客footer 链接，域名映射
+https://hanyudeye.github.io/Parallel-world/
 
 todo: 快手发 旅游团购，如何整理配乐，配音
 
