@@ -7,39 +7,41 @@ categories: ['']
 ---
 
 
-
 # 好用工具
 
-## scoop [软件管理]
+<!-- ## scoop [软件管理]
 
 ``` sh
 scoop install main/rga
 ```
-
-## i3wm，tmux [窗口管理] 
+ -->
+<!-- ## i3wm，tmux [窗口管理] 
 
 每个软件占用窗口的一部分
- 
+  -->
+<!-- 不喜欢，我本身不愿多开应用， -->
+
 ## autokey/autohotkey [快捷键管理]
+这个软件好
 
-## 翻译 [特定行业]
+<!-- ## 翻译 [特定行业] -->
 
-## yt-dlp [视频/字幕下载]
+<!-- ## yt-dlp [视频/字幕下载]
 
 ``` sh
 # youtube 字幕下载
 yt-dlp --write-sub --sub-lang en VIDEO_URL
 m3u8视频下载  windows 下是 N_m3u8DL-CLI
 b 站视频下载 downKyi
-```
+``` -->
 
-##  everything/启动器/grep [应用/文件查找工具]
+<!-- ##  everything/启动器/grep [应用/文件查找工具]
 
 - Everything: Windows下强大的文件搜索工具
 - Listary:  Windows 下的文件搜索和应用启动工具
 - ulauncher: Linux 下具有同Listary 相似功能的工具
-
-## 激活工具、破解
+ -->
+<!-- ## 激活工具、破解
 
 - AdobeGenP : Windows 平台的 Adobe 产品激活
 
@@ -54,7 +56,7 @@ scp /path/to/file user@server:/path/to/destination # Copy file from local to ser
 scp /home/zhao/data/test.txt zw@10.150.69.247: /C:/Users/zw/Desktop/summary
 或
 scp /home/zhao/data/test.txt zw@10.150.69.247: /C:/Users/zw/Desktop/summary/tt.txt
-```
+``` -->
 ## ssh [登录验证]
 
 密钥： 就是一串 看不懂的东西，用来验证用。
