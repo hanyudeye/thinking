@@ -7,7 +7,9 @@ categories: ['']
 draft: true
 ---
 
-## 创意
+创造的产品，赋予各种视觉色彩
+
+<!-- ## 创意
 
 ![](images/2025-03-03-11-15-24.png)
 ![](../images/2025-03-03-11-15-24.png)
@@ -132,4 +134,4 @@ draft: true
 > 原理： 不同的 **图片**，设置成 循环 播放 **幻灯片模式**。幻灯片 再快点 就可以变成  **无声电影** 了。 
 
 制作工具：
-[ezgif.com](https://ezgif.com/)、PhotoScape、PS、LICEcap
+[ezgif.com](https://ezgif.com/)、PhotoScape、PS、LICEcap -->

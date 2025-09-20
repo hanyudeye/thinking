@@ -4,9 +4,12 @@ toc: false
 title: 操作系统,ubuntu,windows，命令行
 date:  2025-07-03T05:51:11+08:00
 categories: ['']
+draft: true
 ---
 
-操作系统给了你一个控制计算机的 友好的方式和界面
+操作计算机的入口环境
+
+<!-- 操作系统给了你一个控制计算机的 友好的方式和界面
 > 没有操作系统的计算机 就像 没有思维的尸体一样，一动不动。
 
 # 计算机操作系统
@@ -128,4 +131,4 @@ ubuntu.exe config --default-user {username}
 Exec=netease-cloud-music --force-device-scale-factor=2 %U
 ```
 
-## wayland
+## wayland -->

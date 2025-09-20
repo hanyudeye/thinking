@@ -4,9 +4,12 @@ toc: false
 title: 编辑器,edit，浏览器,emacs,vscode
 date:  2025-07-03T04:35:44+08:00
 categories: ['']
+draft: true
 ---
 
-# 关于编辑器的能力的思考
+写字本
+
+<!-- # 关于编辑器的能力的思考
 
 编辑器 要有编辑和浏览的 能力，然后这两种模式 可以快速切换
 > 就像 vim 中 使用 i/Esc 键
@@ -154,5 +157,5 @@ Hint: use ~SPC w c~ to center the buffer.
 	},
 
 ]
-```
+``` -->
 

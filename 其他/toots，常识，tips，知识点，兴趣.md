@@ -7,7 +7,8 @@ categories: ['']
 draft: true
 ---
 
-# 信息 [看看就好]
+世界是复杂的,看看就好
+<!-- # 信息 [看看就好]
 
 - 在Youtube上看世界各地直播的跨年烟花秀
 - 自媒体群发软件 
@@ -234,4 +235,4 @@ todo: 遥控灯光开关 [放弃]
 
 todo:  安装 emacs 即时翻译插件，用来查看英文 info 文档 (可能要放弃，要实用 ai api) [放弃，暂时用不到 ai ]
 https://taxodium.ink/translation-in-emacs.html
-
+ -->
