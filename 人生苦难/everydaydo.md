@@ -15,3 +15,12 @@ draft: true
 开篇会话  opening conversations
 主题课程  thematic lesson
 理解力课程 comprehension lesson
+
+简单居家运动：
+1. 把手臂弯曲放在后背坚持1分钟，缓解疲劳感
+2. 举哑铃
+
+【宽容】听到不同的意见而情绪保持稳定
+
+
+人生除了吃喝，其他都是满足各种欲望；有抱负的人可以追求各种欲望 
