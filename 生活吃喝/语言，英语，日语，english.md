@@ -11,6 +11,22 @@ draft: true
 不可能 no way
 当然  you bet
 
+放弃  abandan
+羞愧  abashed
+减少  abate
+痛恨 abhor
+恨死了  abhorrent
+
+能力 ability
+着火，闪亮  ablaze
+废止，取消   abolish
+缩短 abridge
+绝对的  absolute
+
+事业 career
+
+
+
 # 澳大利亚
 
 482 工签
