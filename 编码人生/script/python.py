@@ -75,25 +75,25 @@ def is_armstrong_number(n):
 
 
 ## 字符串操作
-print("hello".upper())  # HELLO ，转为大写
-print("HELLO".lower())  # hello ，转为小写
+# print("hello".upper())  # HELLO ，转为大写
+# print("HELLO".lower())  # hello ，转为小写
 
 # 删除空白
-print(" hello ".strip())  # hello ，删除两边空白
-print(" hello ".lstrip())  # hello ，删除左边空白
-print(" hello ".rstrip())  # hello ，删除右边空白
+# print(" hello ".strip())  # hello ，删除两边空白
+# print(" hello ".lstrip())  # hello ，删除左边空白
+# print(" hello ".rstrip())  # hello ，删除右边空白
 
 # 类型转换
 age=99
-print(" Happy " + str(age) + "th Birthday!")  # TypeError: can only concatenate str (not "int") to str
+# print(" Happy " + str(age) + "th Birthday!")  # TypeError: can only concatenate str (not "int") to str
 
 
 # python 之禅
 # import this
 
 # 列表，数组
-print([1, 2, 3])  # [1, 2, 3]
-print(['a', 'b', 'c'][2])  # ['a', 'b', 'c']
+# print([1, 2, 3])  # [1, 2, 3]
+# print(['a', 'b', 'c'][2])  # ['a', 'b', 'c']
 
 demolist=[1, 2, 3]
 demolist.append(4)  # [1, 2, 3, 4]
@@ -109,27 +109,27 @@ demolist.pop(-2) #删除指定位置的元素
 demolist.remove('hello')  # 删除指定元素
 
 # 切片
-print(demolist[0:2])  # [1, 2]
+# print(demolist[0:2])  # [1, 2]
 # 复制
 demo1list=demolist[:]
 
 # 组织列表
 demolist.sort()  # 排序
-print(demolist)  #[1, 2, 4]
+# print(demolist)  #[1, 2, 4]
 demolist.reverse()  # 反转，倒序
-print(demolist)  
+# print(demolist)  
 
 # 遍历列表
-for item in demolist:
-    print(item)
+# for item in demolist:
+    # print(item)
 
 # 创建数值列表
-for value in range(1, 5):
-    print(value)
+# for value in range(1, 5):
+    # print(value)
 
 # 遍历字典
-for key, value in {'a': 1, 'b': 2}.items():
-    print(key, value)
+# for key, value in {'a': 1, 'b': 2}.items():
+    # print(key, value)
 
 # 输入
 # input_value = input("Please input your name: ")
@@ -170,6 +170,57 @@ for i in range(len(chengji)-1):
 # print(chengji)  # [12, 23, 43, 45, 67, 89, 90]
 
 s='ab\tc'
-print(len(s))  # ab	c
+# print(len(s))  # ab	c
 
-print(502/9027)
+# print(502/9027)
+
+
+list_comprehensions=[x**2 for x in range(1,11) if x%2==0]
+# print(list_comprehensions)  # [4, 16, 36, 64, 100]
+
+# 序列化
+def _treatment(pos,el):
+    return "%d: %s" % (pos, el)
+
+enumlist=[_treatment(pos,el) for pos,el in enumerate(['a','b','c'])]
+# print(enumlist)  # ['0: a', '1: b', '2: c']
+
+
+# 迭代器
+# i=iter(["a","b","c"])
+# print(next(i))
+# print(next(i))
+# print(next(i))
+# print(next(i))
+
+class MyIter:
+    def __init__(self, max):
+        self.max = max
+        self.n = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.n < self.max:
+            result = self.n
+            self.n += 1
+            return result
+        raise StopIteration
+
+# for i in MyIter(5):
+    # pass
+    # print(i)  # 0 1 2 3 4
+
+# 生成器
+def fibonacci():
+    a, b = 0, 1
+    while True:
+        yield a
+        a, b = b, a + b 
+
+fib=fibonacci()
+fibs=[next(fib) for _ in range(10)]
+# print(fibs)  # [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+
