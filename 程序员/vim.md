@@ -5,6 +5,9 @@ title: vim
 date:  2025-08-16T11:07:29+08:00
 draft: true
 ---
+我安装了 github 扩展，所以，打开 ~/.vim_runtime/readme.md 文件夹可以查看文档。
+
+Nerdtree 默认 的快捷键是 <leader> nn :NERDTreeToggle
 
 
 inoremap kj <ESC>   kj 按键绑定<ESC> 键
@@ -19,8 +22,11 @@ set nocompatible        " 禁用兼容模式
 set number              " 显示行号
 set relativenumber      " 显示相对行号
 set cursorline          " 高亮当前行
+set cursorline 高亮当前行
 set showcmd             " 显示部分命令
+set showcmd 显示部分命令
 set showmode            " 显示当前模式
+set showmode 显示当前模式
 set wildmenu            " 命令补全菜单
 set laststatus=2        " 总是显示状态栏
 
