@@ -105,8 +105,14 @@ abridge           删节,缩短,剥夺
 abridge 缩短
 
 absolute          绝对的,专制的,完全的,独立的  绝对
+absolute 对决的
+
 absolve           宣告. . . 无罪,赦免,免除
+absolve
+
 absorb            吸收,并吞,全神贯注,同化
+absorb 吸收
+
 absorbing         吸引人的,非常有趣的
 abstain           自制,戒绝,弃权,避免
 abstinence        节制,禁欲,戒酒
