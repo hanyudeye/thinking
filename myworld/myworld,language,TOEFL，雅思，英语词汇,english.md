@@ -128,8 +128,14 @@ absurd            荒谬的,不合理的,可笑的
 absurd 荒谬的
 abundant          丰富的,充分的
 abuse             滥用,恶习,辱骂  滥用,辱骂,虐待
+abuse 滥用，恶习
+
 academic          学院的,理论的,不够实际的
+academic 学院的，理论的
+
 accelerate          加速
+accelerate 加速
+
 accentuate        以重音念,强调,重读
 access            通路,进入,使用权,发作  访问
 accidental        意外的,偶然的  非本质属性
