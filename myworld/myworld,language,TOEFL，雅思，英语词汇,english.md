@@ -114,12 +114,18 @@ absorb            吸收,并吞,全神贯注,同化
 absorb 吸收
 
 absorbing         吸引人的,非常有趣的
+absorbing
+
 abstain           自制,戒绝,弃权,避免
+abstain 自制力，弃权，避免
+
 abstinence        节制,禁欲,戒酒
+
 abstract          摘要,抽象  抽象的,深奥的  摘要,提炼,使抽象化
 abstraction       抽象化,心不在焉,提炼,抽象派作品
 abstruse          难解的,深奥的
 absurd            荒谬的,不合理的,可笑的
+absurd 荒谬的
 abundant          丰富的,充分的
 abuse             滥用,恶习,辱骂  滥用,辱骂,虐待
 academic          学院的,理论的,不够实际的
