@@ -15,6 +15,51 @@
 1. 下载最新的wordpress，并上传到服务器目录
 2. 访问域名 完成安装向导（设置管理员账号、数据库等）
 
+
+### 使用 docker 的安装方式
+
+``` yaml
+services:
+  db:
+    image: mysql:8.0
+    container_name: wordpress_db
+    restart: always
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - db_data:/var/lib/mysql
+
+  wordpress:
+    image: wordpress:latest
+    container_name: wordpress_app
+    depends_on:
+      - db
+    ports:
+      - "8080:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+    volumes:
+      - wordpress_data:/var/www/html
+
+volumes:
+  db_data:
+  wordpress_data:
+
+```
+
+启动容器 
+docker compose up -d
+访问wordpress
+http://localhost:8080
+关闭游戏卡 docker compose down
+
 ### 安装 WooCommerce插件
 
 woocommerce 是 wordpress 最强大的免费电商插件。
@@ -23,6 +68,8 @@ woocommerce 是 wordpress 最强大的免费电商插件。
 1. 登录后台->插件 -> 安装插件
 2. 搜索“WooCommerce"->点击安装->启用
 3. 按向导完成基本设置（货币、地址、税率、支付方式等）
+
+https://www.loyseo.cn/tutorial/woocommerce/
 
 ### 选择主题（theme）
 推荐支持 WooCommerce 的主题：
