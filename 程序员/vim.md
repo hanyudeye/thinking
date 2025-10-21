@@ -5,7 +5,8 @@ title: vim
 date:  2025-08-16T11:07:29+08:00
 draft: true
 ---
-我安装了 github 扩展，所以，打开 ~/.vim_runtime/readme.md 文件夹可以查看文档。
+
+我安装了 vim 扩展，打开 ~/.vim_runtime/readme.md 文件夹可以查看文档。
 
 Nerdtree 默认 的快捷键是 <leader> nn :NERDTreeToggle
 

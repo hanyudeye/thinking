@@ -4,25 +4,10 @@ toc: false
 title: 软件，帮助，教程，工具，tool,网站,博客,资源
 date:  2025-07-03T07:32:41+08:00
 categories: ['']
+draft: true
 ---
 
-
-# 好用工具
-
-<!-- ## scoop [软件管理]
-
-``` sh
-scoop install main/rga
-```
- -->
-<!-- ## i3wm，tmux [窗口管理] 
-
-每个软件占用窗口的一部分
-  -->
-<!-- 不喜欢，我本身不愿多开应用， -->
-
 ## autokey/autohotkey [快捷键管理]
-这个软件好
 
 <!-- ## 翻译 [特定行业] -->
 
