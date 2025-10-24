@@ -63,6 +63,12 @@
 		"key": "ctrl+b",
 		"command": "-workbench.action.toggleSidebarVisibility"
 	},
+	{
+		//粘贴快捷键
+		"key": "ctrl+v",
+		"command": "editor.action.clipboardPasteAction",
+		"when": "editorTextFocus && vim.active && !inDebugRepl"
+	}
 	//,{
 	// 	"key":"ctrl+alt+l",
 	// 	"command":"notebook.toggleLineNumbers"
