@@ -21,6 +21,15 @@ if (key1 = "a") {
 }
 return
 
+; Change Caps Lock to Control when held down; otherwise, Escape
+*CapsLock::
+   Send {Blind}{Ctrl Down}
+   cDown := A_TickCount
+Return
+
+*CapsLock up::
+  Send {Blind}{Ctrl Up}
+Return
 
 ; 把 CapsLock 定义为 Ctrl 键
 CapsLock::Ctrl
