@@ -7,63 +7,15 @@ Author: Margaret Brooke
 Contributor: Sir Frank Athelstane Swettenham
 贡献者 ：弗兰克·阿瑟斯坦·斯韦特纳姆爵士
 
-Release date: August 9, 2025 [eBook #76658]
-发布日期 ：2025 年 8 月 9 日 [电子书 #76658]
-
 Language: English
 语言 ：英语
 
 Original publication: London: Methuen & co. ltd, 1913
 原始出版物 ：伦敦：Methuen &; co. ltd，1913 年
 
-Credits: Carol Brown, Peter Becker and the Online Distributed Proofreading Team at https://www.pgdp.net (This file was produced from images generously made available by The Internet Archive)
-图片来源 ：Carol Brown、Peter Becker 和 https://www.pgdp.net 的在线分布式校对团队（此文件是根据互联网档案馆慷慨提供的图像制作的）
-
-*** START OF THE PROJECT GUTENBERG EBOOK MY LIFE IN SARAWAK ***
-古腾堡计划电子书《我在砂拉越的生活》的开始 ***
-
 Map of Sarawak
 SKETCH MAP OF草图
 SARAWAK沙捞越
-
-CONTENTS内容
-
-PREFACE前言
-INTRODUCTION介绍
-LIST OF ILLUSTRATIONS插图列表
-CHAPTER I第一章
-CHAPTER II第二章
-CHAPTER III第三章
-CHAPTER IV第四章
-CHAPTER V第五章
-CHAPTER VI第六章
-CHAPTER VII第七章
-CHAPTER VIII第八章
-CHAPTER IX第九章
-CHAPTER X第十章
-CHAPTER XI第十一章
-CHAPTER XII第十二章
-CHAPTER XIII第十三章
-CHAPTER XIV第十四章
-CHAPTER XV第十五章
-CHAPTER XVI第十六章
-CHAPTER XVII第十七章
-CHAPTER XVIII第十八章
-CHAPTER XIX第十九章
-CHAPTER XX第二十章
-CHAPTER XXI第二十一章
-CHAPTER XXII第二十二章
-CHAPTER XXIII第二十三章
-CHAPTER XXIV第二十四章
-CHAPTER XXV第二十五章
-CHAPTER XXVI第二十六章
-CHAPTER XXVII第二十七章
-CHAPTER XXVIII第二十八章
-CHAPTER XXIX第二十九章
-CHAPTER XXX第三十章
-CHAPTER XXXI第三十一章
-CHAPTER XXXII第三十二章
-INDEX指数
 
 MY LIFE IN SARAWAK
 我在砂拉越的生活
@@ -101,7 +53,6 @@ First Published in 1913
 首次出版于 1913 年
 
 [vii][七]
-PREFACE前言
 It is well for the Malay races of Sarawak that they should find an advocate in their Ranee, for she loves them. To know Ranee Brooke is to know that, and those who read her Life in Sarawak will realize this fact to the full, and will feel that, in the years she spent with these simple people, she must have proved it to them and won their confidence by her sympathy. That is the only way to get at the hearts of a Malay people, and though the native population of this section of Borneo is divided into at least two sections,—​Malays and Dyaks,—​differing widely in religion, customs, and language, they are still members of the great Malay family which is spread over the Malay Peninsula, Sumatra, Java, Borneo, the islands of the Archipelago, and farther afield. It is well for any of the Malay race that they should find a sympathetic writer to tell the world something of their little lives, for they are a silent and exclusive people. They do not understand publicity, they do not want it, so long as they are fairly and justly treated; indeed, superficial observers might think that Malays do not really care how they are governed, and that it is a matter of
 这对砂拉越的马来人来说是件好事 他们应该在他们的 拉尼，因为她爱他们。了解拉尼 布鲁克应该知道这一点，那些读过她的人 砂拉越的生活将充分意识到这一事实，并会觉得，在她与这些朴素的人相处的这些年里，她一定向他们证明了这一点，并通过她的同情赢得了他们的信任。这是打动马来人心的唯一途径，尽管婆罗洲这一地区的土著居民至少分为两部分——马来人和迪亚克人——在宗教、习俗和语言上差异很大，但他们仍然是分布在马来半岛上的大马来大家庭的成员， 苏门答腊岛、爪哇岛、婆罗洲、群岛的岛屿，以及更远的地方。对于任何马来人来说，他们应该找到一位富有同情心的作家来向世界讲述他们的小生活，因为他们是一个沉默而排他性的民族。他们不懂宣传，他们不想要宣传，只要他们得到公平公正的对待;事实上，肤浅的观察者可能会认为马来人并不真正关心他们如何被治理，这是一个[viii][八] indifference to them whether they are treated well or ill. Those who take the trouble to win his regard know that the Malay is as keenly interested in his own and his country’s affairs as are those of other nationalities. He is humble about his own capacity, and that of his fellow-countrymen, to organize and endeavour, to frame a scheme of righteous government and to ensue it. He will, if properly approached and considerately handled by Europeans, be the first to admit that they understand the business better, that they are more trustworthy in matters of justice and money, and that they have a conception of duty, of method, and especially a power of continuous application to work, which is foreign and irksome—​indeed well-nigh impossible—​to him. Treat him fairly, reasonably, justly, remember that he represents the people of the country for whose benefit, as Lord Curzon of Kedleston said, the white man is there, and, though the white man retains in his own hands the principal offices, the real power, and the work which is his burden, the Malay will give him admiration, gratitude, and loyal support, and show no sign of jealousy or impatience. If one bears in mind, as indeed one must, that the growth of the white man’s influence, and the adoption of that advice which we say makes for good government, mean always the lessening of the Malay’s authority and the curtailment or abolition of his privileges,—​very often bad privileges in our opinion,—​it is surely rather wonderful and rather admirable that he should accept his
 无论他们受到好待还是不好，都对他们漠不关心。那些不厌其烦地赢得他尊重的人都知道，马来人和其他民族的事务一样，对自己和国家的事务有着浓厚的兴趣。他对自己和同胞的能力感到谦卑，他们有能力组织和努力，制定一个正义的政府计划并随后实施它。如果欧洲人得当地接近和体贴地处理，他将第一个承认他们更了解业务，他们在正义和金钱问题上更值得信赖，并且他们有一种责任观念、方法观念，尤其是一种持续应用于工作的能力，这对他来说是陌生的、令人厌烦的——实际上几乎是不可能的。公平、合理、公正地对待他，记住他代表着这个国家的人民，为了他们的利益，正如凯德勒斯顿的寇松勋爵所说，白人在那里，尽管白人掌握着他自己手中的主要职位、真正的权力和作为他负担的工作，但马来人会钦佩他， 感激和忠诚的支持，没有表现出嫉妒或不耐烦的迹象。如果人们牢记，正如人们确实必须记住的那样，白人影响力的增长，以及我们所说的这种建议的采纳，总是意味着马来人的权威的减少和他的特权的削减或废除——在我们看来，这往往是不好的特权————他接受他的特权肯定是相当美妙和令人钦佩的[ix][九] fate with such a good, often even a charming, grace. The Malay does not always approve of our methods, and sometimes they are really indefensible, but, though he disapproves, what is he to say? To whom is he to complain, and how? We sometimes learn his language, because that is necessary for our benefit; we even take trouble to inquire about his customs and other matters concerning him and his life; but very, very rarely does he learn either our language, or enough of our customs, to make himself heard effectively. He realizes this better than almost any other thing, and therefore, being a fatalist, he accepts what comes because he knows there is no other way. Given his nature, his traditions, his way of life through all the generations, and his present disabilities, how is he to do otherwise? When you have handed over to others the control of everything you once had, can you complain to them of breach of faith, or even of little things like the neglect of your interests when they happen to clash with your controllers’ wishes or ambitions? Western people, in humble or subordinate positions, sometimes find it difficult to assert themselves, or what they believe to be their rights; to the Malay it is impossible.
@@ -127,8 +78,6 @@ I make a final quotation from Mr. Ireland’s book. It is this: “Nothing could
 Every one must hope that a departure from the Brooke tradition is impossible, and as the matter is wholly within the discretion of the present Rajah, who knows better than anyone else what is necessary to
 每个人都必须希望背离布鲁克传统是不可能的，而且由于此事完全在现任拉贾的自由裁量权范围内，他比任何人都更清楚什么是必要的[xv][十五] secure the objects set out by his predecessor, and confirmed and secured by his own rule, there is no reason to fear for the future of Sarawak. Any real man would be proud to take up and help to perpetuate so great an inheritance. When the time comes, he will remember the words of the first Rajah Brooke: “If it please God to permit me to give a stamp to this country which shall last after I am no more, I shall have lived a life which emperors might envy,” and he will begin his rule with the knowledge that his predecessor spent his whole life in making good the promise of those words.
 确保他的前任制定的目标，并由他自己的统治得到确认和保障，没有理由担心砂拉越的未来。任何真正的男人都会自豪地承担并帮助延续如此伟大的遗产。到时候，他会记住第一任拉贾·布鲁克的话：“如果上帝允许我为这个国家留下一个印记，在我去世后仍然存在，我将过上皇帝们可能羡慕的生活”，他将在开始他的统治时知道他的前任一生都在兑现这些话的承诺。
-
-F. A. S. F.A.S.
 
 London, 22nd September 1913
 伦敦 ，1913 年 9 月 22 日
