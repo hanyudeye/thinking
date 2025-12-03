@@ -1,0 +1,4 @@
+localhost:8080  {
+       root * F:/me/emploies/index>
+       file_server
+   }

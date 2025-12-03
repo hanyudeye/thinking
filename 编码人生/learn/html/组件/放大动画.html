@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 这个代码的功能如下：
+## 功能说明
+- 页面有一个固定居中的 shoutouts 列表，包含三个 `<li>`，分别显示 “Cool!”、“Next!”、“Wow!”。
+- 当你按下键盘上的 `[`, `]`, `/` 其中任意一个键时：
+  - 对应的 `<li>` 会被加上 `current` 类，整个 `ul` 加上 `show` 类。
+  - 这会触发 CSS 动画：该 `<li>` 变大为圆形，文字变大，形成“弹出”效果。
+- 当你松开任意键时：
+  - 当前 `<li>` 和 `ul` 的类被移除，动画复原。
+ -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background: dodgerblue;
+            font-family: sans-serif;
+        }
+
+        a {
+            color: peachpuff;
+        }
+
+        #shoutouts {
+            margin: 0;
+            pointer-events: none;
+            inset: 0;
+            position: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            li {
+                pointer-events: none;
+                width: 0;
+                height: 0;
+                background: #fff;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: 1s;
+            }
+
+            span {
+                font-size: 0;
+                transition: 400ms;
+            }
+        }
+
+        #shoutouts.show {
+            li.current {
+                width: 90vmin;
+                height: 90vmin;
+                transition: 1s;
+            }
+
+            li.current span {
+                font-size: 35vmin;
+                transition: 1s;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>Check out the <a
+            href="https://www.wearedevelopers.com/en/magazine/556/building-a-shoutout-component-in-plain-html-css-javascript-556">article
+            explaining this</a> or <a href="https://youtu.be/ReC935r7cEU">watch the video walkthrough</a>.
+
+    <ul id="shoutouts">
+        <li data-key="["><span>Cool!</span></li>
+        <li data-key="]"><span>Next!</span></li>
+        <li data-key="/"><span>Wow!</span></li>
+    </ul>
+
+    <script>
+        let shoutouts = document.querySelector("#shoutouts");
+        if (shoutouts) {
+            let data = {};
+            let current = false;
+            document.querySelectorAll("#shoutouts li").forEach((l) => {
+                data[l.dataset.key] = l;
+            });
+            document.body.addEventListener("keydown", (ev) => {
+                if (data[ev.key]) {
+                    current = data[ev.key];
+                    current.className = "current";
+                    shoutouts.className = "show";
+                }
+            });
+            document.body.addEventListener("keyup", (ev) => {
+                if (current) {
+                    current.className = "";
+                    shoutouts.className = "";
+                    current = false;
+                }
+            });
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+{
+	// Place your snippets for markdown here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	"表格": {
+		"prefix": "table",
+		"body": [
+			"| 左对齐 $1| 居中对齐 |",
+			"| :--------- | :-------: |"
+		],
+		"description": "插入表格"
+	},
+	"hugo header": {
+		"prefix": "hugoheader",
+		"body": [
+			"---",
+			"layout: default",
+			"toc: false",
+			"title: ${TM_FILENAME_BASE}",
+			"date:  ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}+08:00",
+			"draft: true",
+			"---\n",
+			"$0",
+		],
+		"description": "插入hugo头部"
+	},
+		"插入简写日期": {
+		"prefix": "currentdate",
+		"body": [
+			"date: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}+08:00\n",
+		],
+		"description": "格式为 date: 2020-02-17T20:47:48+08:00"
+	},
+	"插入日期": {
+		"prefix": "date",
+		"body": [
+			"### ${CURRENT_MONTH}.${CURRENT_DATE}\n",
+		],
+		"description": "格式为 ### 日期"
+	},
+	"插入more": {
+		"prefix": "more",
+		"body": [
+			"<!--more-->"
+		],
+		"description": "插入more"
+	},
+	"插入当前时间": {
+		"prefix": "now",
+		"body": [
+			"${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}\n",
+		],
+		"description": "格式为 20:47:48"
+	},
+	"插入引用": {
+		"prefix": "source",
+		"body": [
+			"?utm_source=aming.xyz"
+		],
+		"description": "插入引用"
+	}
+}

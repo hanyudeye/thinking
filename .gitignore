@@ -1,7 +1,14 @@
 C#
 do.sln
 passwd.md
-知识/passwd.md
+passwd.org
 *.class
 myenv/
 etc/
+/cache/
+xlsx
+.vscode
+*.o
+node_modules/
+temp.md
+output.xlsx
