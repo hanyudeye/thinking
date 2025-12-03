@@ -11,3 +11,4 @@ xlsx
 *.o
 node_modules/
 temp.md
+output.xlsx
