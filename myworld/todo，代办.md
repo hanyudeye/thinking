@@ -20,3 +20,5 @@ todo: 在 github 找项目
 todo: 学习钢琴
 
 todo: 学习日语
+
+电子电路
