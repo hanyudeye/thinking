@@ -78,7 +78,8 @@ ssh-keygen -t rsa -C "youremail@example.com"
 - 种子 https://thepiratebaye.org/search.php?q={query}
 - 电影字幕下载 : https://yts.mx/
 - 字幕转换 https://converter.app/cn/vtt-srt/
-
+- 搜电影种子 https://en.rarbg-official.is/movies?search={query}
+- 搜电影种子2 https://www.yts-official.cc/browse-movies?keyword={query}
 ## 图片 [图片网站]
 
 https://cn.bing.com/images/search?q={query}&form=HDRSC2&first=1
