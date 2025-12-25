@@ -42,6 +42,7 @@ scp /home/zhao/data/test.txt zw@10.150.69.247: /C:/Users/zw/Desktop/summary
 或
 scp /home/zhao/data/test.txt zw@10.150.69.247: /C:/Users/zw/Desktop/summary/tt.txt
 ``` -->
+## 翻译 mtranserver
 ## ssh [登录验证]
 
 密钥： 就是一串 看不懂的东西，用来验证用。
