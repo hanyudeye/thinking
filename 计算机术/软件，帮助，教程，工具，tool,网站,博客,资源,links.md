@@ -6,27 +6,39 @@ date:  2025-07-03T07:32:41+08:00
 categories: ['']
 draft: true
 ---
-## 启动器,listary
-## autokey/autohotkey [快捷键管理]
 
-<!-- ## 翻译 [特定行业] -->
+## 启动器
 
-<!-- ## yt-dlp [视频/字幕下载]
+- listary
+- Raycast 
+
+## 快捷键
+
+- autokey/autohotkey 
+- hammerspoon
+
+## 翻译 
+- sdcv  翻译单词
+- translate-shell 翻译句子
+
+
+## 下载字幕、视频
+- yt-dlp 
 
 ``` sh
 # youtube 字幕下载
 yt-dlp --write-sub --sub-lang en VIDEO_URL
 m3u8视频下载  windows 下是 N_m3u8DL-CLI
 b 站视频下载 downKyi
-``` -->
+``` 
 
-<!-- ##  everything/启动器/grep [应用/文件查找工具]
+## 应用/文件查找
 
 - Everything: Windows下强大的文件搜索工具
 - Listary:  Windows 下的文件搜索和应用启动工具
 - ulauncher: Linux 下具有同Listary 相似功能的工具
- -->
-<!-- ## 激活工具、破解
+
+## 激活工具、破解
 
 - AdobeGenP : Windows 平台的 Adobe 产品激活
 
@@ -41,7 +53,8 @@ scp /path/to/file user@server:/path/to/destination # Copy file from local to ser
 scp /home/zhao/data/test.txt zw@10.150.69.247: /C:/Users/zw/Desktop/summary
 或
 scp /home/zhao/data/test.txt zw@10.150.69.247: /C:/Users/zw/Desktop/summary/tt.txt
-``` -->
+``` 
+
 ## 翻译 mtranserver
 ## ssh [登录验证]
 
@@ -59,12 +72,14 @@ ssh-keygen -t rsa -C "youremail@example.com"
 
 一个桌面应用（支持 Windows 和 Mac），基于 FFmpeg 进行直播录制，覆盖40+国内外主流直播平台
 
-## [pdf-craft](https://github.com/oomol-lab/pdf-craft) [行业软件，图像识别]
+## 文字识别
+
+[pdf-craft](https://github.com/oomol-lab/pdf-craft) 
 
 命令行 Python 工具，用来将扫描的 PDF 文件转为 Markdown 和 EPUB，并通过 AI 进行 OCR。
 
-## ripgrep [文本搜索]
-
+##  文本搜索
+- ripgrep
 
 # 资源网站
 ## 视频、字幕资源 
@@ -216,3 +231,24 @@ https://huggingface.co/
 
 - [google index](https://trends.google.com/trends/explore?q=UNH)
 - [google 指数](https://trends.google.com/trends/explore?q=gpt&date=now%201-d&geo=US&hl=zh-CN)
+
+## 图片型pdf 文字识别
+``` sh
+# 中英文识别
+ocrmypdf -l chi_sim+eng input.pdf output.pdf
+```
+
+## acc 音频文件批量转mp3
+批处理脚本
+``` bat 
+@echo off
+for %%a in (*.aac) do (
+    ffmpeg -i "%%a" "%%~na.mp3"
+)
+pause
+```
+
+## 屏蔽网站
+ipconfig /flushdns
+macbook： sudo dscacheutil -flushcache
+
