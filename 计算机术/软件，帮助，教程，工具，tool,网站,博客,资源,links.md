@@ -252,3 +252,10 @@ pause
 ipconfig /flushdns
 macbook： sudo dscacheutil -flushcache
 
+## 如何截网页长图
+
+1. 安装chrome扩展
+- GoFullPage
+
+2. 用 Edge 打开网页
+    右键 → 网页捕获
