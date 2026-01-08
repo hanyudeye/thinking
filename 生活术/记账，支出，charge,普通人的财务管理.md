@@ -20,7 +20,7 @@ Bookkeeping can be used to calculate the current financial situation.
 
 ## 2025 Planned Expenses
 
-大概支出 5000元
+大概支出 5000元，实际全年花费1万3，包含香港旅游，买钢琴，交车险，如果没这些花费，平均年开销5000差不多。
 
 ## Expenses Incurred (支出预算)
 
