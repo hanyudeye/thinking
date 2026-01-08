@@ -1,5 +1,0 @@
-127.0.0.1:8082
-
-tls internal
-root * .
-file_server
