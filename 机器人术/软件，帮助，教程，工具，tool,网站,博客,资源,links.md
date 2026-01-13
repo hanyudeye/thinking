@@ -18,11 +18,12 @@ draft: true
 - hammerspoon
 
 ## 翻译 
+
 - sdcv  翻译单词
 - translate-shell 翻译句子
 
-
 ## 下载字幕、视频
+
 - yt-dlp 
 
 ``` sh
@@ -47,6 +48,7 @@ b 站视频下载 downKyi
 - Ultimate vocal remover gui
 
 ## Secure Copy 远程拷贝 [文件远程操作]
+
 ``` sh
 scp /path/to/file user@server:/path/to/destination # Copy file from local to server
 
@@ -55,7 +57,6 @@ scp /home/zhao/data/test.txt zw@10.150.69.247: /C:/Users/zw/Desktop/summary
 scp /home/zhao/data/test.txt zw@10.150.69.247: /C:/Users/zw/Desktop/summary/tt.txt
 ``` 
 
-## 翻译 mtranserver
 ## ssh [登录验证]
 
 密钥： 就是一串 看不懂的东西，用来验证用。
