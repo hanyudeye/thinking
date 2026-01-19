@@ -22,6 +22,11 @@ draft: true
 - sdcv  翻译单词
 - translate-shell 翻译句子
 
+词典下载： 朗道 中英 ,英中 互译词典
+https://raw.githubusercontent.com/shanyouli/stardict/refs/heads/master/stardict-langdao-ce-gb-2.4.2.tar.xz
+
+## 设置查找
+
 ## 下载字幕、视频
 
 - yt-dlp 
