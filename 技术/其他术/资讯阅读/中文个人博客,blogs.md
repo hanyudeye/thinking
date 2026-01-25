@@ -30,7 +30,6 @@ draft: true
 
 - [闲人Life](https://www.xianrenlife.com/)[旅游，作家]
 - [最好金龟换酒](http://fz0512.com/) [生活，旅游 ，摄影，亲子][可以感受幸福，放松心情]
-- [杨钦元 - 博客](http://yangqinyuan.com/) [投资]
 - [白板报](http://www.baibanbao.net/)[剧作家，作家]
 - [孤岛客 - 几支无用笔，半打有心人。](http://www.huangjiwei.com/blog/)
 - [海德沙龙（HeadSalon）](http://headsalon.org/)[随笔，小文章居多]
@@ -52,6 +51,7 @@ draft: true
 - [Leon Fong 的个人网站](https://leonfong.me) [独立旅行]
 - [Cat in Chinese](https://chinese.catchen.me) [移民，演讲者、技术]
 - [水星投资理财](https://mercurychong.blogspot.com/)[ 投资]
+- [杨钦元 - 博客](http://yangqinyuan.com/) [投资]
 
 ## 其他
 

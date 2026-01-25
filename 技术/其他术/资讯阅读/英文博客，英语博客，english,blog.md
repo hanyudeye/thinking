@@ -9,7 +9,6 @@ draft: true
 ## 时常看看、阅读
 
 - [paulgraham](https://paulgraham.com/) [互联网创业者，大佬]
-
 - [James](https://jamesg.blog/) 
 
 
