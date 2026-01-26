@@ -23,11 +23,11 @@ draft: true
 ## 参与开源项目
 
 - [位于 根特 的编程小组](https://sysghent.be)
-- [参与开源项目](https://github.com/chenyukang)
 
 ## 时常看看
 
 
+- [参与开源项目](https://github.com/chenyukang)
 - [闲人Life](https://www.xianrenlife.com/)[旅游，作家]
 - [最好金龟换酒](http://fz0512.com/) [生活，旅游 ，摄影，亲子][可以感受幸福，放松心情]
 - [白板报](http://www.baibanbao.net/)[剧作家，作家]
