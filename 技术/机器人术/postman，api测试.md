@@ -107,10 +107,6 @@ pm.test("response is ok", function () {
 
 ## 怎么发送 json 类型的数据
  
-在 Postman 中发送 JSON 类型的数据是非常简单的，以下是详细的步骤：
-![](images/2025-01-10-14-09-21.png)
-![](../images/2025-01-10-14-09-21.png)
-
 ### 1. **打开 Postman 并创建一个新的请求**
 - 启动 Postman 应用。
 - 点击左上角的 **"New"** 按钮，选择 **"Request"**。
