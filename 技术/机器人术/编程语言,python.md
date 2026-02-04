@@ -15,3 +15,5 @@ draft: true
 - 输入输出 fopen, fread,fclose ,fseek,fgetc,fscanf,fprintf,remove,rename,tmpfile
 - getenv , rand, strof,times,system,exec
 - math: abs ,div, ceil,fmod,frexp,exp,log,cos,sin,tan,acos
+
+- 操作系统相关 日期时间 
