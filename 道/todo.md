@@ -9,4 +9,3 @@ draft: true
 电子垃圾：用 手拨动放在耳麦上的跑耳朵
 
 todo: 在mac电脑下载 delta 用蓝牙手柄玩游戏 半小时
-windows 电脑scoop  VirtuaNES
