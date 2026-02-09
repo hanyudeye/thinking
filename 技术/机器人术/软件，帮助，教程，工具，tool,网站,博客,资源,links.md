@@ -7,6 +7,12 @@ categories: ['']
 draft: true
 ---
 
+
+## 单手操作，鼠标手势
+
+https://github.com/yingDev/WGestures/releases
+
+
 ## 激活工具、破解
 
 - AdobeGenP : Windows 平台的 Adobe 产品激活
