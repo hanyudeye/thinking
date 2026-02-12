@@ -1,6 +1,4 @@
 ---
-layout: default
-toc: false
 title: doing幸福模板
 date:  2026-02-04T09:50:22+08:00
 draft: true
