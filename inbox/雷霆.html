@@ -161,6 +161,19 @@
                 offsetX: 0,
                 offsetY: 0,
                 maxDistance: 60
+            },
+            gamepad: { // 游戏手柄状态
+                isConnected: false,
+                offsetX: 0,
+                offsetY: 0,
+                maxDistance: 60
+            },
+            keyboard: { // 键盘状态
+                up: false,
+                down: false,
+                left: false,
+                right: false,
+                space: false
             }
         };
 
@@ -200,17 +213,32 @@
                 this.lastFireTime = 0;
             }
 
-            // 更新玩家位置（根据摇杆）
+            // 更新玩家位置（根据摇杆、键盘、手柄）
             update() {
-                // 摇杆控制移动
-                if (gameState.joystick.isPressed) {
-                    const moveX = gameState.joystick.offsetX * 0.1;
-                    const moveY = gameState.joystick.offsetY * 0.1;
+                let moveX = 0;
+                let moveY = 0;
 
-                    // 边界检测
-                    this.x = Math.max(0, Math.min(gameState.width - this.width, this.x + moveX));
-                    this.y = Math.max(0, Math.min(gameState.height - this.height, this.y + moveY));
+                // 摇杆控制（移动端触摸）
+                if (gameState.joystick.isPressed) {
+                    moveX += gameState.joystick.offsetX * 0.1;
+                    moveY += gameState.joystick.offsetY * 0.1;
                 }
+
+                // 键盘控制
+                if (gameState.keyboard.left) moveX -= 5;
+                if (gameState.keyboard.right) moveX += 5;
+                if (gameState.keyboard.up) moveY -= 5;
+                if (gameState.keyboard.down) moveY += 5;
+
+                // 手柄模拟摇杆控制
+                if (gameState.gamepad.isConnected) {
+                    moveX += gameState.gamepad.offsetX * 0.1;
+                    moveY += gameState.gamepad.offsetY * 0.1;
+                }
+
+                // 边界检测
+                this.x = Math.max(0, Math.min(gameState.width - this.width, this.x + moveX));
+                this.y = Math.max(0, Math.min(gameState.height - this.height, this.y + moveY));
             }
 
             // 绘制玩家飞机
@@ -537,6 +565,9 @@
 
         // 游戏主循环
         function gameLoop(timestamp) {
+            // 更新手柄输入
+            updateGamepadInput();
+
             // 清屏
             ctx.clearRect(0, 0, gameState.width, gameState.height);
 
@@ -547,12 +578,8 @@
                     gameState.bossTimer = Math.max(0, gameState.bossTimer - 1);
                     updateGameInfo();
 
-                    // 倒计时结束，BOSS未被击败（玩家失败）
-                    if (gameState.bossTimer === 0) {
-                        alert(`时间到！BOSS ${gameState.bossLevel} 未被击败，游戏失败！`);
-                        initGame();
-                        return;
-                    }
+                    // 无敌模式 - 倒计时无限制
+                    // 原有的失败逻辑已禁用
                 }
             }
 
@@ -590,13 +617,8 @@
                 bullet.update();
                 bullet.draw();
 
-                // 子弹与玩家碰撞检测（玩家未无敌）
-                if (!gameState.isSkillActive && player && isColliding(bullet, player)) {
-                    // 玩家被击中，游戏结束
-                    alert('你被击中了！游戏失败！');
-                    initGame();
-                    return false;
-                }
+                // 玩家无敌模式 - 子弹直接穿过
+                // 子弹与玩家碰撞检测已禁用
 
                 return !bullet.isOffScreen();
             });
@@ -613,6 +635,74 @@
         }
 
         // ************************ 事件监听 ************************
+        // 键盘事件监听
+        document.addEventListener('keydown', (e) => {
+            const key = e.key.toLowerCase();
+            if (key === 'arrowup' || key === 'w') { gameState.keyboard.up = true; e.preventDefault(); }
+            if (key === 'arrowdown' || key === 's') { gameState.keyboard.down = true; e.preventDefault(); }
+            if (key === 'arrowleft' || key === 'a') { gameState.keyboard.left = true; e.preventDefault(); }
+            if (key === 'arrowright' || key === 'd') { gameState.keyboard.right = true; e.preventDefault(); }
+            if (key === ' ') { activateSkill(); e.preventDefault(); }
+        });
+
+        document.addEventListener('keyup', (e) => {
+            const key = e.key.toLowerCase();
+            if (key === 'arrowup' || key === 'w') { gameState.keyboard.up = false; }
+            if (key === 'arrowdown' || key === 's') { gameState.keyboard.down = false; }
+            if (key === 'arrowleft' || key === 'a') { gameState.keyboard.left = false; }
+            if (key === 'arrowright' || key === 'd') { gameState.keyboard.right = false; }
+        });
+
+        // 游戏手柄连接/断开事件
+        window.addEventListener('gamepadconnected', (e) => {
+            console.log('游戏手柄已连接:', e.gamepad.id);
+            gameState.gamepad.isConnected = true;
+        });
+
+        window.addEventListener('gamepaddisconnected', (e) => {
+            console.log('游戏手柄已断开:', e.gamepad.id);
+            gameState.gamepad.isConnected = false;
+            gameState.gamepad.offsetX = 0;
+            gameState.gamepad.offsetY = 0;
+        });
+
+        // 手柄输入更新函数（在游戏循环中调用）
+        function updateGamepadInput() {
+            const gamepads = navigator.getGamepads?.() || [];
+            if (gamepads.length === 0) {
+                gameState.gamepad.isConnected = false;
+                return;
+            }
+
+            const gamepad = gamepads[0];
+            if (!gamepad) {
+                gameState.gamepad.isConnected = false;
+                return;
+            }
+
+            gameState.gamepad.isConnected = true;
+
+            // 获取左摇杆数据（轴0和轴1）
+            const axisX = gamepad.axes[0] || 0;
+            const axisY = gamepad.axes[1] || 0;
+
+            // 死区处理（小于0.1的输入忽略）
+            const deadZone = 0.1;
+            gameState.gamepad.offsetX = Math.abs(axisX) > deadZone ? axisX * gameState.gamepad.maxDistance : 0;
+            gameState.gamepad.offsetY = Math.abs(axisY) > deadZone ? axisY * gameState.gamepad.maxDistance : 0;
+
+            // 检测手柄按钮（按钮0通常是A按钮，可用于发大招）
+            if (gamepad.buttons && gamepad.buttons[0] && gamepad.buttons[0].pressed) {
+                // A按钮用于发大招
+                if (!gameState.lastGamepadButtonState) {
+                    activateSkill();
+                }
+                gameState.lastGamepadButtonState = true;
+            } else {
+                gameState.lastGamepadButtonState = false;
+            }
+        }
+
         // 窗口大小变化（适配横竖屏切换）
         window.addEventListener('resize', resizeCanvas);
 
