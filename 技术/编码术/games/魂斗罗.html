@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>魂斗罗 — 简易版</title>
+<style>
+  html,body{height:100%;margin:0;background:#111;color:#eee;font-family:Segoe UI, Roboto, Arial}
+  #game{display:block;margin:10px auto;background:#222;box-shadow:0 0 0 4px #000;width:960px;height:540px}
+  #ui{width:960px;margin:8px auto;color:#fff;display:flex;justify-content:space-between}
+  button{padding:6px 10px}
+  .hint{font-size:13px;color:#bbb}
+</style>
+</head>
+<body>
+<div id="ui">
+  <div>
+    <strong id="status">Level 1 / 8</strong>
+    &nbsp; <span id="lives">Lives: 30</span>
+  </div>
+  <div class="hint">
+    键盘：←→/A D 移动，↑/W/空格 跳，J/K 或 Z/X 射击；手柄：左摇杆移动，A 射击，B 跳
+  </div>
+  <div>
+    <button id="restart">重新开始</button>
+  </div>
+</div>
+<canvas id="game" width="960" height="540"></canvas>
+<script>
+// 简化版魂斗罗：8 关、30 条命、默认武器：散弹（5 发散弹）
+// 控制：键盘 + Gamepad（标准映射）
+
+const canvas = document.getElementById('game');
+const ctx = canvas.getContext('2d');
+const W = canvas.width, H = canvas.height;
+
+// 游戏配置
+const TOTAL_LEVELS = 8;
+const START_LIVES = 30;
+const PLAYER_SPEED = 3.2;
+const JUMP_V = -11;
+const GRAVITY = 0.6;
+const SHOT_COOLDOWN = 300; // ms
+const SHOTSPREAD = 0.35; // radians
+const SHOTCOUNT = 5;
+
+// 关卡配置（每关敌人数量与速度系数）
+const LEVELS = Array.from({length: TOTAL_LEVELS}, (_,i)=>({
+  enemies: 5 + i*3,
+  enemySpeed: 1 + i*0.2,
+  spawnInterval: Math.max(600, 1200 - i*100)
+}));
+
+let state = {
+  level: 0,
+  lives: START_LIVES,
+  running: true,
+  enemiesAlive: 0,
+  enemiesKilled: 0,
+  score: 0,
+  lastShot: 0,
+  bullets: [],
+  enemies: [],
+  pickups: [],
+  player: null,
+  platforms: []
+};
+
+// 输入
+const keys = {};
+let gpState = { connected:false, gp:null, index:null, buttons:[], axes:[] };
+
+class Player{
+  constructor(){
+    this.w = 40; this.h = 48;
+    this.x = 100; this.y = H - 120 - this.h; // ground
+    this.vx = 0; this.vy = 0;
+    this.onGround = false;
+    this.facing = 1; // 1 right, -1 left
+    this.weapon = 'shotgun'; // shotgun | rocket | laser
+    this.weaponTimer = 0; // weapon pickup duration (ms)
+  }
+  update(dt){
+    // horizontal
+    this.x += this.vx*dt;
+    if(this.x < 0) this.x = 0;
+    if(this.x + this.w > W) this.x = W - this.w;
+    // gravity
+    this.vy += GRAVITY;
+    this.y += this.vy;
+    // platforms collision (only ground + simple platforms)
+    this.onGround = false;
+    for(const p of state.platforms){
+      if(this.x + this.w > p.x && this.x < p.x + p.w){
+        if(this.y + this.h > p.y && this.y + this.h < p.y + p.h + 15 && this.vy >=0){
+          this.y = p.y - this.h; this.vy = 0; this.onGround = true; break;
+        }
+      }
+    }
+    if(this.y + this.h > H - 20){ this.y = H - 20 - this.h; this.vy = 0; this.onGround = true; }
+  }
+  draw(){
+    // draw sprite (flip if facing left)
+    ctx.save();
+    if(this.facing < 0){ ctx.translate(this.x + this.w, this.y); ctx.scale(-1,1); ctx.drawImage(playerImg, 0, 0, this.w, this.h); }
+    else { ctx.translate(this.x, this.y); ctx.drawImage(playerImg, 0, 0, this.w, this.h); }
+    ctx.restore();
+    // weapon icon above player
+    ctx.fillStyle = '#0008'; ctx.fillRect(this.x-2, this.y-18, 44, 16);
+    ctx.fillStyle = '#fff'; ctx.font='12px Segoe UI'; ctx.fillText(this.weapon.toUpperCase(), this.x+2, this.y-6);
+  }
+}
+
+class Bullet{
+  constructor(x,y,dx,dy, friendly=true){ this.x=x;this.y=y;this.vx=dx;this.vy=dy;this.r=4;this.friendly=friendly;}
+  update(dt){ this.x += this.vx*dt; this.y += this.vy*dt; }
+  draw(){ ctx.fillStyle = this.friendly? '#fff' : '#f55'; ctx.beginPath(); ctx.arc(this.x,this.y,this.r,0,Math.PI*2); ctx.fill(); }
+}
+
+// Rocket is a stronger projectile
+class Rocket extends Bullet{
+  constructor(x,y,dx,dy){ super(x,y,dx,dy,true); this.r=6; this.explosive=true; }
+  draw(){ ctx.fillStyle='#ffcc00'; ctx.beginPath(); ctx.arc(this.x,this.y,this.r,0,Math.PI*2); ctx.fill(); }
+}
+
+// Laser beam (instant line for short time)
+class Laser{
+  constructor(x,y,angle,length=300,duration=120){ this.x=x; this.y=y; this.angle=angle; this.length=length; this.timer=duration; }
+  update(dt){ this.timer -= dt*16.6667; }
+  draw(){ ctx.save(); ctx.strokeStyle='#66f'; ctx.lineWidth=4; ctx.beginPath(); ctx.moveTo(this.x,this.y); ctx.lineTo(this.x + Math.cos(this.angle)*this.length, this.y + Math.sin(this.angle)*this.length); ctx.stroke(); ctx.restore(); }
+}
+
+class Enemy{
+  constructor(x,y,speed){ this.x=x;this.y=y;this.w=36;this.h=40;this.vx = -speed;this.hp=1;}
+  update(dt){ this.x += this.vx*dt; if(this.x < -50) this.x = W + Math.random()*80; }
+  draw(){ ctx.drawImage(enemyImg, this.x, this.y, this.w, this.h); }
+}
+
+class Boss extends Enemy{
+  constructor(x,y){ super(x,y,1.2); this.w=120; this.h=100; this.hp=12; this.phaseTimer=0; this.shootTimer=0; this.shootInterval=1800; }
+  update(dt){
+    const tms = dt*16.6667;
+    this.phaseTimer += tms;
+    this.shootTimer -= tms;
+    // slow patrol
+    this.x += Math.sin(this.phaseTimer/80)*0.6;
+    if(this.x < 200) this.x = 200;
+    if(this.x > W - this.w - 50) this.x = W - this.w - 50;
+    // fire rocket towards player occasionally
+    if(this.shootTimer <= 0 && state.player){
+      this.shootTimer = this.shootInterval + (Math.random()*600 - 300);
+      const px = state.player.x + state.player.w/2;
+      const py = state.player.y + state.player.h/2;
+      const sx = this.x + this.w/2;
+      const sy = this.y + this.h/2;
+      const angle = Math.atan2(py - sy, px - sx);
+      const speed = 4 + Math.random()*1.2;
+      const vx = Math.cos(angle)*speed;
+      const vy = Math.sin(angle)*speed*0.9;
+      const r = new Rocket(sx, sy, vx, vy);
+      r.friendly = false; // enemy rocket
+      state.bullets.push(r);
+      playTone(320,0.12,'sawtooth',0.12);
+    }
+  }
+  draw(){
+    ctx.fillStyle='#aa3366'; ctx.fillRect(this.x,this.y,this.w,this.h);
+    // hp bar
+    const maxHp = 12;
+    const pct = Math.max(0, this.hp) / maxHp;
+    ctx.fillStyle = '#000'; ctx.fillRect(this.x, this.y-10, this.w, 6);
+    ctx.fillStyle = '#ff4d4d'; ctx.fillRect(this.x+1, this.y-9, Math.max(0, Math.floor((this.w-2)*pct)), 4);
+    ctx.fillStyle='#fff'; ctx.font='14px Segoe UI'; ctx.fillText('BOSS', this.x+10,this.y+20);
+  }
+}
+
+function spawnEnemy(){
+  const lvl = LEVELS[state.level];
+  const y = H - 20 - 40 - Math.random()*80; // ground enemies
+  const x = W + Math.random()*200;
+  const e = new Enemy(x,y, (1 + Math.random()*0.6) * lvl.enemySpeed);
+  state.enemies.push(e); state.enemiesAlive++;
+}
+
+function spawnPickup(x,y){
+  // types: 'rocket','laser','life'
+  const types = ['rocket','laser','life'];
+  const t = types[Math.floor(Math.random()*types.length)];
+  state.pickups.push({x:x, y:y, w:22, h:22, type:t});
+}
+
+function startLevel(i){
+  state.level = i; state.enemies = []; state.bullets=[]; state.enemiesAlive=0; state.enemiesKilled=0;
+  state.pickups = [];
+  state.score = 0;
+  const cfg = LEVELS[i];
+  // spawn initial enemies
+  for(let k=0;k<Math.min(3,cfg.enemies);k++) spawnEnemy();
+  // schedule spawns
+  state.nextSpawn = performance.now() + 800;
+  updateUI();
+}
+
+// optionally spawn boss on last level
+function maybeSpawnBoss(){
+  if(state.level === TOTAL_LEVELS-1 && !state.enemies.some(e=> e instanceof Boss)){
+    const b = new Boss(W-200, H-20-100-20);
+    state.enemies.push(b);
+    // spawn some minions
+    for(let i=0;i<4;i++) spawnEnemy();
+  }
+}
+
+function updateUI(){
+  document.getElementById('status').textContent = `Level ${state.level+1} / ${TOTAL_LEVELS}`;
+  document.getElementById('lives').textContent = `Lives: ${state.lives}`;
+}
+
+function restart(){ state.lives = START_LIVES; startLevel(0); state.running=true; }
+
+// Sprites & Audio helpers
+function makeSprite(w,h,drawFn){
+  const c = document.createElement('canvas'); c.width = w; c.height = h;
+  const g = c.getContext('2d');
+  drawFn(g, w, h);
+  const img = new Image(); img.src = c.toDataURL(); return img;
+}
+
+// simple player sprite
+const playerImg = makeSprite(40,48,(g,w,h)=>{
+  g.fillStyle = '#4ecdc4'; g.fillRect(0,0,w,h);
+  g.fillStyle = '#2d6a4f'; g.fillRect(6,6,28,12); // helmet
+  g.fillStyle = '#ffd166'; g.fillRect(w-12,14,10,6); // gun
+});
+// enemy sprite
+const enemyImg = makeSprite(36,40,(g,w,h)=>{
+  g.fillStyle = '#ff6b6b'; g.fillRect(0,0,w,h);
+  g.fillStyle = '#8b0000'; g.fillRect(4,6,w-8,6);
+});
+
+// audio context & simple sfx
+const AudioCtx = window.AudioContext || window.webkitAudioContext;
+const audioCtx = AudioCtx ? new AudioCtx() : null;
+function resumeAudio(){ if(audioCtx && audioCtx.state === 'suspended') audioCtx.resume(); }
+function playTone(freq, duration=0.08, type='sawtooth', vol=0.08){ if(!audioCtx) return; const o = audioCtx.createOscillator(); const g = audioCtx.createGain(); o.type = type; o.frequency.value = freq; g.gain.value = vol; o.connect(g); g.connect(audioCtx.destination); o.start(); o.stop(audioCtx.currentTime + duration); }
+function playShot(){ playTone(900,0.06,'square',0.06); }
+function playHit(){ playTone(240,0.12,'sawtooth',0.12); setTimeout(()=>playTone(520,0.08,'triangle',0.08),40); }
+function playJump(){ playTone(620,0.08,'sine',0.06); }
+function playHurt(){ playTone(160,0.12,'sawtooth',0.16); }
+
+// init
+function init(){
+  state.player = new Player();
+  state.platforms = [ {x:0,y:H-20-0,w:W,h:20} ];
+  // resume audio on first interaction
+  window.addEventListener('keydown', resumeAudio, {once:true});
+  window.addEventListener('pointerdown', resumeAudio, {once:true});
+  startLevel(0);
+}
+
+// input handlers
+window.addEventListener('keydown', e=>{ keys[e.key.toLowerCase()] = true; if([' ','enter'].includes(e.key)) e.preventDefault(); });
+window.addEventListener('keyup', e=>{ keys[e.key.toLowerCase()] = false; });
+
+function pollGamepad(){
+  const gps = navigator.getGamepads ? navigator.getGamepads() : [];
+  if(!gps){ gpState.connected=false; gpState.gp=null; gpState.index=null; gpState.buttons=[]; gpState.axes=[]; return; }
+  // find first non-null gamepad (some browsers report sparse arrays)
+  let found = null;
+  for(let i=0;i<gps.length;i++){ const g = gps[i]; if(g){ found = g; break; } }
+  if(found){
+    gpState.connected = true;
+    gpState.gp = found;
+    gpState.index = found.index;
+    gpState.buttons = (found.buttons || []).map(b=> b.pressed?1:0);
+    gpState.axes = (found.axes || []).slice();
+  } else {
+    gpState.connected=false; gpState.gp=null; gpState.index=null; gpState.buttons=[]; gpState.axes=[];
+  }
+}
+
+function handleInput(dt){
+  // gamepad first
+  let left=0, jump=false, shoot=false;
+  // use snapshot from pollGamepad (more reliable across browsers)
+  const gp = gpState.gp || ((navigator.getGamepads && navigator.getGamepads()[0]) || null);
+  if(gp){
+    const ax = (gp.axes && gp.axes[0]) || 0; if(Math.abs(ax) > 0.15) left = ax;
+    if(gp.buttons && gp.buttons[1] && gp.buttons[1].pressed) jump = true; // B as jump
+    if(gp.buttons && gp.buttons[0] && gp.buttons[0].pressed) shoot = true; // A shoot
+  }
+  // keyboard fallback/combined
+  if(keys['arrowleft'] || keys['a']) left = Math.min(left, -1) || -1;
+  if(keys['arrowright'] || keys['d']) left = Math.max(left, 1) || 1;
+  if(keys['arrowup'] || keys['w'] || keys[' ']) jump = jump || keys['arrowup'] || keys['w'] || keys[' '];
+  if(keys['j'] || keys['k'] || keys['z'] || keys['x']) shoot = shoot || keys['j'] || keys['k'] || keys['z'] || keys['x'];
+
+  // apply to player
+  state.player.vx = left * PLAYER_SPEED;
+  if(left !== 0) state.player.facing = left>0?1:-1;
+  if(jump && state.player.onGround){ state.player.vy = JUMP_V; state.player.onGround = false; playJump(); }
+
+  // shooting
+  const now = performance.now();
+  if(shoot && now - state.lastShot > SHOT_COOLDOWN){
+    state.lastShot = now; fireShotgun(); }
+}
+
+function fireShotgun(){
+  const p = state.player;
+  const cx = p.x + p.w/2; const cy = p.y + p.h/2;
+  if(p.weapon === 'shotgun'){
+    const baseAngle = p.facing>0? 0 : Math.PI;
+    for(let i=0;i<SHOTCOUNT;i++){
+      const t = (i/(SHOTCOUNT-1) - 0.5) * SHOTSPREAD; // spread
+      const ang = baseAngle + t;
+      const speed = 6 + Math.random()*1.4;
+      const dx = Math.cos(ang) * speed; const dy = Math.sin(ang) * speed * 0.3;
+      state.bullets.push(new Bullet(cx, cy, dx, dy, true));
+    }
+    playShot();
+  } else if(p.weapon === 'rocket'){
+    const ang = p.facing>0? 0 : Math.PI;
+    const dx = Math.cos(ang) * 5; const dy = Math.sin(ang) * 1;
+    state.bullets.push(new Rocket(cx, cy, dx, dy));
+    playTone(420,0.12,'square',0.12);
+  } else if(p.weapon === 'laser'){
+    const ang = p.facing>0? 0 : Math.PI;
+    state.bullets.push(new Laser(cx, cy, ang, 420, 140));
+    playTone(1200,0.12,'sine',0.08);
+  }
+}
+
+let lastTime = performance.now();
+function loop(ts){
+  const dt = Math.min(1/30, (ts - lastTime)/16.6667); lastTime = ts;
+  pollGamepad();
+  if(state.running){ handleInput(dt);
+    // update player
+    state.player.update(dt*16.6667);
+    // update bullets
+    for(let b of state.bullets) b.update(dt*16.6667);
+    state.bullets = state.bullets.filter(b=> b.x>-50 && b.x < W+50 && b.y>-50 && b.y < H+50);
+    // update enemies
+    for(let e of state.enemies){ e.update(dt*16.6667); }
+    // update timers
+    updateTimers(dt);
+    // collisions: player bullets -> enemies (boss takes HP)
+    for(let i=state.bullets.length-1;i>=0;i--){ const b=state.bullets[i]; if(!b.friendly) continue;
+      for(let j=state.enemies.length-1;j>=0;j--){ const e=state.enemies[j];
+        if(b.x > e.x && b.x < e.x + e.w && b.y > e.y && b.y < e.y + e.h){
+          // consume bullet
+          state.bullets.splice(i,1);
+          if(e instanceof Boss){
+            // damage depends on projectile
+            let dmg = 1;
+            if(b instanceof Rocket) dmg = 3;
+            if(b instanceof Laser) dmg = 2;
+            e.hp -= dmg;
+            playHit();
+            if(e.hp <= 0){
+              const enemyObj = state.enemies.splice(j,1)[0];
+              state.enemiesAlive = Math.max(0, state.enemiesAlive-1);
+              state.enemiesKilled++;
+              state.score += 100;
+              if(Math.random() < 0.5) spawnPickup(enemyObj.x + enemyObj.w/2, enemyObj.y + enemyObj.h/2);
+            }
+          } else {
+            // normal enemy dies
+            const enemyObj = state.enemies.splice(j,1)[0];
+            state.enemiesAlive = Math.max(0, state.enemiesAlive-1);
+            state.enemiesKilled++;
+            state.score += 10;
+            playHit();
+            if(Math.random() < 0.25) spawnPickup(enemyObj.x + enemyObj.w/2, enemyObj.y + enemyObj.h/2);
+          }
+          break;
+        }
+      }
+    }
+    // enemy bullets -> player
+    for(let i=state.bullets.length-1;i>=0;i--){ const b = state.bullets[i]; if(b.friendly) continue;
+      if(b.x > state.player.x && b.x < state.player.x + state.player.w && b.y > state.player.y && b.y < state.player.y + state.player.h){
+        // hit player
+        state.bullets.splice(i,1);
+        // rockets do more damage
+        if(b instanceof Rocket) { state.lives -= 2; }
+        else { state.lives -= 1; }
+        updateUI(); playHurt();
+        // knockback
+        state.player.vx = -state.player.facing * 6; state.player.vy = -8;
+        if(state.lives <= 0) state.running = false;
+      }
+    }
+    // bullets hitting laser objects (Laser is in bullets array)
+    for(let k=state.bullets.length-1;k>=0;k--){ const b = state.bullets[k]; if(b instanceof Laser){
+      // check enemies intersecting laser line roughly
+      const x2 = b.x + Math.cos(b.angle)*b.length; const y2 = b.y + Math.sin(b.angle)*b.length;
+      for(let j=state.enemies.length-1;j>=0;j--){ const e=state.enemies[j];
+        // simple distance from enemy center to laser line
+        const ex = e.x + e.w/2, ey = e.y + e.h/2;
+        const A = ey - b.y, B = ex - b.x; // rough
+        const dist = Math.abs((y2-b.y)*ex - (x2-b.x)*ey + x2*b.y - y2*b.x) / Math.hypot(x2-b.x, y2-b.y);
+        if(dist < 28){ state.enemies.splice(j,1); state.enemiesAlive = Math.max(0, state.enemiesAlive-1); state.enemiesKilled++; state.score += 15; playHit(); }
+      }
+    }}
+    // enemy -> player collision
+    for(let e of state.enemies){
+      if(state.player.x < e.x + e.w && state.player.x + state.player.w > e.x && state.player.y < e.y + e.h && state.player.y + state.player.h > e.y){
+        // hit player
+        if(e instanceof Boss){
+          // heavy damage on boss contact
+          state.lives -= 3; updateUI(); playHurt(); state.player.vx = -state.player.facing*8; state.player.vy = -10;
+          if(state.lives <= 0) state.running = false;
+          break;
+        } else {
+          hurtPlayer(); break;
+        }
+      }
+    }
+    // pickups collision
+    for(let i=state.pickups.length-1;i>=0;i--){ const pk = state.pickups[i];
+      if(state.player.x < pk.x + pk.w && state.player.x + state.player.w > pk.x && state.player.y < pk.y + pk.h && state.player.y + state.player.h > pk.y){
+        // collect
+        const t = pk.type;
+        if(t === 'life'){ state.lives += 1; updateUI(); playTone(880,0.08,'sine',0.08); }
+        else { state.player.weapon = t; state.player.weaponTimer = 15000; playTone(980,0.12,'triangle',0.12); }
+        state.pickups.splice(i,1); state.score += 20;
+      }
+    }
+    // spawn more if needed
+    const cfg = LEVELS[state.level];
+    if(state.enemiesKilled + state.enemiesAlive < cfg.enemies && performance.now() > state.nextSpawn){ spawnEnemy(); state.nextSpawn = performance.now() + cfg.spawnInterval; }
+    // maybe spawn boss
+    maybeSpawnBoss();
+    // win level
+    if(state.enemiesKilled >= cfg.enemies){
+      state.running = false;
+      if(state.level+1 >= TOTAL_LEVELS){ setTimeout(()=> alert('You Win! 所有关卡通过！'), 200);
+      } else {
+        setTimeout(()=>{ startLevel(state.level+1); state.player = new Player(); state.running=true; }, 500);
+      }
+    }
+    // lose
+    if(state.lives <= 0){ state.running=false; setTimeout(()=> alert('Game Over'), 200); }
+  }
+  // render
+  draw();
+  requestAnimationFrame(loop);
+}
+
+function hurtPlayer(){
+  state.lives--; updateUI();
+  // brief invulnerability + knockback
+  state.player.vx = -state.player.facing*4; state.player.vy = -6; state.player.x += state.player.vx*5; state.player.y += state.player.vy*5;
+  // if lives gone, stop
+  playHurt();
+  if(state.lives <= 0){ state.running=false; }
+}
+
+// update timers (weapon duration, lasers)
+function updateTimers(dt){
+  if(state.player && state.player.weaponTimer > 0){ state.player.weaponTimer -= dt*16.6667; if(state.player.weaponTimer <= 0){ state.player.weapon = 'shotgun'; state.player.weaponTimer = 0; } }
+  // lasers are stored in bullets array as Laser instances; remove expired
+  for(let i=state.bullets.length-1;i>=0;i--){ const b = state.bullets[i]; if(b instanceof Laser){ if(b.timer <= 0) state.bullets.splice(i,1); } }
+}
+
+function draw(){
+  ctx.clearRect(0,0,W,H);
+  // background
+  ctx.fillStyle = '#16213e'; ctx.fillRect(0,0,W,H);
+  // ground
+  ctx.fillStyle = '#0f1724'; ctx.fillRect(0,H-20,W,20);
+  // platforms
+  for(const p of state.platforms){ ctx.fillStyle = '#213547'; ctx.fillRect(p.x,p.y,p.w,p.h); }
+  // player
+  state.player.draw();
+  // bullets
+  for(const b of state.bullets) b.draw();
+  // enemies
+  for(const e of state.enemies) e.draw();
+  // pickups
+  for(const pk of state.pickups){
+    if(pk.type === 'life'){ ctx.fillStyle='#6bffb3'; }
+    else if(pk.type === 'rocket'){ ctx.fillStyle='#ffcc00'; }
+    else if(pk.type === 'laser'){ ctx.fillStyle='#66f'; }
+    ctx.fillRect(pk.x - pk.w/2, pk.y - pk.h/2, pk.w, pk.h);
+    ctx.fillStyle='#000'; ctx.font='12px Segoe UI'; ctx.fillText(pk.type[0].toUpperCase(), pk.x-6, pk.y+4);
+  }
+  // score & weapon timer
+  ctx.fillStyle='#fff'; ctx.fillText(`Score: ${state.score}`, 680, 22);
+  if(state.player.weapon !== 'shotgun'){
+    ctx.fillText(`${state.player.weapon.toUpperCase()} ${Math.ceil(state.player.weaponTimer/1000)}s`, 780, 22);
+  }
+  // HUD
+  ctx.fillStyle = '#fff'; ctx.font='16px Segoe UI';
+  ctx.fillText(`Level ${state.level+1}/${TOTAL_LEVELS}`, 10, 22);
+  ctx.fillText(`Lives: ${state.lives}`, 110, 22);
+  ctx.fillText(`Enemies: ${state.enemiesKilled}/${LEVELS[state.level].enemies}`, 200, 22);
+  if(gpState.connected){
+    const a0 = gpState.axes.length>0? gpState.axes[0].toFixed(2) : '0.00';
+    ctx.fillText('Gamepad: Connected', 400, 22);
+    ctx.fillText(`Axes:${gpState.axes.length} A0:${a0}`, 540, 22);
+  } else {
+    ctx.fillText('Gamepad: -', 400, 22);
+  }
+}
+
+// restart button
+document.getElementById('restart').addEventListener('click', ()=>{ restart(); updateUI(); });
+
+// gamepad connect events
+window.addEventListener('gamepadconnected', e=>{ gpState.connected=true; gpState.gp=e.gamepad; console.log('gamepad connected', e.gamepad); });
+window.addEventListener('gamepaddisconnected', e=>{ gpState.connected=false; gpState.gp=null; console.log('gamepad disconnected'); });
+
+init();
+requestAnimationFrame(loop);
+</script>
+</body>
+</html>
