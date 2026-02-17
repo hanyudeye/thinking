@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>拳皇 97 - 完整版</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:100%;height:100%;background:#222;font-family:Segoe UI, Arial}
+  #gameContainer{display:flex;flex-direction:column;width:100%;height:100%}
+  #ui{background:#333;color:#fff;padding:10px;display:flex;justify-content:space-between;font-size:14px}
+  #gameArea{flex:1;display:flex;gap:20px;padding:20px;background:#000;position:relative;overflow:hidden}
+  canvas{border:2px solid #666;background:#1a1a1a;flex-shrink:0}
+  .hud{display:flex;flex-direction:column;gap:20px;flex:1;color:#fff;font-size:12px}
+  .hud-bar{display:flex;align-items:center;gap:10px}
+  .hud-label{width:80px;font-weight:bold}
+  .bar{width:200px;height:16px;background:#333;border:1px solid #666;position:relative}
+  .bar-fill{height:100%;background:#4f4;transition:width 0.1s}
+  .bar-fill.danger{background:#f44}
+  .controls{font-size:11px;line-height:1.6}
+  .controls strong{display:block;margin:8px 0 4px}
+  
+  #charSelectScreen{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);display:flex;align-items:center;justify-content:center;flex-direction:column;z-index:100;color:#fff}
+  #charSelectScreen h1{font-size:32px;margin-bottom:40px}
+  #charGrid{display:grid;grid-template-columns:repeat(2,150px);gap:20px;margin-bottom:40px}
+  .charCard{border:2px solid #666;padding:20px;text-align:center;cursor:pointer;background:#333;transition:all 0.2s}
+  .charCard:hover{border-color:#0f0;background:#444;transform:scale(1.05)}
+  .charCard.selected{border-color:#0f0;background:#0f03}
+  .charCard h3{margin:10px 0 5px}
+  .charCard p{font-size:11px;color:#aaa}
+  #selectInfo{font-size:14px;margin-bottom:20px;color:#aaa}
+  #startBtn{padding:10px 30px;font-size:16px;background:#0f0;color:#000;border:none;cursor:pointer;font-weight:bold}
+  #startBtn:hover{background:#0f4}
+</style>
+</head>
+<body>
+<div id="gameContainer">
+  <div id="ui">
+    <div><strong>拳皇 97 - 完整版</strong></div>
+    <div id="gameStatus">准备就绪</div>
+    <div id="hint">P1: WASD+JKL | P2: 手柄或方向键+123</div>
+  </div>
+  <div id="gameArea">
+    <canvas id="game" width="800" height="480"></canvas>
+    <div class="hud">
+      <div>
+        <div class="hud-label">P1</div>
+        <div class="hud-bar">
+          <span class="hud-label">生命:</span>
+          <div class="bar"><div class="bar-fill" id="p1hp" style="width:100%"></div></div>
+        </div>
+        <div class="hud-bar">
+          <span class="hud-label">能量:</span>
+          <div class="bar"><div class="bar-fill" id="p1power" style="width:0%;background:#0f0"></div></div>
+        </div>
+        <div class="controls">
+          <strong>P1 控制:</strong>
+          键盘: WASD 移动 | Shift 防守<br>
+          J/K: 拳 | L/U: 腿<br>
+          或用手柄操控 | I: 必杀
+        </div>
+      </div>
+      <div>
+        <div class="hud-label">P2 (AI/手柄)</div>
+        <div class="hud-bar">
+          <span class="hud-label">生命:</span>
+          <div class="bar"><div class="bar-fill" id="p2hp" style="width:100%"></div></div>
+        </div>
+        <div class="hud-bar">
+          <span class="hud-label">能量:</span>
+          <div class="bar"><div class="bar-fill" id="p2power" style="width:0%;background:#0f0"></div></div>
+        </div>
+        <div class="controls">
+          <strong>P2 (AI 自动)</strong>
+          自动使用 AI 对战<br>
+          根据距离和状态<br>
+          自动判断攻击/防守
+        </div>
+      </div>
+    </div>
+    <div id="charSelectScreen">
+      <h1>选择你的战士</h1>
+      <div id="charGrid"></div>
+      <div id="selectInfo">P1 选择: 请点击一个角色</div>
+      <button id="startBtn">开始对战</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const canvas = document.getElementById('game');
+const ctx = canvas.getContext('2d');
+const W = canvas.width, H = canvas.height;
+
+// === 角色定义 ===
+const CHARACTERS = {
+  'kyo': {
+    name: '草薙京', color: '#f44', speed: 4.5, power: 95,
+    skills: {
+      punch_weak: { dmg: 12, range: 60, knockback: 2 },
+      punch_strong: { dmg: 25, range: 70, knockback: 4 },
+      kick_weak: { dmg: 15, range: 75, knockback: 2.5 },
+      kick_strong: { dmg: 35, range: 85, knockback: 5 },
+      special: { dmg: 80, range: 100, knockback: 8, cost: 70 }
+    }
+  },
+  'iori': {
+    name: '八神庵', color: '#8844ff', speed: 4.2, power: 100,
+    skills: {
+      punch_weak: { dmg: 11, range: 55, knockback: 2 },
+      punch_strong: { dmg: 28, range: 75, knockback: 4.5 },
+      kick_weak: { dmg: 16, range: 70, knockback: 2.5 },
+      kick_strong: { dmg: 38, range: 90, knockback: 5.5 },
+      special: { dmg: 90, range: 110, knockback: 9, cost: 70 }
+    }
+  },
+  'mai': {
+    name: '不知火舞', color: '#f4f4', speed: 5, power: 85,
+    skills: {
+      punch_weak: { dmg: 10, range: 50, knockback: 1.5 },
+      punch_strong: { dmg: 22, range: 65, knockback: 3.5 },
+      kick_weak: { dmg: 18, range: 80, knockback: 3 },
+      kick_strong: { dmg: 32, range: 95, knockback: 5 },
+      special: { dmg: 70, range: 120, knockback: 7, cost: 70 }
+    }
+  },
+  'terry': {
+    name: '特瑞', color: '#00ff00', speed: 4, power: 105,
+    skills: {
+      punch_weak: { dmg: 13, range: 65, knockback: 2 },
+      punch_strong: { dmg: 30, range: 80, knockback: 5 },
+      kick_weak: { dmg: 17, range: 75, knockback: 2.5 },
+      kick_strong: { dmg: 40, range: 90, knockback: 6 },
+      special: { dmg: 100, range: 100, knockback: 10, cost: 70 }
+    }
+  }
+};
+
+// === Game State ===
+let gameState = 'charSelect';
+let round = 1, maxRounds = 3;
+let p1Selected = null, p2Selected = null;
+
+// === Audio ===
+const AudioCtx = window.AudioContext || window.webkitAudioContext;
+const audioCtx = AudioCtx ? new AudioCtx() : null;
+function resumeAudio() { if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume(); }
+function playTone(freq, duration = 0.08, type = 'sine', vol = 0.08) {
+  if (!audioCtx) return;
+  const o = audioCtx.createOscillator();
+  const g = audioCtx.createGain();
+  o.type = type; o.frequency.value = freq; g.gain.value = vol;
+  o.connect(g); g.connect(audioCtx.destination);
+  o.start(); o.stop(audioCtx.currentTime + duration);
+}
+function playAttack() { playTone(440, 0.05, 'square', 0.1); }
+function playHit() { playTone(200, 0.1, 'sawtooth', 0.12); setTimeout(() => playTone(350, 0.08, 'triangle', 0.08), 50); }
+function playSpecial() { playTone(880, 0.2, 'sine', 0.15); playTone(1200, 0.15, 'sine', 0.1); }
+
+// === Fighter Class ===
+class Fighter {
+  constructor(charKey, x, side, isAI = false) {
+    const char = CHARACTERS[charKey];
+    this.charKey = charKey;
+    this.name = char.name;
+    this.x = x;
+    this.y = H - 120;
+    this.side = side;
+    this.w = 40; this.h = 60;
+    
+    this.maxHp = 320 + char.power;
+    this.hp = this.maxHp;
+    this.maxPower = 100;
+    this.power = 0;
+    this.speed = char.speed;
+    this.skills = char.skills;
+    this.color = char.color;
+    
+    this.vx = 0; this.vy = 0;
+    this.airborne = false; this.canDoubleJump = true;
+    
+    this.state = 'idle';
+    this.stateTimer = 0;
+    this.combo = 0; this.comboTimer = 0;
+    this.lastHitFrame = -1000;
+    
+    this.blocking = false;
+    this.attackActive = false; this.attackType = null; this.attackDamage = 0;
+    this.attackCooldown = 0;
+    
+    this.isAI = isAI;
+    this.aiTimer = 0;
+  }
+  
+  update(dt, opponent) {
+    const ms = dt * 16.6667;
+    
+    if (this.airborne) {
+      this.vy += 0.8;
+      this.y += this.vy;
+      if (this.y + this.h >= H - 20) {
+        this.y = H - 20 - this.h;
+        this.vy = 0;
+        this.airborne = false;
+        this.canDoubleJump = true;
+      }
+    }
+    
+    this.x += this.vx * ms;
+    if (this.x < 50) this.x = 50;
+    if (this.x + this.w > W - 50) this.x = W - 50 - this.w;
+    
+    this.stateTimer -= ms; this.comboTimer -= ms; this.attackCooldown -= ms;
+    if (this.comboTimer <= 0) this.combo = 0;
+    
+    if (this.state !== 'hurt' && !this.blocking && this.power < this.maxPower) {
+      this.power += 0.4;
+    }
+    
+    if (this.stateTimer <= 0) {
+      if (['punch', 'kick', 'hurt', 'knockdown'].includes(this.state)) {
+        this.state = 'idle';
+        this.blocking = false;
+      }
+      this.attackActive = false;
+    }
+    
+    if (this.isAI) this.updateAI(opponent);
+  }
+  
+  updateAI(opponent) {
+    this.aiTimer -= 16.6667;
+    const dist = Math.abs(this.x - opponent.x);
+    const opp_far = dist > 200;
+    
+    if (this.aiTimer <= 0) {
+      const r = Math.random();
+      if (opp_far) {
+        this.vx = 3;
+      } else if (dist > 80) {
+        if (r < 0.3) this.performAttack('punch_weak');
+        else if (r < 0.6) this.performAttack('kick_weak');
+        else this.vx = (opponent.x > this.x ? 2 : -2);
+      } else {
+        if (r < 0.08 && this.power > 70) {
+          this.performSpecial();
+        } else if (r < 0.3) {
+          this.performAttack('punch_strong');
+        } else if (r < 0.55) {
+          this.performAttack('kick_weak');
+        } else if (r < 0.75) {
+          this.blocking = true;
+        } else {
+          this.vx = (opponent.x > this.x ? 2 : -2);
+        }
+      }
+      this.aiTimer = 600 + Math.random() * 800;
+    }
+  }
+  
+  draw() {
+    ctx.fillStyle = this.color;
+    ctx.fillRect(this.x, this.y, this.w, this.h);
+    
+    ctx.beginPath();
+    ctx.arc(this.x + this.w/2, this.y - 8, 12, 0, Math.PI*2);
+    ctx.fill();
+    
+    ctx.fillStyle = '#000';
+    ctx.fillRect(this.x + 10, this.y - 12, 4, 4);
+    ctx.fillRect(this.x + 26, this.y - 12, 4, 4);
+    
+    if (this.blocking) {
+      ctx.strokeStyle = '#0f0';
+      ctx.lineWidth = 3;
+      ctx.strokeRect(this.x - 5, this.y - 5, this.w + 10, this.h + 10);
+    }
+    
+    ctx.fillStyle = '#fff';
+    ctx.font = 'bold 10px Segoe UI';
+    ctx.fillText(this.name, this.x - 10, this.y - 25);
+    
+    if (this.combo > 0) {
+      ctx.fillStyle = '#ffff00';
+      ctx.font = 'bold 12px Segoe UI';
+      ctx.fillText(`${this.combo}hit`, this.x + 2, this.y - 35);
+    }
+  }
+  
+  takeDamage(damage, knockback) {
+    if (this.blocking) {
+      damage = Math.floor(damage * 0.4);
+      knockback *= 0.3;
+    }
+    this.hp = Math.max(0, this.hp - damage);
+    this.state = this.hp <= 0 ? 'knockdown' : 'hurt';
+    this.stateTimer = 500;
+    this.vx = knockback;
+    this.power = Math.min(this.maxPower, this.power + 25);
+    playHit();
+  }
+  
+  performAttack(attackType) {
+    if (this.attackCooldown > 0 || ['hurt', 'knockdown'].includes(this.state)) return;
+    
+    this.state = attackType.includes('punch') ? 'punch' : 'kick';
+    this.stateTimer = 300;
+    this.attackActive = true;
+    this.attackType = attackType;
+    
+    const skill = this.skills[attackType];
+    this.attackDamage = skill.dmg;
+    this.attackCooldown = 180;
+    
+    playAttack();
+  }
+  
+  performSpecial() {
+    if (this.power < 70 || ['hurt', 'knockdown'].includes(this.state)) return;
+    
+    this.state = 'punch';
+    this.stateTimer = 600;
+    this.attackActive = true;
+    this.attackType = 'special';
+    
+    const skill = this.skills.special;
+    this.attackDamage = skill.dmg;
+    this.power = 0;
+    this.attackCooldown = 450;
+    
+    playSpecial();
+    return true;
+  }
+  
+  distance(other) {
+    return Math.abs((this.x + this.w/2) - (other.x + other.w/2));
+  }
+  
+  canHit(other) {
+    if (!this.attackActive || this.lastHitFrame >= performance.now() - 120) return false;
+    const dist = this.distance(other);
+    const skill = this.skills[this.attackType] || { range: 80 };
+    return dist < skill.range;
+  }
+}
+
+// === Input ===
+const keys = {};
+let gamepadState = { p2: null };
+
+window.addEventListener('keydown', e => { keys[e.key] = true; resumeAudio(); });
+window.addEventListener('keyup', e => { keys[e.key] = false; });
+window.addEventListener('gamepadconnected', () => { console.log('Gamepad connected'); });
+
+function pollGamepad() {
+  const gps = navigator.getGamepads ? navigator.getGamepads() : [];
+  for (let i = 0; i < Math.min(4, gps.length); i++) {
+    if (gps[i]) { gamepadState.p2 = gps[i]; return; }
+  }
+  gamepadState.p2 = null;
+}
+
+function handleP1Input() {
+  let input = {};
+  pollGamepad();
+  
+  // 优先检查手柄，没有手柄才用键盘
+  if (gamepadState.p2) {
+    const gp = gamepadState.p2;
+    if (gp.axes[0] < -0.3) input.left = true;
+    if (gp.axes[0] > 0.3) input.right = true;
+    if (gp.axes[1] < -0.3) input.jump = true;
+    if (gp.buttons[0] && gp.buttons[0].pressed) input.weakPunch = true;
+    if (gp.buttons[1] && gp.buttons[1].pressed) input.strongPunch = true;
+    if (gp.buttons[2] && gp.buttons[2].pressed) input.weakKick = true;
+    if (gp.buttons[3] && gp.buttons[3].pressed) input.strongKick = true;
+    if (gp.buttons[4] && gp.buttons[4].pressed) input.special = true;
+    if (gp.buttons[5] && gp.buttons[5].pressed) input.block = true;
+  } else {
+    // 手柄不可用，使用键盘
+    if (keys['a'] || keys['A']) input.left = true;
+    if (keys['d'] || keys['D']) input.right = true;
+    if (keys['w'] || keys['W']) input.jump = true;
+    if (keys['j'] || keys['J']) input.weakPunch = true;
+    if (keys['k'] || keys['K']) input.strongPunch = true;
+    if (keys['l'] || keys['L']) input.weakKick = true;
+    if (keys['u'] || keys['U']) input.strongKick = true;
+    if (keys['i'] || keys['I']) input.special = true;
+    if (keys['Shift']) input.block = true;
+  }
+  
+  applyInput(p1, input);
+}
+
+function applyInput(fighter, input) {
+  fighter.vx = 0;
+  if (input.left) fighter.vx = -fighter.speed;
+  if (input.right) fighter.vx = fighter.speed;
+  
+  if (input.jump && !fighter.airborne) {
+    fighter.vy = -12; fighter.airborne = true;
+  } else if (input.jump && fighter.airborne && fighter.canDoubleJump) {
+    fighter.vy = -10; fighter.canDoubleJump = false;
+  }
+  
+  if (input.block) fighter.blocking = true;
+  
+  if (input.weakPunch) fighter.performAttack('punch_weak');
+  if (input.strongPunch) fighter.performAttack('punch_strong');
+  if (input.weakKick) fighter.performAttack('kick_weak');
+  if (input.strongKick) fighter.performAttack('kick_strong');
+  if (input.special) fighter.performSpecial();
+}
+
+// === Fighters ===
+let p1 = null, p2 = null;
+
+// === Init ===
+function initCharSelect() {
+  const charGrid = document.getElementById('charGrid');
+  charGrid.innerHTML = '';
+  
+  Object.entries(CHARACTERS).forEach(([key, char]) => {
+    const card = document.createElement('div');
+    card.className = 'charCard';
+    card.innerHTML = `<h3>${char.name}</h3><p>速度: ${char.speed}/5<br>力量: ${char.power}/105</p>`;
+    card.onclick = () => {
+      document.querySelectorAll('.charCard').forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+      p1Selected = key;
+      document.getElementById('selectInfo').textContent = `已选择: ${char.name} (速度: ${char.speed}, 力量: ${char.power})`;
+    };
+    charGrid.appendChild(card);
+  });
+  
+  document.getElementById('startBtn').onclick = () => {
+    if (!p1Selected) {
+      alert('请选择一个角色!');
+      return;
+    }
+    p2Selected = Object.keys(CHARACTERS)[Math.floor(Math.random() * Object.keys(CHARACTERS).length)];
+    startGame();
+  };
+}
+
+function startGame() {
+  document.getElementById('charSelectScreen').style.display = 'none';
+  p1 = new Fighter(p1Selected, 150, 'left', false);
+  p2 = new Fighter(p2Selected, W - 150 - 40, 'right', true);
+  gameState = 'ready';
+}
+
+function updateGame() {
+  p1.update(1, p2);
+  p2.update(1, p1);
+  
+  if (p1.canHit(p2)) {
+    const skill = p1.skills[p1.attackType] || p1.skills.punch_weak;
+    p2.takeDamage(p1.attackDamage, skill.knockback * (p1.side === 'left' ? 1 : -1));
+    p1.lastHitFrame = performance.now();
+    p1.combo++; p1.comboTimer = 2000;
+  }
+  
+  if (p2.canHit(p1)) {
+    const skill = p2.skills[p2.attackType] || p2.skills.punch_weak;
+    p1.takeDamage(p2.attackDamage, skill.knockback * (p2.side === 'left' ? 1 : -1));
+    p2.lastHitFrame = performance.now();
+    p2.combo++; p2.comboTimer = 2000;
+  }
+  
+  if (p1.hp <= 0) gameState = 'p2wins';
+  if (p2.hp <= 0) gameState = 'p1wins';
+}
+
+function drawGame() {
+  ctx.fillStyle = '#1a1a2e';
+  ctx.fillRect(0, 0, W, H);
+  
+  ctx.fillStyle = '#333';
+  ctx.fillRect(0, H - 20, W, 20);
+  
+  ctx.strokeStyle = '#555';
+  ctx.setLineDash([10, 10]);
+  ctx.beginPath();
+  ctx.moveTo(W/2, 0);
+  ctx.lineTo(W/2, H);
+  ctx.stroke();
+  ctx.setLineDash([]);
+  
+  p1.draw();
+  p2.draw();
+  
+  ctx.fillStyle = 'rgba(0,0,0,0.7)';
+  ctx.fillRect(W/2 - 100, 10, 200, 40);
+  ctx.fillStyle = '#fff';
+  ctx.font = 'bold 16px Segoe UI';
+  ctx.textAlign = 'center';
+  ctx.fillText(`Round ${round} / ${maxRounds}`, W/2, 30);
+  
+  ctx.font = '14px Segoe UI';
+  if (gameState === 'ready') {
+    ctx.fillText('Ready? Press any key!', W/2, 50);
+  }
+  
+  if (gameState === 'p1wins' || gameState === 'p2wins') {
+    const winner = gameState === 'p1wins' ? p1.name : p2.name;
+    ctx.fillStyle = 'rgba(0,0,0,0.8)';
+    ctx.fillRect(W/2 - 150, H/2 - 60, 300, 120);
+    ctx.fillStyle = '#ffff00';
+    ctx.font = 'bold 24px Segoe UI';
+    ctx.fillText(`${winner} 胜利!`, W/2, H/2 - 20);
+    ctx.fillStyle = '#fff';
+    ctx.font = '14px Segoe UI';
+    if (round >= maxRounds) {
+      ctx.fillText('按空格返回选择屏幕', W/2, H/2 + 20);
+    } else {
+      ctx.fillText(`按空格进行第 ${round + 1} 回合`, W/2, H/2 + 20);
+    }
+  }
+  
+  const updateHUD = (fighter, p1or2) => {
+    const hpBar = document.getElementById(`${p1or2}hp`);
+    const powerBar = document.getElementById(`${p1or2}power`);
+    hpBar.style.width = (fighter.hp / fighter.maxHp * 100) + '%';
+    hpBar.classList.toggle('danger', fighter.hp < fighter.maxHp / 3);
+    powerBar.style.width = (fighter.power / fighter.maxPower * 100) + '%';
+  };
+  
+  updateHUD(p1, 'p1');
+  updateHUD(p2, 'p2');
+  
+  let status = '';
+  if (gameState === 'p1wins') status = `${p1.name} 胜利! (按空格继续)`;
+  if (gameState === 'p2wins') status = `${p2.name} 胜利! (按空格继续)`;
+  if (gameState === 'playing') status = '对战中...';
+  document.getElementById('gameStatus').textContent = status;
+}
+
+let lastTime = performance.now();
+function loop(ts) {
+  const dt = Math.min((ts - lastTime) / 1000, 0.033);
+  lastTime = ts;
+  
+  if (gameState === 'playing') {
+    handleP1Input();
+    updateGame();
+  }
+  
+  if (gameState === 'ready') {
+    if (Object.values(keys).some(v => v)) {
+      gameState = 'playing';
+      Object.keys(keys).forEach(k => keys[k] = false);
+    }
+  }
+  
+  if ((gameState === 'p1wins' || gameState === 'p2wins') && keys[' ']) {
+    if (round < maxRounds) {
+      round++;
+      p1.hp = p1.maxHp;
+      p2.hp = p2.maxHp;
+      p1.power = 0;
+      p2.power = 0;
+      p1.combo = 0;
+      p2.combo = 0;
+      gameState = 'ready';
+      delete keys[' '];
+    } else {
+      // 返回角色选择屏幕
+      gameState = 'charSelect';
+      round = 1;
+      p1Selected = null;
+      p2Selected = null;
+      document.getElementById('charSelectScreen').style.display = 'flex';
+      delete keys[' '];
+    }
+  }
+  
+  if (gameState !== 'charSelect') drawGame();
+  requestAnimationFrame(loop);
+}
+
+initCharSelect();
+requestAnimationFrame(loop);
+</script>
+</body>
+</html>
