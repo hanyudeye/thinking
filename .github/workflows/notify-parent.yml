@@ -1,0 +1,17 @@
+name: Notify Parent Repository
+
+on:
+  push:
+    branches: ['master', 'main']
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger parent repo update
+        run: |
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/hanyudeye/blog/actions/workflows/update-submodules.yml/dispatches \
+            -d '{"ref":"master"}'
