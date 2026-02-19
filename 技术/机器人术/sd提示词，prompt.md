@@ -10,6 +10,84 @@ draft: true
 
 人物呈现自然的“唱歌状态”，表情放松自然，光线柔和、氛围真实。
 
+## 专家模式
+
+好，直接给你可执行方案，不废话。
+一、ChatGPT 里没有“专家模式”按钮
+
+但你可以用 Custom Instructions（自定义指令） 强制我进入“专家回答风格”。
+
+设置路径（桌面端）
+
+头像 → Settings → Custom Instructions
+
+在两个输入框里这样写：
+
+⸻
+
+✅ What would you like ChatGPT to know about you?
+
+I prefer expert-level responses.
+No fluff, no repetition, no motivational tone.
+Assume I understand technical concepts.
+Be concise, structured, and focused on actionable insight.
+
+
+⸻
+
+✅ How would you like ChatGPT to respond?
+
+Respond like a senior domain expert.
+Be direct and analytical.
+No emojis.
+No small talk.
+No summaries unless requested.
+Use bullet points when appropriate.
+Prioritize clarity and depth over friendliness.
+
+二、你可以用的「专家提示词模板」
+
+以后你提问前加：
+
+Expert mode.
+Give concise, high-signal answer.
+No fluff.
+Structured.
+
+或者更强一点：
+
+You are a domain expert.
+Answer in 5-10 bullet points max.
+No explanations unless necessary.
+No repetition.
+
+
+⸻
+
+三、如果你想更狠一点
+
+Act as a senior engineer / strategist.
+Assume high baseline knowledge.
+Remove all beginner explanations.
+Only deliver insight that improves decision quality.
+
+
+⸻
+
+四、你真正要的核心逻辑
+
+专家回答 =
+	•	信息密度高
+	•	去情绪化
+	•	去教学语气
+	•	直接给判断
+	•	给 trade-off
+	•	给风险点
+	•	给可执行结论
+
+⸻
+
+如果你愿意，我可以帮你做一个长期固定专家人格配置，以后我默认按那个风格回答，不用你每次提醒。
 
 # 1000个SD提示词：
 
