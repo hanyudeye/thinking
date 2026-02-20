@@ -42,7 +42,8 @@ repeat
 		-- 朗读新的文本内容
 		if currentText is not "" then
 			-- 使用后台运行来朗读文本，语速调慢
-			do shell script "say -r 120 " & quoted form of currentText & " &"
+			-- 为避免命令行长度或换行导致的截断，将文本通过 printf 管道传给 say，并使用 nohup 后台运行
+			do shell script "printf %s " & quoted form of currentText & " | nohup say -r 120 >/dev/null 2>&1 &"
 			set isReading to true
 		end if
 		
