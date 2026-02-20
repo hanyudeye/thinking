@@ -30,3 +30,13 @@ draft: true
 - [x] Hammerspoon 对配置文件进行配置后，可以默认用 vscode 打开
 - [x] iterm2 可以在多窗口下拉 : 使用 自己的配置，设置 window 为 show in all spaces
 - 
+- 你好  是，不是，不知道 日语 p23
+
+### 02.20
+
+- 搜索量大说明流行 (搜索公司会收集 用户的搜索次数)
+- 
+
+
+
+
