@@ -24,3 +24,9 @@ draft: true
 
 - 今天比以前想得通透，人生需要什么：我进步在学会 2 个语言单词
 - 比昨天更少的忧郁，焦虑，更自然的生活
+
+### 02.20
+
+- [x] Hammerspoon 对配置文件进行配置后，可以默认用 vscode 打开
+- [x] iterm2 可以在多窗口下拉 : 使用 自己的配置，设置 window 为 show in all spaces
+- 
