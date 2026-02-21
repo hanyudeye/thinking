@@ -17,6 +17,6 @@ jobs:
           curl -X POST \
             -H "Authorization: token ${{ secrets.BLOG_DISPATCH_TOKEN }}" \
             -H "Accept: application/vnd.github.v3+json" \
-            https://api.github.com/repos/hanyudeye/blog/actions/workflows/update-submodules.yml/dispatches \
-            -d '{"ref":"master"}' \
+            https://api.github.com/repos/hanyudeye/blog/dispatches \
+            -d '{"event_type":"content_updated"}' \
             -v
