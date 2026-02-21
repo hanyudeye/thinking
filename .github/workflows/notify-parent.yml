@@ -20,4 +20,3 @@ jobs:
             https://api.github.com/repos/hanyudeye/blog/actions/workflows/update-submodules.yml/dispatches \
             -d '{"ref":"master"}' \
             -v
-        continue-on-error: true
