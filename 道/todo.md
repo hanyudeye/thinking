@@ -7,3 +7,6 @@ draft: true
 Todo:  使用下 openclaw ，简单充值 豆包 10元，deepseek 10元，尝试功能，因为很多博主说很不错
 
 Todo: spacex 2026 年 6 月中旬上市，准备点现金购买，每股 $79–$100 
+
+配置查找，编辑，用终端学习
+bindkey -s '^F' 'fzf --preview "cat {}" --bind "enter:execute(vim {})"\n'
