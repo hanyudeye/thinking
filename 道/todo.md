@@ -12,7 +12,7 @@ Todo: spacex 2026 年 6 月中旬上市，准备点现金购买，每股 $79–$
 bindkey -s '^F' 'fzf --preview "cat {}" --bind "enter:execute(vim {})"\n'
 
 
-什么东西可以放在手里盘，且能很好地使人放松 (硬币)
+什么东西可以放在手里盘，且能很好地使人放松 (硬币)，用个大的东西盘下
 
 更新下 tmux
 git clone --single-branch https://github.com/gpakosz/.tmux.git
