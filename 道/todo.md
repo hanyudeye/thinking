@@ -8,3 +8,4 @@ draft: true
 
 Todo: spacex 2026 年 6 月中旬上市，准备点现金购买，每股 $79–$100 
 
+如何在 docker 内安装 openclaw
