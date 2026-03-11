@@ -3,5 +3,21 @@ todos 3/10
 有没有比notepad 更智能点的编辑器？可以使用vim 快捷键
 使用sublime ，速度很快很轻量，其实notepad 已经很方便了，最终没有换
 
+修改anki牌组模板信息
+设置游戏手柄多个anki 牌组键位
 
+给foobar2000 添加了循环组件，https://www.foobar2000.org/components 可以下载组件，然后再软件配置中安装组件
 
+完全使用英语工作
+Work entirely in English
+
+I work entirely in English
+
+如何在 antimicrox 中配置鼠标3击选中段落，或者选中段落有其他快捷键吗
+> 我在浏览器中，默认选段快捷键是 C+S+⬇ ，这了这个快捷键
+
+如何合理布局窗口， 工具类窗口 gpt 必须要用完就扔，怎么办
+> ahk 脚本有触发角功能吗，比如鼠标移动到显示器左上角，可以触发某条命令
+> 
+
+chatgpt 桌面版没有网页版稳定，容易卡死，怎么回事
