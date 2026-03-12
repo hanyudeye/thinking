@@ -20,17 +20,6 @@ draft: true
 - 蛙跳是一种强力运动， 对人运动量很大
 - 赌王，船王，泡面王，敢于争先
 - 比昨天更少的忧郁，焦虑，更自然的生活
-- [x] vscode 切换到 资源管理器的快捷键是 Ctrl + Shift + E 
-- [x] 阅读资讯的方案，复制到编辑器 仔细查看
-- 
-
-
-;更稳健的写法
-#InstallKeybdHook
-#UseHook On
-SetCapsLockState, AlwaysOff
-
-SC03A::Ctrl
 
 ### 2026年03月完成的人生
 

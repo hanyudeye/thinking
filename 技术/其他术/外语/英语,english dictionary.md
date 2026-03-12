@@ -3,6 +3,18 @@
 6 月 june
 7 月  july
 
+going a full day without thinking about yourself 
+
+sunny in Seattle 
+
+Thundercat's lyrics
+
+sometimes you gotta close a door to open a window
+
+hats with a single letter on it ,and figuring out what it represents
+
+people read this and are happy that you are happy about things
+
 abandon           放弃,沉溺  放任
 abashed           1  (在人前) 感觉羞愧的,局促不安的,困窘的; 
 abate             缓和,减弱,减少,废除  缓和,减弱,减少
@@ -4559,3 +4571,15 @@ yogurt            酸奶(酪)
 zealous           狂热的
 zinc              锌
 zone              地域，地带
+
+listening to 10+ year old media discuss their pop culture
+
+Denim hats, I guess today's list is hat themed
+
+Temporal: A nine-year journey to fix time in JavaScript (bloomberg.github.io)
+
+temporal: a nine-year journey to fix time in JavaScript
+
+I'm very happy about this. The fact that Temporal forces you to actually deal with the inherent complexities of time management (primarily the distinction between an instant and a calendar datetime) makes it incredibly difficult to make the mistakes that Date almost seems designed to cause. It's a bit more verbose, but I'll take writing a handful of extra characters over being called at 3AM to fix a DST related bug any day of the week.
+
+我对此非常满意。Temporal 强制你处理时间管理固有的复杂性（主要是区分即时日期和日历日期时间），这使得你很难犯 Date 几乎是故意设计的那些错误。它的语句确实更冗长一些，但我宁愿多写几个字符，也不愿凌晨三点被叫去修复夏令时相关的 bug。

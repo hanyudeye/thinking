@@ -1,23 +1,43 @@
 todos 3/10
 
 有没有比notepad 更智能点的编辑器？可以使用vim 快捷键
-使用sublime ，速度很快很轻量，其实notepad 已经很方便了，最终没有换
+> 使用sublime ，速度很快很轻量，其实notepad 已经很方便了，最终没有换
 
 修改anki牌组模板信息
-设置游戏手柄多个anki 牌组键位
+> 设置游戏手柄多个anki 牌组键位
 
-给foobar2000 添加了循环组件，https://www.foobar2000.org/components 可以下载组件，然后再软件配置中安装组件
+给foobar2000 添加了循环组件
+> https://www.foobar2000.org/components 可以下载组件，然后再软件配置中安装组件
 
-完全使用英语工作
-Work entirely in English
-
-I work entirely in English
+完全使用英语工作,Work entirely in English
+> 使用键盘操作，这样效果很好，拷贝一句后用英语复写
 
 如何在 antimicrox 中配置鼠标3击选中段落，或者选中段落有其他快捷键吗
 > 我在浏览器中，默认选段快捷键是 C+S+⬇ ，这了这个快捷键
+> 现在变更成多使用键盘，少使用鼠标
 
 如何合理布局窗口， 工具类窗口 gpt 必须要用完就扔，怎么办
 > ahk 脚本有触发角功能吗，比如鼠标移动到显示器左上角，可以触发某条命令
 > 
 
 chatgpt 桌面版没有网页版稳定，容易卡死，怎么回事
+> 因为 Electron 性能没有浏览器稳定，浏览器 多进程，垃圾回收，内存优化的更好
+
+在 trip.com 买机票是否可靠
+> 在 trip.com（携程国际版）买机票整体可靠、正规、可放心使用
+
+v2rayN 订阅如果断线
+> 克隆一份，切换到克隆版本
+
+浏览器有类似 emacs 键盘操作的扩展吗
+Does the browser have an extension similar to emacs keyboard operation
+Does the browser have an extension similar to emacs keyboard operation
+> 经过查找后发现只有浏览功能，没有光标导航，所以还是使用vim
+> After searching, it was found that there is only a browsing function but no cursor navigation, so vim is still used
+> after searching , I find only have a browsing  function, but no cursor navigation,so  vim is still used
+
+
+在windows，通过判断打开的软件，审计自己的状态，状态包含打开浏览器 为 娱乐，打开 vscode 为工作，在工作区的左上方显示状态文字，做这个产品最便捷的方案是什么
+> 根据当前活跃窗口判断状态.ahk
+> 加入开机启动
+
