@@ -4,11 +4,6 @@ date:  2026-02-05T13:10:10+08:00
 draft: true
 ---
 
-## 工作地方
-
-- [linkedin](https://www.linkedin.com/)
-- https://www.v2ex.com/
-
 # 视频文案
 
 国民女鞋达芙妮，舒适好穿又放心！
