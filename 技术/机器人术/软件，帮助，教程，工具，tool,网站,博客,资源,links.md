@@ -7,6 +7,11 @@ draft: true
 
 反思：计算机中的好用的工具
 
+## 离线翻译
+
+pip install argostranslate argostranslategui
+argos-translate-gui
+
 ## 鼠标手势
 
 反思： 我操作鼠标的唯二场景就是 ps中作图 和 浏览器中选择文本，其他地方都别用
