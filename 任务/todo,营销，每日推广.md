@@ -73,11 +73,11 @@ draft: true
 15. 天才就是永恒的耐心。
     Genius is eternal patience.
 
-16. 只有坚持到底，才能笑到最后。
-    Only those who persist can laugh last.
+16. 只有坚持到底，才能笑到最后。 Only those who persist can laugh last.
 
-17. 路虽远，行则将至。
-    The road is long, but you will get there if you keep walking.
+
+
+17. 路虽远，行则将至。 The road is long, but you will get there if you keep walking.
 
 18. 所有光芒，都需要时间才能被看见。
     All brilliance takes time to shine.
