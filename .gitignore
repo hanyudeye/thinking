@@ -12,3 +12,5 @@ xlsx
 node_modules/
 temp.md
 output.xlsx
+.obsidian
+docs
