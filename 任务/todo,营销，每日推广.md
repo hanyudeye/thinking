@@ -9,14 +9,8 @@ draft: true
 - 营销 是一次准备一周的内容，然后利用 定时发送的功能，设置每天发布一篇
 
 
-
-
-
-
-
-
-
-
+所有光芒，都需要时间才能被看见。
+ All brilliance takes time to shine.
 
 
 ## 营销文案
