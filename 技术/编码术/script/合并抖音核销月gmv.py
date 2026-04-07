@@ -2,10 +2,9 @@ import pandas as pd
 import sys
 
 # 输入文件名
-input_file = r'e:\Users\Administrator\Desktop\抖音统计月核销GMV\input.xlsx'
+input_file = r'd:\Users\Administrator\Desktop\抖音统计月核销GMV\input.xlsx'
 
-
-output_file = r'e:\Users\Administrator\Desktop\抖音统计月核销GMV\output.xlsx'
+output_file = r'd:\Users\Administrator\Desktop\抖音统计月核销GMV\output.xlsx'
 
 
 # 读取两个 sheet

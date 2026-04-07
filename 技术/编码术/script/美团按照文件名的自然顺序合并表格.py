@@ -5,7 +5,7 @@ import sys
 
 # 替换为你的Excel文件所在文件夹路径
 # folder_path = r"C:\ExcelFiles\*.xlsx"
-folder_path=r"e:\Users\Administrator\Desktop\美团财务对账\1月\*.xlsx"
+folder_path=r"d:\Users\Administrator\Desktop\美团财务对账\3月\*.xlsx"
 file_paths = glob.glob(folder_path)
 
 # 按文件名自然排序（区分数字顺序，如 1.xlsx < 2.xlsx < 10.xlsx)
