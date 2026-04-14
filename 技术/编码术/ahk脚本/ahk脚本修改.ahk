@@ -21,3 +21,27 @@ ToggleQuakeWindowQuake(identifier, type := "class") {
     if  !IsSet(windowID){
         Exit
     }
+
+}
+
+;发送热键
+SendDownQuiet(hwnd) {
+    if !WinExist("ahk_id " hwnd)
+        return false
+
+    ; 保存当前激活窗口
+    prev := WinExist("A")
+
+    ; 后台发送
+    WinActivate("ahk_id " hwnd)
+    ControlSend("{j}",, "ahk_id " hwnd)
+
+    ; 切回原来窗口
+    WinActivate("ahk_id " prev)
+    return true
+}
+
+F8:: {
+    hwnd := WinExist("Microsoft​ Edge")
+ SendDownQuiet(hwnd)
+}

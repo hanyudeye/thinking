@@ -24,11 +24,12 @@ def translate(text):
 
 def main():
     print("=" * 50)
-    print(" LibreTranslate 终端翻译工具（WSL 修复版）")
+    print(" LibreTranslate 终端翻译工具（循环输入版）")
     print(" 输入文字 → 回车翻译 | 输入 quit 退出")
     print("=" * 50)
 
     while True:
+        # 接收输入（自动等待你打字）
         try:
             # user_input = input("\n请输入要翻译的内容：").strip()
             user_input = input("\n").strip()
@@ -36,12 +37,14 @@ def main():
             print("\n退出程序")
             break
 
+        # 退出条件
         if not user_input:
             continue
         if user_input.lower() in ["quit", "exit", "q", "退出"]:
             print("再见！")
             break
 
+        # 翻译并输出
         result = translate(user_input)
         # print(f"→ 翻译结果：{result}")
         print(f"{result}")
