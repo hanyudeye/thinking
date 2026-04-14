@@ -5,8 +5,8 @@ from flask_cors import CORS
 
 # ===================== 全局核心配置=====================
 # LIBRE_URL = "http://172.17.0.1:50116/translate" # 172.17.0.1 为飞牛docker内部网络IP可以不改，端口需要改为 libretranslate 容器的对外映射端口
-LIBRE_URL = "http://127.0.0.1:50116/translate" # 172.17.0.1 为飞牛docker内部网络IP可以不改，端口需要改为 libretranslate 容器的对外映射端口
-PROXY_PORT = 5000
+LIBRE_URL = "http://127.0.0.1:5000/translate" # 172.17.0.1 为飞牛docker内部网络IP可以不改，端口需要改为 libretranslate 容器的对外映射端口
+PROXY_PORT = 5001
 MAX_TEXT_LENGTH = 5000                          # 文本长度上限
 TOKEN_CHECK = False                             # True=强制验token  False=忽略所有token检查
 
@@ -28,6 +28,7 @@ def clean_lang_code(lang):
 # 核心翻译接口
 @app.route('/translate', methods=['POST'])
 def translate_proxy():
+    # 测试
     # 从请求参数中获取前端传入的token
     client_api_key = request.args.get("token", "")
     api_key_param = ""
