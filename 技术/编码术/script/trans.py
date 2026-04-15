@@ -1,11 +1,12 @@
 import requests
 import json
 
-# ===================== 配置 =====================
-API_URL = "http://127.0.0.1:5000/translate"  # 你的 LibreTranslate 地址
-SOURCE_LANG = "auto"    # 源语言（自动检测）
-TARGET_LANG = "zh"      # 目标语言（改成 en 就是翻英文）
-# =================================================
+# ===================== WSL 修复版配置 =====================
+# API_URL = "http://host.docker.internal:5000/translate"  # WSL 专用
+API_URL = "http://127.0.0.1:5000/translate"  # WSL 专用
+SOURCE_LANG = "auto"
+TARGET_LANG = "zh"
+# ==========================================================
 
 def translate(text):
     try:
