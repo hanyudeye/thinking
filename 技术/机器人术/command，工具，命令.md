@@ -22,3 +22,12 @@ Get-FileHash WeChatSetup.exe -Algorithm SHA256
 Win+v
 Get-Clipboard
 ```
+
+## tmux
+
+命令:
+
+select-layout even-horizontal 左右布局
+select-layout even-vertical 上下布局
+
+

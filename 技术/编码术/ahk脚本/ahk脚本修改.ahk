@@ -45,3 +45,4 @@ F8:: {
     hwnd := WinExist("Microsoft​ Edge")
  SendDownQuiet(hwnd)
 }
+
