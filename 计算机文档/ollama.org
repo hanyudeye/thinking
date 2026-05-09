@@ -1,0 +1,7 @@
+** 访问测试
+
+curl http://localhost:11434
+
+** 列出模型
+
+ollama list
