@@ -1,4 +1,4 @@
-看书，或pdf，或一个网页 ,系统学习
+ todo: 看书，或pdf，或一个网页 ,系统学习
 
 1. 每个学习周期，看一页书 (25分钟) ,这是合理的学习任务，能按时完成
 
@@ -25,6 +25,64 @@
 - [x] 表达式：数学计算的表达式，语言科学家把它复用于 数学计算
 - [x] page 196: 函数，也是为了规范，把一个<计算机执行功能> 集中到一个块中，组合成库后就可以很方便地复用
 - []
+
+## 2026-05-19
+
+- 玻璃纤维，主要用于隔热，危害没有石棉大，别太恐惧，注意空气质量
+- [x] todo: 下载sdcv 词典，因为当前朗道词典词汇不够
+- 完整表达某个观点，就是要说出完整的故事
+- wsl 中的网络和windows 的网络是怎么样的，为什么断网后就无法互联
+
+## 2026-05-20
+- 给我一个python脚本，我能根据日期推算每天的涨潮时间，比如我输入一个日期，你给我涨潮时间
+
+
+
+Here's a Python script that calculates the high tide time for a given date:
+
+```Python
+import datetime as dt
+from pytz import timezone, UTC
+
+# Define the location and its offset from UTC
+location = "New York"  # adjust to your desired location
+offset = -5 * 60 * 60  # in seconds (adjust according to your time zone)
+
+# Create a timezone object for the given location
+tz = timezone(location)
+UTC_tz = UTC()
+
+def high_tide(date_str):
+    date_obj = dt.datetime.strptime(date_str, "%Y-%m-%d")
+    date_obj_utc = UTC_tz.localize(date_obj).astimezone(tz)
+    
+    # Calculate the high tide time based on the location
+    if location == "New York":
+        high_tide_offset = 2.5 * 60 * 60  # in seconds (adjust according to your high tide offset)
+        return date_obj_utc + dt.timedelta(seconds=high_tide_offset)
+    else:
+        raise ValueError(f"High tide calculation not implemented for {location}.")
+
+date_str = input("Enter a date (YYYY-MM-DD): ")
+print(high_tide(date_str))
+```
+
+To use this script, simply replace `"New York"` with your desired location (which must be supported by the `pytz` library), and run the script. When prompted, enter a date in the format `YYYY-MM-DD`. The script will output the high tide time for that date.
+
+Note: This script uses the `pytz` library to handle timezone conversions. You may need to install this library using pip (`pip install pytz`) if you haven't already. Additionally, the high tide offset is specific to New York; adjust this value according to your location's actual high tide time.
+
+
+
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+
+
+You're likely trying to use the 'US/East' timezone instead of 'New York', which is not a recognized timezone. Try replacing it with `pytz.timezone('US/East')`.
+
+
+- [x] 使用 emacs看 spacemacs 文档 2026-05-20T02:42:52+08:00
+- 我感觉空想根本就没有灵感，还不如出去走走，所以看书比空想重要，要增加阅读量
+
+
 
 
 在 **完全断网（无外网、无局域网）** 环境下，WSL 与 Windows 仍可通过 **虚拟网卡（Hyper-V 内部网络）** 互相访问服务。核心是利用两者之间默认存在的 **虚拟私有网络**，无需依赖物理网卡或外部网络。
