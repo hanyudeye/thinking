@@ -69,7 +69,7 @@ prompts["简化解释"] :=
 ; English Prompt
 ; =========================
 
-prompts["Summarize Webpage"] :=
+prompts["赚钱要提高生产力，竞争"] :=
 (
 "Summarize the following webpage content." "`n`n"
 "Requirements:" "`n"
