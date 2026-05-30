@@ -5,8 +5,6 @@ categories: ['']
 draft: true
 ---
 
-反思：计算机中的好用的工具
-
 ## 离线翻译
 
 pip install argostranslate argostranslategui
@@ -14,14 +12,11 @@ argos-translate-gui
 
 ## 鼠标手势
 
-反思： 我操作鼠标的唯二场景就是 ps中作图 和 浏览器中选择文本，其他地方都别用
-
 https://github.com/yingDev/WGestures/releases
 
-## ssh [登录验证]
+## ssh 
 
-> 我用某身份会见某AI，AI要对比我的签章，是否与公钥配对，配对后接见我
-> 验证方法用 做题而不是回答密码的方式
+私钥加密验证
 
 1. 服务器出题
 2. 你用私钥盖章
@@ -32,4 +27,29 @@ https://github.com/yingDev/WGestures/releases
 ssh-keygen -t rsa -C "youremail@example.com"
 ```
 要用 ssh 无密码登录，要把本地公钥 ~/.ssh/id_rsa.pub 配置到服务器 的 ~/.ssh/authorized_keys 认证文件中，服务器才能接受您的认证。
+
+## 文件校验
+
+### md5/SHA256
+
+```powershell
+Get-FileHash WeChatSetup.exe -Algorithm MD5
+Get-FileHash WeChatSetup.exe -Algorithm SHA256
+```
+
+## 打开系统剪切板
+
+```powershell
+Win+v
+Get-Clipboard
+```
+
+## tmux
+
+命令:
+
+select-layout even-horizontal 左右布局
+select-layout even-vertical 上下布局
+
+
 

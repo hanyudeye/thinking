@@ -7,6 +7,8 @@ categories: ['']
 draft: true
 ---
 
-## 网络互相访问的问题
+## 镜像网络模式
 
-使用图片的 网络wsl 配置后， 在  wsl 中 使用  localhost 或 127.0.0.1 都能访问 windows
+> win11才有
+
+如果使用镜像网络， 在  wsl 中 可以使用  localhost 或 127.0.0.1 可以访问 windows
