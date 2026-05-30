@@ -1,20 +1,3 @@
-1月 January January
-2月 february 
-6 月 june
-7 月  july
-
-going a full day without thinking about yourself 
-
-sunny in Seattle 
-
-Thundercat's lyrics
-
-sometimes you gotta close a door to open a window
-
-hats with a single letter on it ,and figuring out what it represents
-
-people read this and are happy that you are happy about things
-
 abandon           放弃,沉溺  放任
 abashed           1  (在人前) 感觉羞愧的,局促不安的,困窘的; 
 abate             缓和,减弱,减少,废除  缓和,减弱,减少
