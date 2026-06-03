@@ -98,3 +98,20 @@ USE test;
 
 删除数据库
 DROP DATABASE test;
+
+## leftjoin
+
+SELECT
+    a.id,
+    a.name,
+    -- 拼接右表字段，逗号分隔
+    GROUP_CONCAT(b.title SEPARATOR ',') AS title_list
+FROM table_a a
+LEFT JOIN table_b b ON a.id = b.a_id
+<!-- GROUP BY a.id,a.name; -->
+
+
+软件 sqlite browse
+
+---  美团拼接表格，业务员 ，t1 为业务表
+SELECT a.商品ID ,a.服务门店名称,b.业务员 from t1 a left join 业务员 b on a.服务门店ID=b.服务门店ID;
