@@ -1,18 +1,284 @@
-我的配置
-```
-  ;; OPTIONAL configuration
-  (gptel-make-deepseek "DeepSeek"
+提示词： 你是一个全能专家，回答问题专业简洁
+
+
+todo: 配置多个后端
+
+在 ~/.authinfo 文件
+
+ machine api.deepseek.com login apikey password KEY
+ 
+在 .spacemacs 配置后端
+``` elisp
+
+   (gptel-make-deepseek "DeepSeek"
     :stream t
     :models '(deepseek-v4-flash)
-    :key "KEY"
+    :key (gptel-api-key-from-auth-source :host "api.deepseek.com")
+
     )
-  (gptel-make-preset 'deepseek-coding
-    :backend "DeepSeek"
-    :model 'deepseek-v4-flash
-    :system "你是一个专业代码助手"
+  ;; (gptel-make-preset 'deepseek-coding
+  ;;   :backend "DeepSeek"
+  ;;   :model 'deepseek-v4-flash
+  ;;   :system "你是一个专业代码助手"
+  ;;   )
+
+  (gptel-make-ollama "Ollama"
+    ;; :host "192.168.110.162:11434"
+    :host "localhost:11434"
+    :stream t
+    :models '(gemma4:e4b)
     )
 
+  (setq
+   ;; gptel-model 'gemma4:e4b
+   gptel-backend (gptel-get-backend "DeepSeek")
+   gptel-model 'deepseek-v4-flash
+   gptel-include-reasoning nil
+   )
 ```
+
+---
+
+# 🎯 最简明结论  
+在 Spacemacs 中配置多个 LLM provider 的核心就是：
+
+1. **安装 gptel**  
+2. **为每个 provider 调用对应的 `(gptel-make-xxx ...)` 注册 backend**  
+3. **可选：设置默认 backend 和 model**  
+4. **通过 `SPC a i g`（或 M-x gptel-menu）切换模型**
+
+---
+
+# 🧩 一套可直接复制的 Spacemacs 配置（支持多个 provider）
+
+把下面内容放进 `~/.spacemacs` 的 `dotspacemacs/user-config`：
+
+```elisp
+;; ===========================
+;; gptel 多 LLM provider 配置
+;; ===========================
+
+(use-package gptel
+  :ensure t
+  :config
+  ;; 1. OpenAI
+  (gptel-make-openai "OpenAI"
+    :key (auth-source-pick-first-password :host "api.openai.com")
+    :models '(gpt-4o-mini gpt-4o gpt-5.5))
+
+  ;; 2. Anthropic Claude
+  (gptel-make-anthropic "Claude"
+    :key (auth-source-pick-first-password :host "api.anthropic.com")
+    :stream t)
+
+  ;; 3. Google Gemini
+  (gptel-make-gemini "Gemini"
+    :key (auth-source-pick-first-password :host "generativelanguage.googleapis.com")
+    :models '(gemini-2.0-flash gemini-2.0-pro))
+
+  ;; 4. DeepSeek
+  (gptel-make-openai "DeepSeek"
+    :host "api.deepseek.com"
+    :key (auth-source-pick-first-password :host "api.deepseek.com")
+    :models '(deepseek-chat deepseek-reasoner))
+
+  ;; 5. 本地 Ollama
+  (gptel-make-ollama "Ollama"
+    :host "localhost:11434"
+    :stream t
+    :models '(qwen2.5:latest mistral:latest llama3.1:latest))
+
+  ;; 默认 backend（可选）
+  (setq gptel-backend "Claude"
+        gptel-model 'claude-3-7-sonnet-20250219))
+```
+
+---
+
+# 🔐 API Key 建议放在 `~/.authinfo`  
+gptel 文档也推荐这样做（  [github.com](https://github.com/karthink/gptel)）：
+
+```
+machine api.openai.com login apikey password YOUR_KEY
+machine api.anthropic.com login apikey password YOUR_KEY
+machine generativelanguage.googleapis.com login apikey password YOUR_KEY
+machine api.deepseek.com login apikey password YOUR_KEY
+```
+
+这样 Emacs 会自动读取，不需要把 key 写进配置文件。
+
+---
+
+# 🕹️ 在 Spacemacs 中如何使用多个 provider？
+
+### 1. 打开 gptel 菜单  
+```
+SPC a i g
+```
+或  
+```
+M-x gptel-menu
+```
+
+### 2. 切换模型  
+在菜单中按：
+
+```
+m
+```
+
+你会看到类似：
+
+```
+OpenAI:gpt-4o-mini
+Claude:claude-3-7-sonnet
+Gemini:gemini-2.0-flash
+Ollama:mistral:latest
+DeepSeek:deepseek-chat
+```
+
+随时切换。
+
+---
+
+# 🧪 测试是否成功  
+任意 buffer 中：
+
+```
+M-x gptel-send
+```
+
+或在 gptel chat buffer 中：
+
+```
+C-c RET
+```
+
+---
+
+# 🧠 如果你想，我还能帮你：  
+- 生成 **更高级的 preset（预设）系统**，一键切换“写代码模式 / 写文案模式 / 本地模型模式”  
+- 配置 **Org-mode 多分支对话**  
+- 配置 **工具调用（tool-use）**  
+- 配置 **本地模型 + 云端模型混合工作流**
+
+
+
+
+根据你提供的配置，你已经正确使用了 `gptel-make-openai` 和 `gptel-make-ollama`。以下是对多后端配置的专业优化建议，涵盖更多主流 provider，并保持代码简洁可靠。
+
+---
+
+## 核心原则
+
+- **每个 provider 一个 `gptel-make-*` 调用**  
+- **API Key 统一由 `auth-source` 从 `~/.authinfo` 自动读取**（你已正确实现）  
+- **默认 backend 和 model 可通过 `setq` 指定**  
+- **切换时使用 `M-x gptel-menu` 或 `SPC a i g`**
+
+---
+
+## 推荐的完整配置（放入 `dotspacemacs/user-config`）
+
+```elisp
+;; 确保 gptel 已安装
+(use-package gptel
+  :ensure t
+  :config
+  ;; ---- 云端服务 ---- 
+
+  ;; OpenAI / ChatGPT
+  (gptel-make-openai "OpenAI"
+    :key (auth-source-pick-first-password :host "api.openai.com")
+    :models '(gpt-4o gpt-4o-mini gpt-5.5))
+
+  ;; Anthropic Claude
+  (gptel-make-anthropic "Claude"
+    :key (auth-source-pick-first-password :host "api.anthropic.com")
+    :stream t)
+
+  ;; Google Gemini
+  (gptel-make-gemini "Gemini"
+    :key (auth-source-pick-first-password :host "generativelanguage.googleapis.com")
+    :models '(gemini-2.0-flash gemini-2.0-pro))
+
+  ;; DeepSeek（使用 OpenAI 兼容 API）
+  (gptel-make-openai "DeepSeek"
+    :host "api.deepseek.com"
+    :key (auth-source-pick-first-password :host "api.deepseek.com")
+    :models '(deepseek-chat deepseek-reasoner))
+
+  ;; ---- 本地模型 ----
+
+  ;; Ollama
+  (gptel-make-ollama "Ollama"
+    :host "localhost:11434"
+    :stream t
+    :models '(qwen2.5:latest mistral:latest gemma4:e4b))
+
+  ;; 设定默认 backend（例如 Claude）
+  (setq gptel-backend "Claude"
+        gptel-model 'claude-3-7-sonnet-20250219))
+```
+
+> **注意**：  
+> - 若使用 `auth-source-pick-first-password`，请确认 `(auth-source-search :host ...)` 可正确找到你的条目（你在 `~/.authinfo` 中的写法正确）。  
+> - DeepSeek 当前推荐模型为 `deepseek-chat`（对应 deepseek-v4-flash），你写的 `deepseek-v4-flash` 在官方 API 中可能不存在，建议改为 `deepseek-chat`。
+
+---
+
+## 切换模型与后端
+
+| 操作                           | 快捷键                            |
+|-------------------------------|-----------------------------------|
+| 打开 gptel 对话菜单           | `SPC a i g` 或 `M-x gptel-menu`  |
+| 切换模型（后端+模型）         | 在菜单中按 `m`                    |
+| 发送当前 buffer 内容          | `C-c RET` 或 `M-x gptel-send`    |
+
+在 `gptel-menu` 按 `m` 后，你会看到类似列表：
+
+```
+OpenAI:gpt-4o
+Claude:claude-3-7-sonnet
+Gemini:gemini-2.0-flash
+DeepSeek:deepseek-chat
+Ollama:qwen2.5:latest
+```
+
+---
+
+## 常见问题 & 调试
+
+- **无法连接**：检查 `~/.authinfo` 权限（应为 600）和 machine/login 字段是否匹配。  
+- **模型名被拒绝**：对照 provider 文档确认模型标识符。  
+- **出现 “No support” 错误**：gptel 版本过旧，更新 package 后重试。  
+- **Ollama 本地模型不显示**：确保运行了 `ollama serve`，并执行过 `ollama pull <model>`。
+
+---
+
+## 进阶：为不同任务预设 prompt 和 backend
+
+若你想一键切换“代码助手” vs “通用对话”，可使用 `gptel-make-preset`：
+
+```elisp
+(gptel-make-preset 'coding-assistant
+  :backend "DeepSeek"
+  :model 'deepseek-chat
+  :system "你是一个资深代码助手，只输出简洁的代码和关键解释。")
+
+(gptel-make-preset 'general-chat
+  :backend "Claude"
+  :model 'claude-3-7-sonnet
+  :system "你是友好的助手，回答详细且富有同理心。")
+```
+
+切换预设：`M-x gptel-use-preset`。
+
+---
+
+你的配置已经接近完美，只需微调模型名和默认 backend。如需进一步帮助（如 Azure OpenAI、Groq 等额外 provider），欢迎追问。
+
+``
 大模型的**精准提示词**通常包含角色、任务、格式、约束等要素。以下是几类常用模板，可直接套用：
 
 ---
@@ -185,3 +451,47 @@ Groq:llama3-70b
 - 配置 Emacs 自动高亮、自动滚动、Org-mode 集成等
 
 你想让我帮你把配置整理成一份可直接复制的 Emacs Lisp 吗。
+
+## 配置多个后端
+
+``` lisp
+;; ===========================
+;; gptel 多 LLM provider 配置
+;; ===========================
+
+(use-package gptel
+  :ensure t
+  :config
+  ;; 1. OpenAI
+  (gptel-make-openai "OpenAI"
+    :key (auth-source-pick-first-password :host "api.openai.com")
+    :models '(gpt-4o-mini gpt-4o gpt-5.5))
+
+  ;; 2. Anthropic Claude
+  (gptel-make-anthropic "Claude"
+    :key (auth-source-pick-first-password :host "api.anthropic.com")
+    :stream t)
+
+  ;; 3. Google Gemini
+  (gptel-make-gemini "Gemini"
+    :key (auth-source-pick-first-password :host "generativelanguage.googleapis.com")
+    :models '(gemini-2.0-flash gemini-2.0-pro))
+
+  ;; 4. DeepSeek
+  (gptel-make-openai "DeepSeek"
+    :host "api.deepseek.com"
+    :key (auth-source-pick-first-password :host "api.deepseek.com")
+    :models '(deepseek-chat deepseek-reasoner))
+
+  ;; 5. 本地 Ollama
+  (gptel-make-ollama "Ollama"
+    :host "localhost:11434"
+    :stream t
+    :models '(qwen2.5:latest mistral:latest llama3.1:latest))
+
+  ;; 默认 backend（可选）
+  (setq gptel-backend "Claude"
+        gptel-model 'claude-3-7-sonnet-20250219))
+
+
+```
