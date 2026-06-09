@@ -1,1 +1,0 @@
-(gptel-make-privategpt )
